@@ -169,7 +169,7 @@ console.log('\n[1] Identity / URL / RSS GUID contracts');
   check(
     'category mutation ⇒ different canonical URL (identity migration)',
     itemCanonicalUrl('papers', base.data.id) !== migrated &&
-      migrated === 'https://cylenlc.github.io/dailyinfo-web/code/openreview-example-001/',
+      migrated === absoluteUrl('/code/openreview-example-001/'),
   );
   check(
     'category mutation ⇒ different RSS GUID',
@@ -194,38 +194,38 @@ console.log('\n[1] Identity / URL / RSS GUID contracts');
   );
 
   // -- Deployment base is a URL concern, not an identity concern ----------
-  check('current production origin is GitHub Pages', SITE.origin === 'https://cylenlc.github.io');
-  check('current production base is the project-site path', SITE.base === '/dailyinfo-web');
+  check('configured production origin is normalized', SITE.origin === SITE.origin.replace(/\/$/, ''));
+  check('configured production base is normalized', SITE.base === '' || (!SITE.base.endsWith('/') && SITE.base.startsWith('/')));
   check(
     'logical Item route excludes deployment base',
     itemRoute('papers', base.data.id) === '/papers/openreview-example-001/',
   );
   check(
-    'Item deployment href includes project-site base',
+    'Item deployment href includes configured base',
     withBase(itemRoute('papers', base.data.id)) ===
-      '/dailyinfo-web/papers/openreview-example-001/',
+      `${SITE.base}/papers/openreview-example-001/`,
   );
   check(
-    'category deployment href includes project-site base',
-    withBase(categoryRoute('papers')) === '/dailyinfo-web/papers/',
+    'category deployment href includes configured base',
+    withBase(categoryRoute('papers')) === `${SITE.base}/papers/`,
   );
   check(
-    'Daily deployment href includes project-site base',
-    withBase(dailyRoute('2026-08-26')) === '/dailyinfo-web/daily/2026-08-26/',
+    'Daily deployment href includes configured base',
+    withBase(dailyRoute('2026-08-26')) === `${SITE.base}/daily/2026-08-26/`,
   );
   check(
-    'Briefing deployment href includes project-site base',
+    'Briefing deployment href includes configured base',
     withBase(briefingRoute('2026-08-26', 'papers')) ===
-      '/dailyinfo-web/daily/2026-08-26/papers/',
+      `${SITE.base}/daily/2026-08-26/papers/`,
   );
   check(
-    'RSS absolute URL includes project-site base',
-    absoluteUrl(feedRoute()) === 'https://cylenlc.github.io/dailyinfo-web/feed.xml',
+    'RSS absolute URL includes configured base',
+    absoluteUrl(feedRoute()) === `${SITE.origin}${SITE.base}/feed.xml`,
   );
   check(
-    'canonical Item URL includes project-site base',
+    'canonical Item URL includes configured base',
     itemCanonicalUrl('papers', base.data.id) ===
-      'https://cylenlc.github.io/dailyinfo-web/papers/openreview-example-001/',
+      `${SITE.origin}${SITE.base}/papers/openreview-example-001/`,
   );
 
   // A future custom-domain build changes only deployment config. The route
