@@ -1,0 +1,23 @@
+---
+import type { Category } from '../lib/categories.ts';
+
+interface Props {
+  category: Category;
+  count: number;
+  eyebrow?: string;
+}
+
+const { category, count, eyebrow } = Astro.props;
+---
+
+<header class="page-heading page-heading--category" data-category={category.id}>
+  <div>
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{category.label}</h1>
+    <p class="page-heading__description">{category.description}</p>
+  </div>
+  <p class="count-block" aria-label={`${count} 条内容`}>
+    <strong>{count}</strong>
+    <span>Articles</span>
+  </p>
+</header>

@@ -2,32 +2,42 @@
 import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { itemRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
-import { formatDate, truncate } from '../lib/format.ts';
+import { formatDisplayText, truncate } from '../lib/format.ts';
 import type { ItemEntry } from '../lib/content.ts';
-import SourceBadge from './SourceBadge.astro';
 import TagList from './TagList.astro';
+import ItemMeta from './ItemMeta.astro';
 
 interface Props {
   item: ItemEntry;
   /** Show the category badge (default true on mixed-category lists). */
   showCategory?: boolean;
+  /** Compact rows are used for large briefing and overview lists. */
+  compact?: boolean;
+  /** Show a useful category-specific technical identifier in research indexes. */
+  showTechnicalId?: boolean;
+  /** Match the card title to the page's semantic heading structure. */
+  headingLevel?: 3 | 4;
 }
-const { item, showCategory = true } = Astro.props;
+const {
+  item,
+  showCategory = true,
+  compact = false,
+  showTechnicalId = false,
+  headingLevel = 3,
+} = Astro.props;
 
 const category = CATEGORY_BY_ID[item.data.category];
 const href = withBase(itemRoute(item.data.category, item.data.id));
+const Heading = headingLevel === 4 ? 'h4' : 'h3';
+const displayTitle = formatDisplayText(item.data.title);
+const displaySummary = formatDisplayText(item.data.summary);
 ---
 
-<article class="item-card">
-  <a href={href}>
-    <div class="item-card__meta">
-      {showCategory && <SourceBadge category={category} />}
-      <span>{item.data.source.name}</span>
-      <span aria-hidden="true">·</span>
-      <time datetime={item.data.published_at}>{formatDate(item.data.published_at)}</time>
-    </div>
-    <h3 class="item-card__title">{item.data.title}</h3>
-    <p class="item-card__summary">{truncate(item.data.summary, 220)}</p>
-  </a>
-  {item.data.tags.length > 0 && <TagList tags={item.data.tags} />}
+<article class:list={['item-card', { 'item-card--compact': compact }]} data-category={category.id}>
+  <ItemMeta item={item} showCategory={showCategory} showExternalId={showTechnicalId} />
+  <Heading class="item-card__title">
+    <a href={href}>{displayTitle}</a>
+  </Heading>
+  <p class="item-card__summary">{truncate(displaySummary, compact ? 170 : 240)}</p>
+  {item.data.tags.length > 0 && <TagList tags={item.data.tags} limit={compact ? 4 : 6} />}
 </article>

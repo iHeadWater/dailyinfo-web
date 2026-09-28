@@ -1,14 +1,18 @@
 ---
 interface Props {
   tags: string[];
+  limit?: number;
 }
-const { tags } = Astro.props;
+const { tags, limit } = Astro.props;
+const visibleTags = typeof limit === 'number' ? tags.slice(0, limit) : tags;
+const hiddenCount = tags.length - visibleTags.length;
 
 if (tags.length === 0) return;
 ---
 
 <ul class="tag-list" aria-label="标签">
-  {tags.map((tag) => (
+  {visibleTags.map((tag) => (
     <li>{tag}</li>
   ))}
+  {hiddenCount > 0 && <li aria-label={`另有 ${hiddenCount} 个标签`}>+{hiddenCount}</li>}
 </ul>

@@ -1,0 +1,37 @@
+---
+import { CATEGORY_BY_ID } from '../lib/categories.ts';
+import { formatDate } from '../lib/format.ts';
+import type { ItemEntry } from '../lib/content.ts';
+import SourceBadge from './SourceBadge.astro';
+
+interface Props {
+  item: ItemEntry;
+  showCategory?: boolean;
+  showExternalId?: boolean;
+}
+
+const { item, showCategory = true, showExternalId = false } = Astro.props;
+const category = CATEGORY_BY_ID[item.data.category];
+const listIdentityCategories = new Set(['papers', 'arxiv', 'code']);
+const technicalId =
+  showExternalId && listIdentityCategories.has(category.id) ? item.data.source.external_id : undefined;
+---
+
+<div class="item-meta">
+  {showCategory && <SourceBadge category={category} />}
+  <span class="item-meta__source">{item.data.source.name}</span>
+  {item.data.source_published_at && (
+    <>
+      <span class="item-meta__separator" aria-hidden="true">·</span>
+      <time datetime={item.data.source_published_at}>
+        {formatDate(item.data.source_published_at)}
+      </time>
+    </>
+  )}
+  {technicalId && (
+    <>
+      <span class="item-meta__separator" aria-hidden="true">·</span>
+      <code class="item-meta__id"><span class="sr-only">Technical ID：</span>{technicalId}</code>
+    </>
+  )}
+</div>

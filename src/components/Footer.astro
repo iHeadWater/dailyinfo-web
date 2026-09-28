@@ -6,26 +6,33 @@ import { categoryRoute, archiveRoute, feedRoute } from '../lib/urls.ts';
 
 <footer class="site-footer">
   <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">{SITE.name}</p>
+        <p class="site-footer__copy">
+          {SITE.tagline}。内容由自动化流水线生成的摘要组成，仅用于研究导航。
+        </p>
+      </div>
+      <div>
+        <p class="site-footer__label">Explore</p>
+        <nav class="site-footer__links" aria-label="页脚导航">
+          <a href={withBase('/')}>Home</a>
+          {CATEGORIES.map((category) => (
+            <a href={withBase(categoryRoute(category.id))}>{category.label}</a>
+          ))}
+          <a href={withBase(archiveRoute())}>Archive</a>
+        </nav>
+      </div>
+      <div>
+        <p class="site-footer__label">Feeds</p>
+        <nav class="site-footer__links" aria-label="RSS 订阅">
+          <a href={withBase(feedRoute())}>All RSS</a>
+          {CATEGORIES.map((category) => (
+            <a href={withBase(feedRoute(category.id))}>{category.label} RSS</a>
+          ))}
+        </nav>
+      </div>
+    </div>
     <p class="site-footer__notice">{ATTRIBUTION}</p>
-    <nav class="site-footer__links" aria-label="页脚导航">
-      <a href={withBase('/')}>首页</a>
-      {CATEGORIES.map((category) => (
-        <a href={withBase(categoryRoute(category.id))}>{category.label}</a>
-      ))}
-      <a href={withBase(archiveRoute())}>Archive</a>
-    </nav>
-    <p>
-      <a href={withBase(feedRoute())}>RSS（全部）</a>
-      {' · '}
-      {CATEGORIES.map((category, index) => (
-        <>
-          {index > 0 && ' · '}
-          <a href={withBase(feedRoute(category.id))}>{category.label} RSS</a>
-        </>
-      ))}
-    </p>
-    <p>
-      {SITE.name} — {SITE.tagline}。内容由自动化流水线生成的摘要组成，仅用于研究导航。
-    </p>
   </div>
 </footer>

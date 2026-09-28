@@ -12,13 +12,29 @@ const { currentPath } = Astro.props;
 <header class="site-header">
   <div class="container">
     <div class="site-header__bar">
-      <div class="site-header__brand">
-        <a class="site-header__logo" href={withBase('/')}>{SITE.name}</a>
-        <span class="site-header__tagline">{SITE.tagline}</span>
+      <a class="site-header__brand" href={withBase('/')} aria-label={`${SITE.name} 首页`}>
+        <span class="site-header__mark" aria-hidden="true">DI</span>
+        <span>
+          <strong class="site-header__logo">{SITE.name}</strong>
+          <span class="site-header__tagline">Research Intelligence</span>
+        </span>
+      </a>
+      <div class="site-header__desktop-nav">
+        <CategoryNav currentPath={currentPath} />
       </div>
-      <ThemeToggle />
+      <div class="site-header__actions">
+        <ThemeToggle />
+        <details class="mobile-menu">
+          <summary aria-label="打开导航菜单">
+            <span class="mobile-menu__icon" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+          </summary>
+          <div class="mobile-menu__panel">
+            <CategoryNav currentPath={currentPath} />
+          </div>
+        </details>
+      </div>
     </div>
-    <CategoryNav currentPath={currentPath} />
   </div>
 </header>
 
@@ -27,7 +43,10 @@ const { currentPath } = Astro.props;
   function syncLabels() {
     const dark = document.documentElement.getAttribute('data-theme') === 'dark';
     document.querySelectorAll('[data-theme-label]').forEach((label) => {
-      label.textContent = dark ? '浅色' : '深色';
+      label.textContent = dark ? 'Light' : 'Dark';
+    });
+    document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(dark));
     });
   }
   syncLabels();
@@ -43,5 +62,9 @@ const { currentPath } = Astro.props;
       }
       syncLabels();
     });
+  });
+
+  document.querySelectorAll('.mobile-menu a').forEach((link) => {
+    link.addEventListener('click', () => link.closest('details')?.removeAttribute('open'));
   });
 </script>

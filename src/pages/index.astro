@@ -1,16 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ItemCard from '../components/ItemCard.astro';
+import BriefingCard from '../components/BriefingCard.astro';
+import EditionSpine from '../components/EditionSpine.astro';
 import { CATEGORIES } from '../lib/categories.ts';
-import { briefingRoute, dailyRoute, archiveRoute, feedRoute } from '../lib/urls.ts';
+import { categoryRoute, dailyRoute, archiveRoute, feedRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
-import { formatDateTime } from '../lib/format.ts';
-import { loadSiteContent } from '../lib/content.ts';
+import { itemsOnDate, loadSiteContent } from '../lib/content.ts';
 
 const site = await loadSiteContent();
 const latestDate = site.latestDate;
 const latestBriefings = site.briefingsByDate.get(latestDate) ?? [];
-const recentItems = site.items.slice(0, 12);
+const latestItems = latestDate ? itemsOnDate(site, latestDate) : [];
+const sections = CATEGORIES.map((category) => ({
+  category,
+  items: latestItems.filter((item) => item.data.category === category.id),
+}));
 ---
 
 <BaseLayout
@@ -18,51 +23,88 @@ const recentItems = site.items.slice(0, 12);
   description={`DailyInfo 最新科研情报日报（${latestDate || '暂无内容'}）：论文、AI 新闻、代码、资源与 arXiv。`}
   path="/"
 >
-  <div style="margin-block: 2.5rem 2rem;">
-    <h1 style="font-size:1.9rem;">DailyInfo</h1>
-    <p style="font-size:1.05rem;color:var(--text-soft);margin-bottom:0.4rem;">
-      AI for Science Intelligence
-    </p>
-    <p style="font-size:0.9rem;color:var(--text-faint);">
-      {latestDate
-        ? `最新可用日期：${latestDate} · Last updated：${formatDateTime(site.lastUpdated)}`
-        : '暂无发布内容（fixture 未加载）'}
-    </p>
-  </div>
-
-  <div class="prose">
-    <h2 class="section-title">Latest Daily — {latestDate || '—'}</h2>
-    {latestBriefings.length === 0 && <p class="empty-note">没有可用的日报。</p>}
-    <ul style="list-style:none;padding:0;margin:0 0 1.5rem;">
-      {latestBriefings.map((briefing) => {
-        const category = CATEGORIES.find((c) => c.id === briefing.data.category)!;
-        return (
-          <li style="padding:0.8rem 0;border-bottom:1px solid var(--border);">
-            <a href={withBase(briefingRoute(latestDate, category.id))} style="font-weight:600;">
-              {category.label}
-            </a>
-            <span style="color:var(--text-faint);font-size:0.85rem;">
-              {' '}· {briefing.data.item_ids.length} 条
-            </span>
-          </li>
-        );
-      })}
-    </ul>
-    {latestDate && (
-      <p>
-        <a href={withBase(dailyRoute(latestDate))}>{latestDate} 全部日报 →</a>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="eyebrow">Research Intelligence</p>
+      <h1 id="hero-title">每天，读懂值得关注的科研进展</h1>
+      <p class="hero__description">
+        聚合论文、AI 动态、开源代码、科研资源与 arXiv 新作，整理成可快速扫描、可深入追踪的每日情报。
       </p>
-    )}
+      <div class="hero__actions">
+        {latestDate && <a class="button-link" href={withBase(dailyRoute(latestDate))}>阅读今日简报</a>}
+        <a class="text-link" href={withBase(feedRoute())}>RSS 订阅 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <aside class="publication-status" aria-label="最新出版状态">
+      {latestDate ? (
+        <EditionSpine
+          date={latestDate}
+          articles={latestItems.length}
+          sections={latestBriefings.length}
+          updatedAt={site.lastUpdated || undefined}
+        />
+      ) : (
+        <p class="empty-note">暂无已出版刊期。</p>
+      )}
+    </aside>
+  </section>
 
-    <h2 class="section-title">Recent Items</h2>
-    {recentItems.map((item) => (
-      <ItemCard item={item} />
-    ))}
+  <section class="overview-strip" aria-labelledby="overview-title">
+    <div class="overview-strip__intro">
+      <h2 id="overview-title">今日更新概览</h2>
+    </div>
+    <div class="stat-grid">
+      {sections.map(({ category, items }) => (
+        <a class="stat-card" href={withBase(categoryRoute(category.id))} data-category={category.id}>
+          <span>{category.label}</span>
+          <strong>{items.length}</strong>
+        </a>
+      ))}
+    </div>
+  </section>
 
-    <p style="margin-top:1.5rem;">
-      <a href={withBase(archiveRoute())}>浏览 Archive →</a>
-      {' · '}
-      <a href={withBase(feedRoute())}>RSS 订阅</a>
-    </p>
-  </div>
+  <section class="home-stream" aria-labelledby="today-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="today-title">今日内容</h2>
+      </div>
+      {latestDate && <a class="text-link" href={withBase(dailyRoute(latestDate))}>查看 Daily Overview →</a>}
+    </div>
+
+    <div class="category-section-grid">
+      {sections.map(({ category, items }) => (
+        <section class="category-section" data-category={category.id} aria-labelledby={`home-${category.id}`}>
+          <header class="category-section__header">
+            <div>
+              <h3 id={`home-${category.id}`}>{category.label}</h3>
+              <p>{category.description}</p>
+            </div>
+            <span class="category-section__count">{items.length}</span>
+          </header>
+          <div class="item-list item-list--home">
+            {items.length === 0 && <p class="empty-note">今日暂无内容。</p>}
+            {items.slice(0, 3).map((item) => (
+              <ItemCard item={item} showCategory={false} compact headingLevel={4} />
+            ))}
+          </div>
+          <a class="category-section__link" href={withBase(categoryRoute(category.id))}>
+            浏览全部 {category.label} <span aria-hidden="true">→</span>
+          </a>
+        </section>
+      ))}
+    </div>
+  </section>
+
+  <section class="briefing-section" aria-labelledby="briefings-title">
+    <div class="section-heading">
+      <div>
+        <h2 id="briefings-title">最近简报</h2>
+      </div>
+      <a class="text-link" href={withBase(archiveRoute())}>浏览 Archive →</a>
+    </div>
+    <div class="briefing-list">
+      {latestBriefings.length === 0 && <p class="empty-note">没有可用的日报。</p>}
+      {latestBriefings.map((briefing) => <BriefingCard briefing={briefing} showDate />)}
+    </div>
+  </section>
 </BaseLayout>

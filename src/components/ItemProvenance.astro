@@ -1,0 +1,53 @@
+---
+import type { ItemEntry } from '../lib/content.ts';
+import { formatDateTime } from '../lib/format.ts';
+import TagList from './TagList.astro';
+
+interface Props {
+  item: ItemEntry;
+}
+
+const { item } = Astro.props;
+---
+
+<section class="article-provenance" aria-labelledby="evidence-title">
+  <h2 id="evidence-title">Original Evidence</h2>
+  <dl>
+    <div>
+      <dt>Source</dt>
+      <dd>
+        <a href={item.data.source.url} rel="external noopener noreferrer">
+          {item.data.source.name}<span class="sr-only">（外部链接）</span>
+        </a>
+      </dd>
+    </div>
+    {item.data.authors.length > 0 && (
+      <div>
+        <dt>Authors</dt>
+        <dd>{item.data.authors.join('、')}</dd>
+      </div>
+    )}
+    {item.data.source_published_at && (
+      <div>
+        <dt>Published</dt>
+        <dd>
+          <time datetime={item.data.source_published_at}>
+            {formatDateTime(item.data.source_published_at)}
+          </time>
+        </dd>
+      </div>
+    )}
+    {item.data.source.external_id && (
+      <div>
+        <dt>Technical ID</dt>
+        <dd><code>{item.data.source.external_id}</code></dd>
+      </div>
+    )}
+  </dl>
+  {item.data.tags.length > 0 && (
+    <div class="article-provenance__tags">
+      <span>Tags</span>
+      <TagList tags={item.data.tags} />
+    </div>
+  )}
+</section>

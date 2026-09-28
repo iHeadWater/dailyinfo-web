@@ -1,12 +1,14 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import DateNavigation from '../components/DateNavigation.astro';
 import ItemCard from '../components/ItemCard.astro';
-import { CATEGORY_BY_ID } from '../lib/categories.ts';
-import { briefingRoute, dailyRoute } from '../lib/urls.ts';
+import EditionSpine from '../components/EditionSpine.astro';
+import { CATEGORIES } from '../lib/categories.ts';
+import { briefingRoute, categoryRoute, dailyRoute, archiveRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
-import { formatDateTime } from '../lib/format.ts';
-import { type SiteContent } from '../lib/content.ts';
+import { formatEditorialDate } from '../lib/format.ts';
+import { itemsOnDate, type SiteContent } from '../lib/content.ts';
 
 interface Props {
   site: SiteContent;
@@ -14,62 +16,109 @@ interface Props {
 }
 const { site, date } = Astro.props;
 const dateBriefings = site.briefingsByDate.get(date) ?? [];
-const dayItems = site.items.filter(
-  (item) => item.data.published_at.slice(0, 10) === date,
-);
+const dayItems = itemsOnDate(site, date);
+const sections = CATEGORIES.map((category) => {
+  const briefing = dateBriefings.find((entry) => entry.data.category === category.id);
+  const items = briefing
+    ? briefing.data.item_ids.map((id) => site.itemsById.get(id)!).filter(Boolean)
+    : dayItems.filter((item) => item.data.category === category.id);
+  return { category, briefing, items };
+});
 const lastUpdatedOnDate = [...dateBriefings]
-  .map((b) => b.data.updated_at ?? b.data.published_at)
+  .map((briefing) => briefing.data.updated_at ?? briefing.data.published_at)
   .sort()
   .pop();
 
 const seo = {
   title: `DailyInfo Daily · ${date}`,
-  description: `DailyInfo ${date} 日报：${dateBriefings
-    .map((b) => CATEGORY_BY_ID[b.data.category].label)
-    .join('、')} 分类共 ${dateBriefings.length} 份日报、${dayItems.length} 条条目。`,
+  description: `DailyInfo ${date} 日报：${dateBriefings.length} 份日报、${dayItems.length} 条条目。`,
   path: dailyRoute(date),
 };
 ---
 
 <BaseLayout {...seo}>
-  <div class="prose" style="margin-block: 2rem;">
-    <h1>{date}</h1>
-    <p style="color:var(--text-soft);font-size:0.9rem;">
-      {dateBriefings.length > 0
-        ? `${dateBriefings.length} 份日报 · ${dayItems.length} 条条目`
-        : '本日无日报'}
-      {lastUpdatedOnDate && ` · 更新于 ${formatDateTime(lastUpdatedOnDate)}`}
-    </p>
-    <DateNavigation dates={site.dates} current={date} />
+  <div class="page-shell daily-page">
+    <Breadcrumb
+      items={[
+        { label: 'Home', href: '/' },
+        { label: 'Archive', href: archiveRoute() },
+        { label: formatEditorialDate(date) },
+      ]}
+    />
 
-    <h2 class="section-title">当日分类</h2>
-    {dateBriefings.length === 0 && (
-      <p class="empty-note">本日没有任何分类发布内容。</p>
-    )}
-    <ul style="list-style:none;padding:0;margin:0;">
-      {dateBriefings.map((briefing) => {
-        const category = CATEGORY_BY_ID[briefing.data.category];
-        return (
-          <li style="padding:0.9rem 0;border-bottom:1px solid var(--border);">
-            <a href={withBase(briefingRoute(date, briefing.data.category))}>
-              <strong style="font-size:1.05rem;">{category.label}</strong>
-              <span style="color:var(--text-faint);font-size:0.85rem;">
-                {' '}· {briefing.data.item_ids.length} 条 · 发布于{' '}
-                {formatDateTime(briefing.data.published_at)}
-              </span>
-            </a>
-          </li>
-        );
-      })}
-    </ul>
+    <header class="daily-header">
+      <div>
+        <EditionSpine
+          date={date}
+          articles={dayItems.length}
+          sections={dateBriefings.length}
+          updatedAt={lastUpdatedOnDate}
+          asHeading
+        />
+        <p class="daily-header__description">
+          {dateBriefings.length > 0
+            ? `${dateBriefings.length} 个分类简报，汇集当日科研与技术情报。`
+            : '本日无分类简报。'}
+        </p>
+      </div>
+    </header>
 
-    {dayItems.length > 0 && (
-      <>
-        <h2 class="section-title">当日全部条目</h2>
-        {dayItems.map((item) => (
-          <ItemCard item={item} />
+    <div class="daily-tools">
+      <DateNavigation dates={site.dates} current={date} />
+    </div>
+
+    <section class="daily-overview" aria-labelledby="category-overview-title">
+      <div class="section-heading section-heading--compact">
+        <div>
+          <h2 id="category-overview-title">分类概览</h2>
+        </div>
+      </div>
+      <div class="stat-grid stat-grid--daily">
+        {sections.map(({ category, briefing, items }) => (
+          <a
+            class="stat-card"
+            href={withBase(briefing ? briefingRoute(date, category.id) : categoryRoute(category.id))}
+            data-category={category.id}
+          >
+            <span>{category.label}</span>
+            <strong>{items.length}</strong>
+          </a>
         ))}
-      </>
-    )}
+      </div>
+    </section>
+
+    <div class="daily-category-list">
+      {sections.map(({ category, briefing, items }) => (
+        <section class="daily-category" data-category={category.id} aria-labelledby={`daily-${category.id}`}>
+          <header class="daily-category__header">
+            <div>
+              <p class="daily-category__count">{items.length} Articles</p>
+              <h2 id={`daily-${category.id}`}>{category.label}</h2>
+              <p>{category.description}</p>
+            </div>
+            <div class="daily-category__links">
+              {briefing && (
+                <a href={withBase(briefingRoute(date, category.id))}>完整 Briefing →</a>
+              )}
+              <a href={withBase(categoryRoute(category.id))}>Category</a>
+            </div>
+          </header>
+          {items.length === 0 ? (
+            <p class="empty-note">本日该分类暂无内容。</p>
+          ) : (
+            <div class="item-list item-list--daily">
+              {items.slice(0, 3).map((item) => (
+                <ItemCard item={item} showCategory={false} compact />
+              ))}
+            </div>
+          )}
+          {items.length > 3 && briefing && (
+            <a class="daily-category__more" href={withBase(briefingRoute(date, category.id))}>
+              在 Briefing 中查看其余 {items.length - 3} 条
+            </a>
+          )}
+        </section>
+      ))}
+    </div>
   </div>
 </BaseLayout>

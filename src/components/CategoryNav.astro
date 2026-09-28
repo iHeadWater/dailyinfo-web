@@ -8,14 +8,23 @@ interface Props {
   currentPath?: string;
 }
 const { currentPath } = Astro.props;
+
+function isCategoryActive(slug: string): boolean {
+  if (!currentPath) return false;
+  return (
+    currentPath === `/${slug}/` ||
+    currentPath.startsWith(`/${slug}/`) ||
+    new RegExp(`^/daily/[^/]+/${slug}/$`).test(currentPath)
+  );
+}
 ---
 
 <nav class="category-nav" aria-label="分类导航">
-  <a href={withBase('/')} aria-current={currentPath === '/' ? 'page' : undefined}>Latest</a>
+  <a href={withBase('/')} aria-current={currentPath === '/' ? 'page' : undefined}>Home</a>
   {CATEGORIES.map((category) => (
     <a
       href={withBase(categoryRoute(category.id))}
-      aria-current={currentPath === categoryRoute(category.id) ? 'page' : undefined}
+      aria-current={isCategoryActive(category.slug) ? 'page' : undefined}
     >
       {category.label}
     </a>

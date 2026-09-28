@@ -8,7 +8,7 @@ import { SITE } from './src/lib/site.ts';
 // before Briefing bodies are rendered to static HTML.
 //
 // site + base come from the single deployment config in src/lib/site.ts
-// (current: GitHub Pages project site https://cylenlc.github.io/dailyinfo-web/).
+// (current: GitHub Pages project site https://iheadwater.github.io/dailyinfo-web/).
 export default defineConfig({
   site: SITE.origin,
   base: SITE.base || '/',

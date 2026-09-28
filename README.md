@@ -2,7 +2,7 @@
 
 DailyInfo 公共 Web 门户 — 基于 [Astro](https://astro.build) 的静态发布站点。
 
-当前生产地址：<https://cylenlc.github.io/dailyinfo-web/>（GitHub Pages Project Site，base 为 `/dailyinfo-web/`）。未来目标地址为 <https://daily.iheadwater.org/>（根路径 base `/`）。
+当前生产地址：<https://iheadwater.github.io/dailyinfo-web/>（GitHub Pages Project Site，base 为 `/dailyinfo-web/`）。未来目标地址为 <https://daily.iheadwater.org/>（根路径 base `/`）。
 
 本仓库**不包含任何后端代码**：没有 Python、数据库、SSR、API Route 或 Serverless。整个站点在构建期从内容文件生成静态 HTML / CSS / XML。
 
@@ -26,7 +26,7 @@ dailyinfo-web（本仓库）
       ↓
 Astro Build
       ↓
-GitHub Pages → cylenlc.github.io/dailyinfo-web/
+GitHub Pages → iheadwater.github.io/dailyinfo-web/
 ```
 
 **Phase 2D 边界**：生产内容只接受 `src/content/items/generated/` 与
@@ -124,9 +124,9 @@ Item URL 只由 `category + id` 决定，标题修改永不改变 URL。
 
 - **Logical route**：`/papers/openreview-example-001/`，只表达业务路由和 publication identity。
 - **Browser href**：`/dailyinfo-web/papers/openreview-example-001/`，由 `withBase()` 将当前部署 base 加到 logical route 上。
-- **Absolute public URL**：`https://cylenlc.github.io/dailyinfo-web/papers/openreview-example-001/`，由 `absoluteUrl()` 生成，用于 canonical、`og:url`、RSS link/GUID、robots 和 sitemap。
+- **Absolute public URL**：`https://iheadwater.github.io/dailyinfo-web/papers/openreview-example-001/`，由 `absoluteUrl()` 生成，用于 canonical、`og:url`、RSS link/GUID、robots 和 sitemap。
 
-部署配置集中在 [`src/lib/site.ts`](src/lib/site.ts)：当前默认值是 `SITE_ORIGIN=https://cylenlc.github.io`、`SITE_BASE=/dailyinfo-web`；未来只需改为 `SITE_ORIGIN=https://daily.iheadwater.org`、`SITE_BASE=/`。
+部署配置集中在 [`src/lib/site.ts`](src/lib/site.ts)：当前默认值是 `SITE_ORIGIN=https://iheadwater.github.io`、`SITE_BASE=/dailyinfo-web`；未来只需改为 `SITE_ORIGIN=https://daily.iheadwater.org`、`SITE_BASE=/`。
 
 
 ## Content ownership and fixtures

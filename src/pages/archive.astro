@@ -1,18 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import EditionSpine from '../components/EditionSpine.astro';
 import { CATEGORIES } from '../lib/categories.ts';
 import { briefingRoute, dailyRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
 import { loadSiteContent } from '../lib/content.ts';
+import { formatEditorialMonth } from '../lib/format.ts';
 
 const site = await loadSiteContent();
-
-// Archive rows: one row per (date, category) with a briefing that day.
-// Derived entirely from Content Collections — no hand-maintained date list.
-const rowsByDate = site.dates.map((date) => {
-  const briefings = site.briefingsByDate.get(date) ?? [];
-  return { date, briefings };
-});
+const yearGroups = [...new Set(site.dates.map((date) => date.slice(0, 4)))].map((year) => ({
+  year,
+  months: [...new Set(site.dates.filter((date) => date.startsWith(year)).map((date) => date.slice(0, 7)))].map(
+    (month) => ({ month, dates: site.dates.filter((date) => date.startsWith(month)) }),
+  ),
+}));
 ---
 
 <BaseLayout
@@ -20,48 +22,73 @@ const rowsByDate = site.dates.map((date) => {
   description="DailyInfo 历史日报归档，按日期与分类组织。"
   path="/archive/"
 >
-  <div class="prose" style="margin-block: 2rem;">
-    <h1>Archive</h1>
-    <p style="color:var(--text-soft);font-size:0.9rem;">
-      按日期组织的历史发布内容，共 {site.dates.length} 个发布日期。
-    </p>
+  <div class="page-shell archive-page">
+    <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Archive' }]} />
+    <header class="page-heading">
+      <div>
+        <h1>Archive</h1>
+        <p class="page-heading__description">
+          按日期浏览历史 DailyInfo 出版物，并快速定位当天各分类简报。
+        </p>
+      </div>
+      {site.dates.length > 1 && (
+        <p class="count-block" aria-label={`${site.dates.length} 个发布日期`}>
+          <strong>{site.dates.length}</strong>
+          <span>Editions</span>
+        </p>
+      )}
+    </header>
 
-    {rowsByDate.map(({ date, briefings }) => (
-      <section style="margin-top:2.25rem;">
-        <h2 class="archive-date">
-          <a href={withBase(dailyRoute(date))}>{date}</a>
-        </h2>
-        <table class="archive-table">
-          <thead>
-            <tr>
-              <th scope="col">Category</th>
-              <th scope="col">Items</th>
-            </tr>
-          </thead>
-          <tbody>
-            {CATEGORIES.map((category) => {
-              const briefing = briefings.find((b) => b.data.category === category.id);
-              const count = briefing ? briefing.data.item_ids.length : 0;
-              if (!briefing) {
-                return (
-                  <tr>
-                    <td style="color:var(--text-faint)">{category.label}</td>
-                    <td style="color:var(--text-faint)">0</td>
-                  </tr>
-                );
-              }
-              return (
-                <tr>
-                  <td>
-                    <a href={withBase(briefingRoute(date, category.id))}>{category.label}</a>
-                  </td>
-                  <td>{count}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </section>
-    ))}
+    {yearGroups.length === 0 && <p class="empty-note">暂无历史发布内容。</p>}
+    <div class="archive-timeline">
+      {yearGroups.map(({ year, months }) => (
+        <section class="archive-year" aria-labelledby={`year-${year}`}>
+          <h2 id={`year-${year}`}>{year}</h2>
+          {months.map(({ month, dates }) => (
+            <section class="archive-month" aria-labelledby={`month-${month}`}>
+              <h3 id={`month-${month}`}>{formatEditorialMonth(month)}</h3>
+              <div class="archive-days">
+                {dates.map((date) => {
+                  const briefings = site.briefingsByDate.get(date) ?? [];
+                  const total = briefings.reduce((sum, briefing) => sum + briefing.data.item_ids.length, 0);
+                  return (
+                    <article class="archive-day">
+                      <div class="archive-day__date">
+                        <time datetime={date}>{date.slice(8)}</time>
+                        <EditionSpine
+                          date={date}
+                          articles={total}
+                          sections={briefings.length}
+                          href={withBase(dailyRoute(date))}
+                          compact
+                          showLabel={false}
+                        />
+                      </div>
+                      <ul class="archive-day__categories" aria-label={`${date} 分类简报`}>
+                        {CATEGORIES.map((category) => {
+                          const briefing = briefings.find((entry) => entry.data.category === category.id);
+                          if (!briefing) return null;
+                          return (
+                            <li>
+                              <a
+                                href={withBase(briefingRoute(date, category.id))}
+                                data-category={category.id}
+                              >
+                                <span>{category.label}</span>
+                                <strong>{briefing.data.item_ids.length}</strong>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
+        </section>
+      ))}
+    </div>
   </div>
 </BaseLayout>

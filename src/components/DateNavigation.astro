@@ -1,6 +1,7 @@
 ---
 import { dailyRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
+import { formatEditorialDate } from '../lib/format.ts';
 
 interface Props {
   dates: string[];
@@ -15,17 +16,17 @@ const newer = currentIndex >= 0 ? dates[currentIndex - 1] : undefined;
 const older = currentIndex >= 0 ? dates[currentIndex + 1] : undefined;
 ---
 
-<nav aria-label="日期导航">
-  <span class="meta-row" style="display:inline-flex;gap:1.25rem;font-size:0.85rem;">
+<nav class="date-navigation" aria-label="日期导航">
+  <span class="date-navigation__links">
     {newer ? (
-      <a href={withBase(dailyRoute(newer))}>← {newer}</a>
+      <a href={withBase(dailyRoute(newer))}><span aria-hidden="true">←</span> {formatEditorialDate(newer)}</a>
     ) : (
-      <span style="color:var(--text-faint)">← 更新</span>
+      <span class="date-navigation__disabled"><span aria-hidden="true">←</span> 更新</span>
     )}
     {older ? (
-      <a href={withBase(dailyRoute(older))}>{older} →</a>
+      <a href={withBase(dailyRoute(older))}>{formatEditorialDate(older)} <span aria-hidden="true">→</span></a>
     ) : (
-      <span style="color:var(--text-faint)">更早 →</span>
+      <span class="date-navigation__disabled">更早 <span aria-hidden="true">→</span></span>
     )}
   </span>
 </nav>

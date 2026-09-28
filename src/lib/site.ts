@@ -8,7 +8,7 @@
  *      — publication identity; NEVER includes the deployment base.
  *   2. Deployment href    e.g.  /dailyinfo-web/papers/openreview-example-001/
  *      — what the browser requests from the deployed host.
- *   3. Absolute public URL e.g. https://cylenlc.github.io/dailyinfo-web/papers/openreview-example-001/
+ *   3. Absolute public URL e.g. https://iheadwater.github.io/dailyinfo-web/papers/openreview-example-001/
  *      — canonical URL / RSS GUID / og:url.
  *
  * astro.config.ts imports SITE.origin / SITE.base as the Astro `site`/`base`
@@ -21,7 +21,7 @@
  *   SITE_BASE    e.g. /            (root deployment)
  *
  * Current production = GitHub Pages project site:
- *   https://cylenlc.github.io/dailyinfo-web/
+ *   https://iheadwater.github.io/dailyinfo-web/
  *
  * Future custom-domain migration = change these defaults (or set the env in
  * the deploy workflow) to SITE_ORIGIN=https://daily.iheadwater.org and
@@ -39,7 +39,7 @@ function normalizeBase(base: string): string {
   return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
 }
 
-const ORIGIN = normalizeOrigin(process.env.SITE_ORIGIN ?? 'https://cylenlc.github.io');
+const ORIGIN = normalizeOrigin(process.env.SITE_ORIGIN ?? 'https://iheadwater.github.io');
 const BASE = normalizeBase(process.env.SITE_BASE ?? '/dailyinfo-web');
 
 export const SITE = {

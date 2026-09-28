@@ -1,11 +1,14 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import DateNavigation from '../components/DateNavigation.astro';
 import ItemCard from '../components/ItemCard.astro';
+import SourceBadge from '../components/SourceBadge.astro';
+import EditionSpine from '../components/EditionSpine.astro';
 import { CATEGORY_BY_ID } from '../lib/categories.ts';
-import { dailyRoute, briefingRoute } from '../lib/urls.ts';
+import { categoryRoute, dailyRoute, briefingRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
-import { formatDateTime } from '../lib/format.ts';
+import { formatEditorialDate } from '../lib/format.ts';
 import { type SiteContent } from '../lib/content.ts';
 import { render } from 'astro:content';
 
@@ -16,7 +19,13 @@ interface Props {
 const { site, briefingId } = Astro.props;
 const briefing = site.briefingsById.get(briefingId)!;
 const category = CATEGORY_BY_ID[briefing.data.category];
-const items = briefing.data.item_ids.map((id) => site.itemsById.get(id)!);
+const items = briefing.data.item_ids.map((id) => site.itemsById.get(id)!).filter(Boolean);
+const itemBatches = Array.from({ length: Math.ceil(items.length / 50) }, (_, index) => ({
+  start: index * 50,
+  items: items.slice(index * 50, (index + 1) * 50),
+}));
+const formatFolio = (start: number, length: number) =>
+  `${String(start + 1).padStart(3, '0')}–${String(start + length).padStart(3, '0')}`;
 
 const { Content } = await render(briefing);
 const updated = briefing.data.updated_at ?? briefing.data.published_at;
@@ -30,24 +39,84 @@ const updated = briefing.data.updated_at ?? briefing.data.published_at;
   publishedTime={briefing.data.published_at}
   modifiedTime={updated}
 >
-  <article class="prose" style="margin-block: 2rem;">
-    <a class="backlink" href={withBase(dailyRoute(briefing.data.date))}>← {briefing.data.date} 日报</a>
-    <h1>{briefing.data.title}</h1>
-    <p style="color:var(--text-soft);font-size:0.85rem;">
-      {formatDateTime(briefing.data.published_at)} 发布
-      {briefing.data.updated_at && ` · ${formatDateTime(briefing.data.updated_at)} 更新`}
-    </p>
-    <DateNavigation dates={site.dates} current={briefing.data.date} />
+  <article class="page-shell briefing-page" data-category={category.id}>
+    <Breadcrumb
+      items={[
+        { label: 'Home', href: '/' },
+        { label: formatEditorialDate(briefing.data.date), href: dailyRoute(briefing.data.date) },
+        { label: `${category.label} Briefing` },
+      ]}
+    />
 
-    <h2 class="section-title">Structured Items</h2>
-    {items.length === 0 && <p class="empty-note">本日报无结构化条目。</p>}
-    {items.map((item) => (
-      <ItemCard item={item} showCategory={false} />
-    ))}
+    <header class="briefing-header" data-category={category.id}>
+      <div>
+        <SourceBadge category={category} />
+        <h1>{category.label} Daily Briefing</h1>
+        <p>{briefing.data.title}</p>
+      </div>
+      <EditionSpine
+        date={briefing.data.date}
+        articles={items.length}
+        sections={1}
+        updatedAt={updated}
+        compact
+      />
+    </header>
 
-    <h2 class="section-title">完整日报正文</h2>
-    <div class="markdown-body">
-      <Content />
+    <div class="briefing-subnav">
+      <DateNavigation dates={site.dates} current={briefing.data.date} />
+      <div class="briefing-subnav__links">
+        <a href={withBase(dailyRoute(briefing.data.date))}>Daily Overview</a>
+        <a href={withBase(categoryRoute(briefing.data.category))}>{category.label} Category</a>
+      </div>
     </div>
+
+    <details class="briefing-body" open={items.length <= 40}>
+      <summary>
+        <span>
+          <strong>完整日报正文</strong>
+          <small>{items.length > 40 ? '内容较长，按需展开阅读' : '编辑版正文与摘要'}</small>
+        </span>
+        <span class="details-action" aria-hidden="true"></span>
+      </summary>
+      <div class="markdown-body">
+        <Content />
+      </div>
+    </details>
+
+    <section class="briefing-items" aria-labelledby="items-title">
+      <div class="list-toolbar">
+        <div><h2 id="items-title">Edition Index</h2><span>标题、来源与摘要</span></div>
+        <span>{items.length} articles</span>
+      </div>
+      {items.length === 0 && <p class="empty-note">本日报无结构化条目。</p>}
+
+      {itemBatches.length <= 1 ? (
+        <div class="item-list item-list--briefing">
+          {items.map((item) => <ItemCard item={item} showCategory={false} compact showTechnicalId />)}
+        </div>
+      ) : (
+        <div class="item-batches">
+          {itemBatches.map((batch, index) => (
+            <details class="item-batch" open={index === 0}>
+              <summary>
+                <span>{formatFolio(batch.start, batch.items.length)}</span>
+                <span>{batch.items.length} Articles</span>
+              </summary>
+              <div class="item-list item-list--briefing">
+                {batch.items.map((item) => (
+                  <ItemCard item={item} showCategory={false} compact showTechnicalId />
+                ))}
+              </div>
+            </details>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <nav class="context-navigation" aria-label="Briefing 上下文导航">
+      <a href={withBase(dailyRoute(briefing.data.date))}>← 返回 Daily Overview</a>
+      <a href={withBase(categoryRoute(briefing.data.category))}>浏览全部 {category.label} →</a>
+    </nav>
   </article>
 </BaseLayout>

@@ -1,0 +1,37 @@
+---
+import type { BriefingEntry } from '../lib/content.ts';
+import { CATEGORY_BY_ID } from '../lib/categories.ts';
+import { briefingRoute } from '../lib/urls.ts';
+import { withBase } from '../lib/site.ts';
+import { formatDateTime, formatEditorialDate } from '../lib/format.ts';
+
+interface Props {
+  briefing: BriefingEntry;
+  showDate?: boolean;
+}
+
+const { briefing, showDate = false } = Astro.props;
+const category = CATEGORY_BY_ID[briefing.data.category];
+const updated = briefing.data.updated_at ?? briefing.data.published_at;
+---
+
+<article class="briefing-card" data-category={category.id}>
+  <div class="briefing-card__main">
+    <span class="briefing-card__marker" aria-hidden="true"></span>
+    <div>
+      <p class="briefing-card__meta">
+        {showDate && <time datetime={briefing.data.date}>{formatEditorialDate(briefing.data.date)}</time>}
+        {showDate && <span aria-hidden="true">·</span>}
+        <span>{briefing.data.item_ids.length} Articles</span>
+      </p>
+      <h3>
+        <a href={withBase(briefingRoute(briefing.data.date, briefing.data.category))}>
+          {category.label} Briefing
+        </a>
+      </h3>
+    </div>
+  </div>
+  <time class="briefing-card__updated" datetime={updated}>
+    Updated {formatDateTime(updated)}
+  </time>
+</article>

@@ -1,0 +1,66 @@
+---
+import { formatDateTime, formatEditorialDate } from '../lib/format.ts';
+
+interface Props {
+  date: string;
+  articles: number;
+  sections: number;
+  updatedAt?: string;
+  href?: string;
+  asHeading?: boolean;
+  compact?: boolean;
+  showLabel?: boolean;
+}
+
+const {
+  date,
+  articles,
+  sections,
+  updatedAt,
+  href,
+  asHeading = false,
+  compact = false,
+  showLabel = true,
+} = Astro.props;
+
+const articleLabel = articles === 1 ? 'Article' : 'Articles';
+const sectionLabel = sections === 1 ? 'Section' : 'Sections';
+const formattedDate = formatEditorialDate(date);
+---
+
+<div
+  class:list={[
+    'edition-spine',
+    { 'edition-spine--heading': asHeading, 'edition-spine--compact': compact },
+  ]}
+  aria-label={`DailyInfo ${date} 刊期：${articles} 篇内容，${sections} 个分类`}
+>
+  {showLabel && <p class="edition-spine__label">Daily Edition</p>}
+  {asHeading ? (
+    <h1 class="edition-spine__date">
+      {href ? (
+        <a href={href}><time datetime={date}>{formattedDate}</time></a>
+      ) : (
+        <time datetime={date}>{formattedDate}</time>
+      )}
+    </h1>
+  ) : (
+    <p class="edition-spine__date">
+      {href ? (
+        <a href={href}><time datetime={date}>{formattedDate}</time></a>
+      ) : (
+        <time datetime={date}>{formattedDate}</time>
+      )}
+    </p>
+  )}
+  <p class="edition-spine__facts">
+    <span>{articles} {articleLabel}</span>
+    <span aria-hidden="true">·</span>
+    <span>{sections} {sectionLabel}</span>
+  </p>
+  {updatedAt && (
+    <p class="edition-spine__updated">
+      Updated <time datetime={updatedAt}>{formatDateTime(updatedAt)}</time>
+    </p>
+  )}
+</div>
