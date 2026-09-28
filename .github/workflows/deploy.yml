@@ -13,7 +13,7 @@ permissions:
 # Keep the production deployment explicit. A future custom-domain migration
 # changes these two values to https://daily.iheadwater.org and /.
 env:
-  SITE_ORIGIN: https://cylenlc.github.io
+  SITE_ORIGIN: https://iheadwater.github.io
   SITE_BASE: /dailyinfo-web
 
 concurrency:

@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 env:
-  SITE_ORIGIN: https://cylenlc.github.io
+  SITE_ORIGIN: https://iheadwater.github.io
   SITE_BASE: /dailyinfo-web
 
 jobs:

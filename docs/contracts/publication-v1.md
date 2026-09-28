@@ -153,12 +153,12 @@ explicit, deliberate operation (out of scope for v1; no redirect store exists).
   - **Browser href**: `/dailyinfo-web/papers/openreview-example-001/`, produced
     by `withBase(logicalRoute)` for the current GitHub Pages Project Site.
   - **Absolute public URL**:
-    `https://cylenlc.github.io/dailyinfo-web/papers/openreview-example-001/`,
+    `https://iheadwater.github.io/dailyinfo-web/papers/openreview-example-001/`,
     produced by `absoluteUrl(logicalRoute)` for canonical, `og:url`, RSS,
     robots and sitemap output.
 - Current production deployment is
-  `SITE_ORIGIN=https://cylenlc.github.io` + `SITE_BASE=/dailyinfo-web`,
-  yielding `https://cylenlc.github.io/dailyinfo-web/`. The future custom-domain
+  `SITE_ORIGIN=https://iheadwater.github.io` + `SITE_BASE=/dailyinfo-web`,
+  yielding `https://iheadwater.github.io/dailyinfo-web/`. The future custom-domain
   deployment is `SITE_ORIGIN=https://daily.iheadwater.org` + `SITE_BASE=/`;
   changing those settings must not change the logical route or Item identity.
 
