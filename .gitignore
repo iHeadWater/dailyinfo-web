@@ -25,6 +25,9 @@ pnpm-debug.log*
 .vscode/*
 !.vscode/extensions.json
 
+# AI assistant config (kept local, not part of the publication contract)
+CLAUDE.md
+
 # astro content-layer probe outputs (tests/refine-probe)
 tests/refine-probe/dist/
 tests/refine-probe/.astro/
