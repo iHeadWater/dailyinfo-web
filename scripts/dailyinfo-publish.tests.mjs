@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { chmodSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { chmodSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { hostname, tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -23,6 +23,13 @@ function write(path, content) {
   writeFileSync(path, content);
 }
 
+function report(f) {
+  const runtime = join(f.repo, 'runtime/dailyinfo-sync');
+  const reports = readdirSync(runtime).filter((name) => name.endsWith('.json'));
+  assert.equal(reports.length, 1, `expected one publication report, found ${reports.length}`);
+  return readFileSync(join(runtime, reports[0]), 'utf8');
+}
+
 function fixture(name) {
   const base = join(root, name);
   const repo = join(base, 'web');
@@ -32,7 +39,7 @@ function fixture(name) {
   const bin = join(base, 'bin');
   mkdirSync(repo, { recursive: true });
   mkdirSync(bin, { recursive: true });
-  must(base, 'git', ['init', '--bare', remote]);
+  must(base, 'git', ['init', '--bare', '-b', 'main', remote]);
   must(repo, 'git', ['init', '-b', 'main']);
   must(repo, 'git', ['config', 'user.name', 'Publisher Test']);
   must(repo, 'git', ['config', 'user.email', 'publisher@example.test']);
@@ -75,9 +82,9 @@ try {
     assert.equal(result.status, 0, result.stderr);
     assert.match(must(f.repo, 'git', ['log', '-1', '--format=%s']), /publish\(dailyinfo\)/);
     assert.equal(must(f.repo, 'git', ['rev-parse', 'HEAD']), must(f.repo, 'git', ['rev-parse', 'origin/main']));
-    const report = JSON.parse(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json')));
-    assert.equal(report.git.commit_created, true);
-    assert.equal(report.git.remote_head_after, report.git.head_after);
+    const publicationReport = JSON.parse(report(f));
+    assert.equal(publicationReport.git.commit_created, true);
+    assert.equal(publicationReport.git.remote_head_after, publicationReport.git.head_after);
     passed += 1;
   }
   {
@@ -85,7 +92,7 @@ try {
     write(join(f.repo, 'unrelated.txt'), 'do not publish');
     const result = publish(f);
     assert.notEqual(result.status, 0);
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /clean worktree/);
+    assert.match(report(f), /clean worktree/);
     assert.equal(existsSync(join(f.repo, 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-28.md')), false);
     passed += 1;
   }
@@ -94,7 +101,7 @@ try {
     must(f.repo, 'git', ['switch', '-c', 'feature']);
     const result = publish(f);
     assert.notEqual(result.status, 0);
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /expected main/);
+    assert.match(report(f), /expected main/);
     passed += 1;
   }
   {
@@ -109,7 +116,7 @@ try {
     must(other, 'git', ['push', 'origin', 'main']);
     const result = publish(f);
     assert.notEqual(result.status, 0);
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /not an ancestor/);
+    assert.match(report(f), /not an ancestor/);
     passed += 1;
   }
   {
@@ -119,7 +126,7 @@ try {
     write(join(lock, 'owner.json'), JSON.stringify({ pid: process.pid, hostname: hostname(), started_at: '2000-01-01T00:00:00.000Z' }));
     const result = publish(f);
     assert.notEqual(result.status, 0);
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /another publication/);
+    assert.match(report(f), /another publication/);
     passed += 1;
   }
   {
@@ -138,7 +145,7 @@ try {
     assert.notEqual(result.status, 0);
     assert.equal(existsSync(join(f.repo, 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-28.md')), false);
     assert.equal(must(f.repo, 'git', ['status', '--porcelain']), '');
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /restored from pre-run snapshot/);
+    assert.match(report(f), /restored from pre-run snapshot/);
     passed += 1;
   }
   {
@@ -151,8 +158,8 @@ try {
     const retained = must(f.repo, 'git', ['rev-parse', 'HEAD']);
     assert.notEqual(retained, must(f.repo, 'git', ['rev-parse', 'origin/main']));
     assert.equal(must(f.repo, 'git', ['status', '--porcelain']), '');
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /retained for safe push retry/);
-    assert.equal(JSON.parse(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'))).build_success, true);
+    assert.match(report(f), /retained for safe push retry/);
+    assert.equal(JSON.parse(report(f)).build_success, true);
     write(hook, '#!/bin/sh\nexit 0\n');
     const retried = publish(f);
     assert.equal(retried.status, 0, retried.stderr);
@@ -165,16 +172,16 @@ try {
     assert.equal(result.status, 0, result.stderr);
     assert.equal(existsSync(join(f.repo, 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-28.md')), true);
     assert.equal(must(f.repo, 'git', ['log', '-1', '--format=%s']), 'initial');
-    const report = JSON.parse(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json')));
-    assert.equal(report.publish_success, false);
-    assert.equal(report.build_success, true);
+    const publicationReport = JSON.parse(report(f));
+    assert.equal(publicationReport.publish_success, false);
+    assert.equal(publicationReport.build_success, true);
     passed += 1;
   }
   {
     const f = fixture('wrong-remote');
     const result = publish(f, [], { DAILYINFO_PUBLISH_REMOTE_URL: `${f.remote}-wrong` });
     assert.notEqual(result.status, 0);
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /unexpected origin push URL/);
+    assert.match(report(f), /unexpected origin push URL/);
     passed += 1;
   }
   {
@@ -182,7 +189,7 @@ try {
     const surprise = join(f.repo, 'surprise.txt');
     const result = publish(f, [], { TEST_NPM_TOUCH: surprise });
     assert.notEqual(result.status, 0);
-    assert.match(readFileSync(join(f.repo, 'runtime/dailyinfo-sync/2026-09-28.json'), 'utf8'), /outside this sync run/);
+    assert.match(report(f), /outside this sync run/);
     assert.equal(existsSync(join(f.repo, 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-28.md')), false);
     passed += 1;
   }
