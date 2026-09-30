@@ -115,6 +115,7 @@ export function syncDailyInfo(options) {
   let unchanged = 0;
   let briefings = 0;
   const writes = new Map();
+  const changedPaths = new Set();
 
   for (const record of records) {
     const briefingId = `${record.category}-${record.date}`;
@@ -136,9 +137,9 @@ export function syncDailyInfo(options) {
     };
     const target = join(webRoot, 'src/content/items/generated', record.category, `${record.id}.md`);
     const rendered = renderDocument(data);
-    if (!existsSync(target)) added += 1;
+    if (!existsSync(target)) { added += 1; changedPaths.add(target); }
     else if (readFileSync(target, 'utf8') === rendered) unchanged += 1;
-    else updated += 1;
+    else { updated += 1; changedPaths.add(target); }
     writes.set(target, rendered);
   }
 
@@ -163,7 +164,10 @@ export function syncDailyInfo(options) {
       body = section;
     }
     const rendered = renderDocument(data, body);
-    if (!existsSync(target) || readFileSync(target, 'utf8') !== rendered) briefings += 1;
+    if (!existsSync(target) || readFileSync(target, 'utf8') !== rendered) {
+      briefings += 1;
+      changedPaths.add(target);
+    }
     writes.set(target, rendered);
   }
 
@@ -180,7 +184,10 @@ export function syncDailyInfo(options) {
     unchanged,
     skipped: skipped.length,
     briefings_written: briefings,
-    files_written: options.apply ? writes.size : 0,
+    files_written: options.apply ? changedPaths.size : 0,
+    written_paths: options.apply
+      ? [...changedPaths].map((path) => path.slice(`${webRoot}/`.length)).sort()
+      : [],
     skipped_details: skipped,
   };
   return result;
