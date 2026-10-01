@@ -14,6 +14,14 @@ const args = process.argv.slice(2);
 const publish = args.includes('--publish');
 const includePushed = args.includes('--include-pushed');
 const requestedDate = args.includes('--date') ? args[args.indexOf('--date') + 1] : '';
+const windowDaysIndex = args.indexOf('--window-days');
+const windowDays = windowDaysIndex === -1 ? '' : args[windowDaysIndex + 1];
+// Validated here as well as in the sync: a bare `--window-days` would otherwise
+// be forwarded as an empty string, dropped by the sync's own guard, and the
+// publication would silently keep everything instead of failing.
+if (windowDaysIndex !== -1 && !/^\d+$/.test(windowDays ?? '')) {
+  throw new Error(`--window-days expects a non-negative integer, got ${JSON.stringify(windowDays)}`);
+}
 const workspace = process.env.DAILYINFO_WORKSPACE || process.env.DAILYINFO_DATA_ROOT;
 const sources = process.env.DAILYINFO_SOURCES;
 const backup = mkdtempSync(join(tmpdir(), 'dailyinfo-web-backup-'));
@@ -155,13 +163,20 @@ try {
   const syncArgs = ['scripts/dailyinfo-sync.mjs', '--apply', '--source-root', workspace, '--sources', sources];
   if (includePushed) syncArgs.push('--include-pushed');
   if (requestedDate) syncArgs.push('--date', requestedDate);
+  if (windowDays !== '') syncArgs.push('--window-days', windowDays);
   const sync = run('sync', process.execPath, syncArgs, { capture: true });
   report.sync = JSON.parse(sync.stdout);
   for (const gate of ['validate', 'test', 'check', 'build']) run(`npm:${gate}`, 'npm', ['run', gate]);
   report.build_success = true;
 
   if (publish) {
-    const writtenPaths = report.sync.written_paths || [];
+    // Deletions count as this run's own changes. A retention window rewrites
+    // and removes files, and both have to be staged or the commit would carry
+    // a window's worth of new content alongside a tree still holding the old.
+    const writtenPaths = [
+      ...(report.sync.written_paths || []),
+      ...(report.sync.deleted_paths || []),
+    ];
     const changedPaths = assertOnlySyncChanges(writtenPaths);
     if (changedPaths.length) git('add', ['add', '--', ...changedPaths]);
     const diff = spawnSync('git', ['diff', '--cached', '--quiet'], { cwd: repo });

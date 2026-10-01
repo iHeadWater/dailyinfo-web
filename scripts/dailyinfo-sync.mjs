@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { parse as parseYaml, stringify as stringifyYaml } from 'yaml';
 
@@ -51,6 +51,22 @@ function timestampFor(date) {
   return `${date}T00:00:00+08:00`;
 }
 
+/**
+ * Shift a YYYY-MM-DD date by whole days.
+ *
+ * Arithmetic runs in UTC on purpose: a local-time implementation would give a
+ * different cutoff on a machine in another timezone, and the publisher compares
+ * these strings against dates parsed out of filenames.
+ */
+function shiftDate(date, days) {
+  const base = Date.UTC(Number(date.slice(0, 4)), Number(date.slice(5, 7)) - 1, Number(date.slice(8, 10)));
+  const shifted = new Date(base + days * 86_400_000);
+  return `${shifted.getUTCFullYear()}-${String(shifted.getUTCMonth() + 1).padStart(2, '0')}-${String(shifted.getUTCDate()).padStart(2, '0')}`;
+}
+
+/** Item filenames this publisher owns: `dailyinfo-…-YYYY-MM-DD.md`. */
+const ITEM_FILE_RE = /^dailyinfo-.*-(\d{4}-\d{2}-\d{2})\.md$/;
+
 function loadSources(configPath) {
   const config = JSON.parse(readFileSync(configPath, 'utf8'));
   return new Map(config.sources.map((source) => [source.name, source]));
@@ -72,6 +88,76 @@ function listMarkdown(root, includePushed) {
   return files.sort((a, b) => a.path.localeCompare(b.path));
 }
 
+/**
+ * Publisher-owned Item files that fell out of the retention window.
+ *
+ * Matched on the `dailyinfo-…-{date}.md` shape this sync writes, so a file some
+ * other publisher placed in the same directory is never a candidate — the web
+ * repository is shared, and pruning must stay inside its own boundary.
+ */
+function expiredItemFiles(webRoot, cutoff) {
+  const base = join(webRoot, 'src/content/items/generated');
+  const expired = [];
+  if (!existsSync(base)) return expired;
+  for (const category of readdirSync(base, { withFileTypes: true })) {
+    if (!category.isDirectory()) continue;
+    for (const name of readdirSync(join(base, category.name))) {
+      const match = name.match(ITEM_FILE_RE);
+      if (match && match[1] < cutoff) expired.push(join(base, category.name, name));
+    }
+  }
+  return expired.sort();
+}
+
+/** Briefing files dated before the cutoff — the date is the directory path. */
+function expiredBriefingFiles(webRoot, cutoff) {
+  const base = join(webRoot, 'src/content/briefings/generated');
+  const expired = [];
+  if (!existsSync(base)) return expired;
+  for (const year of readdirSync(base, { withFileTypes: true })) {
+    if (!year.isDirectory()) continue;
+    for (const month of readdirSync(join(base, year.name), { withFileTypes: true })) {
+      if (!month.isDirectory()) continue;
+      for (const day of readdirSync(join(base, year.name, month.name), { withFileTypes: true })) {
+        if (!day.isDirectory()) continue;
+        const date = `${year.name}-${month.name}-${day.name}`;
+        if (date >= cutoff) continue;
+        const dir = join(base, year.name, month.name, day.name);
+        for (const name of readdirSync(dir)) {
+          if (name.endsWith('.md')) expired.push(join(dir, name));
+        }
+      }
+    }
+  }
+  return expired.sort();
+}
+
+/**
+ * Remove this publisher's contribution from an expired Briefing.
+ *
+ * A Briefing is shared: the sync owns only the region between its own markers
+ * and only the item ids it minted. Both are removed, and the file is deleted
+ * only once nothing else is left — otherwise the other publisher's content is
+ * rewritten verbatim around it.
+ *
+ * Returns 'deleted' | 'rewritten' | 'untouched'.
+ */
+function pruneBriefing(path, prunedItemIds) {
+  const { data, body } = parseDocument(readFileSync(path, 'utf8'));
+  const marked = new RegExp(`${START}[\\s\\S]*?${END}\\n?`);
+  // No markers: this file was not written by the sync. Leave it alone.
+  if (!marked.test(body)) return 'untouched';
+
+  const remaining = body.replace(marked, '').trim();
+  const itemIds = (data.item_ids || []).filter((id) => !prunedItemIds.has(id));
+  if (!remaining && itemIds.length === 0) {
+    rmSync(path, { force: true });
+    return 'deleted';
+  }
+  atomicWrite(path, renderDocument({ ...data, item_ids: itemIds }, remaining));
+  return 'rewritten';
+}
+
 export function syncDailyInfo(options) {
   const sourceRoot = resolve(options.sourceRoot);
   const webRoot = resolve(options.webRoot);
@@ -80,14 +166,29 @@ export function syncDailyInfo(options) {
   const records = [];
   const skipped = [];
 
+  // Pass 1 resolves every candidate's date without reading it, so the retention
+  // window can be anchored to the newest content the source actually holds.
+  // Anchoring to the wall clock instead would let a collection outage slide the
+  // window forward and empty a public site.
+  const candidates = [];
   for (const file of discovered) {
     const name = basename(file.path);
     const match = name.match(FILE_RE);
     if (!match) { skipped.push({ file: file.path, reason: 'filename' }); continue; }
     const [, sourceName, date, suffix] = match;
-    if (options.date && date !== options.date) continue;
     const source = sources.get(sourceName);
     if (!source?.url) { skipped.push({ file: file.path, reason: 'unknown-source' }); continue; }
+    candidates.push({ file, sourceName, date, suffix, source });
+  }
+
+  const newestDate = candidates.reduce((newest, candidate) => (candidate.date > newest ? candidate.date : newest), '');
+  // windowDays 0 (or absent) disables retention entirely: every date is kept.
+  const cutoff = options.windowDays > 0 && newestDate ? shiftDate(newestDate, -(options.windowDays - 1)) : '';
+
+  for (const candidate of candidates) {
+    const { file, sourceName, date, suffix, source } = candidate;
+    if (options.date && date !== options.date) continue;
+    if (cutoff && date < cutoff) continue;
     const markdown = readFileSync(file.path, 'utf8').trim();
     const sourceKey = `${sourceName}${suffix}`;
     // Mirrors the backend registry default (display_name, falling back to name)
@@ -182,6 +283,25 @@ export function syncDailyInfo(options) {
   }
 
   if (options.apply) for (const [path, content] of writes) atomicWrite(path, content);
+
+  // Retention. Runs after the writes so the two never contend for one file: a
+  // date inside the window is never a prune candidate, and vice versa.
+  const deletedPaths = [];
+  if (options.apply && cutoff) {
+    const expiredItems = expiredItemFiles(webRoot, cutoff);
+    const prunedItemIds = new Set(expiredItems.map((path) => basename(path, '.md')));
+    for (const path of expiredItems) {
+      rmSync(path, { force: true });
+      deletedPaths.push(path);
+    }
+    for (const path of expiredBriefingFiles(webRoot, cutoff)) {
+      // Reported either way: a rewrite is a change the publisher has to stage,
+      // exactly like a write.
+      if (pruneBriefing(path, prunedItemIds) !== 'untouched') deletedPaths.push(path);
+    }
+  }
+
+  const relative = (path) => path.slice(`${webRoot}/`.length);
   const result = {
     mode: options.apply ? 'apply' : 'dry-run',
     source_root: sourceRoot,
@@ -195,9 +315,11 @@ export function syncDailyInfo(options) {
     skipped: skipped.length,
     briefings_written: briefings,
     files_written: options.apply ? changedPaths.size : 0,
-    written_paths: options.apply
-      ? [...changedPaths].map((path) => path.slice(`${webRoot}/`.length)).sort()
-      : [],
+    written_paths: options.apply ? [...changedPaths].map(relative).sort() : [],
+    window_days: options.windowDays || 0,
+    cutoff,
+    deleted: options.apply ? deletedPaths.length : 0,
+    deleted_paths: options.apply ? deletedPaths.map(relative).sort() : [],
     skipped_details: skipped,
   };
   return result;
@@ -211,6 +333,7 @@ function args(argv) {
     includePushed: false,
     apply: false,
     date: '',
+    windowDays: 0,
   };
   for (let i = 0; i < argv.length; i += 1) {
     if (argv[i] === '--apply') result.apply = true;
@@ -219,7 +342,14 @@ function args(argv) {
     else if (argv[i] === '--web-root') result.webRoot = argv[++i];
     else if (argv[i] === '--sources') result.sourcesConfig = argv[++i];
     else if (argv[i] === '--date') result.date = argv[++i];
-    else throw new Error(`unknown argument: ${argv[i]}`);
+    else if (argv[i] === '--window-days') {
+      const raw = argv[++i];
+      // Rejected rather than coerced: a typo here silently changes how much of
+      // the site survives, and 0 means "keep everything" -- the opposite of
+      // what someone typing a bad number probably intended.
+      if (!/^\d+$/.test(raw ?? '')) throw new Error(`--window-days expects a non-negative integer, got ${JSON.stringify(raw)}`);
+      result.windowDays = Number(raw);
+    } else throw new Error(`unknown argument: ${argv[i]}`);
   }
   if (!result.sourceRoot) throw new Error('set DAILYINFO_DATA_ROOT (or DAILYINFO_WORKSPACE / --source-root)');
   if (!result.sourcesConfig) throw new Error('set DAILYINFO_SOURCES (or pass --sources)');

@@ -31,6 +31,32 @@ export DAILYINFO_SOURCES="/path/to/dailyinfo/config/sources.json"
 npm run dailyinfo:sync
 ```
 
+## Retention window
+
+The web is a rolling window, not an archive. `--window-days N` limits a run to
+the newest N days and **deletes** what falls out of it, so the site shows a
+digestible recent slice rather than every day it has ever published. Measured
+on the real corpus: ~25 Items/day, so `--window-days 7` is ~170 Items.
+
+```bash
+npm run dailyinfo:publish -- --include-pushed --window-days 7 --publish
+```
+
+Two properties of the window are load-bearing and pinned by tests:
+
+- **It is anchored to the newest date in the SOURCE, not to today.** Anchoring
+  to the wall clock would let a collection outage slide the window forward and
+  empty a public site. Anchored to content, an outage simply leaves the last
+  good week standing.
+- **It only ever deletes files this publisher owns** — Items matching
+  `dailyinfo-…-YYYY-MM-DD.md`, and, for a Briefing, only the region between
+  this publisher's own markers plus the item ids it minted. A Briefing shared
+  with another publisher is rewritten around, and deleted only once nothing
+  else remains.
+
+`--window-days 0` (the default) disables retention and keeps every date, which
+is also the escape hatch if the rolling window ever needs to be turned off.
+
 Publish content locally and run all four gates, without remote deployment:
 
 ```bash
@@ -81,10 +107,15 @@ The host scheduler should run `dailyinfo run` first and invoke the publisher
 only when collection succeeds. Runtime reports are written atomically to
 `runtime/dailyinfo-sync/YYYY-MM-DD.json` and are not committed.
 
-The scheduler must provide both variables above. A primary job runs before the
-Discord archive step; a later fallback may run `npm run dailyinfo:fallback` to
-scan both `briefings/` and `pushed/`. Scheduling is deployment configuration,
-not a repository-specific absolute path.
+The scheduler must provide both variables above. Scheduling is deployment
+configuration, not a repository-specific absolute path.
+
+The Discord step MOVES each briefing file from `briefings/` into `pushed/`, so
+the web publication reads both with `--include-pushed`. That is what makes the
+two pipelines order-independent: whether the web run happens before or after
+the Discord push, it sees the same content. Arguments are forwarded through
+`dailyinfo:fallback`, so a catch-up run takes the same `--window-days` and
+cannot reintroduce a day the window had already dropped.
 
 No bad version is published: sync changes are snapshotted, all four npm gates
 must pass, and remote publication happens only afterward. A gate failure

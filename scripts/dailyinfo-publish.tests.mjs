@@ -193,7 +193,36 @@ try {
     assert.equal(existsSync(join(f.repo, 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-28.md')), false);
     passed += 1;
   }
-  console.log(`[dailyinfo-publish tests] ${passed}/11 passed`);
+  {
+    // A retention window has to reach the remote as DELETIONS, not merely as
+    // new content -- otherwise the site keeps every day it has ever shown and
+    // "the last week" is a claim only the writer believes.
+    const f = fixture('window');
+    for (const day of ['2026-09-20', '2026-09-21', '2026-09-22', '2026-09-23', '2026-09-24', '2026-09-25', '2026-09-26', '2026-09-27']) {
+      write(join(f.workspace, 'briefings/code', `github_trending_briefing_${day}.md`), `# GitHub Trending\n\n1. **${day}** — summary.`);
+    }
+    const atRemote = (path) => command(f.repo, 'git', ['cat-file', '-e', `origin/main:${path}`]).status === 0;
+    const oldItem = 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-20.md';
+    const oldBriefing = 'src/content/briefings/generated/2026/09/20/code.md';
+    const keptItem = 'src/content/items/generated/code/dailyinfo-code-github_trending-2026-09-28.md';
+
+    // No --window-days: the pre-existing behaviour, every date retained.
+    const wide = command(f.repo, process.execPath, ['scripts/dailyinfo-publish.mjs', '--publish'], f.env);
+    assert.equal(wide.status, 0, wide.stderr);
+    assert.equal(atRemote(oldItem), true, 'without a window everything is published');
+    assert.equal(atRemote(oldBriefing), true);
+
+    // Newest content is 2026-09-28, so a 7-day window covers 09-22 .. 09-28.
+    const narrow = command(f.repo, process.execPath, ['scripts/dailyinfo-publish.mjs', '--publish', '--window-days', '7'], f.env);
+    assert.equal(narrow.status, 0, narrow.stderr);
+    assert.equal(atRemote(oldItem), false, 'the pruned item is deleted from the remote');
+    assert.equal(atRemote(oldBriefing), false, 'and so is its briefing');
+    assert.equal(atRemote(keptItem), true, 'in-window content survives');
+    assert.equal(must(f.repo, 'git', ['status', '--porcelain']), '', 'the worktree is left clean');
+    assert.equal(must(f.repo, 'git', ['rev-parse', 'HEAD']), must(f.repo, 'git', ['rev-parse', 'origin/main']));
+    passed += 1;
+  }
+  console.log(`[dailyinfo-publish tests] ${passed}/${passed} passed`);
 } finally {
   rmSync(root, { recursive: true, force: true });
 }
