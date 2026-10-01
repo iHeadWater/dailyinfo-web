@@ -1,5 +1,6 @@
 import { createMarkdownProcessor } from '@astrojs/markdown-remark';
 import rehypeSanitize from 'rehype-sanitize';
+import { formatDisplayText } from './format.ts';
 
 /**
  * Render an Item summary to sanitized HTML.
@@ -86,96 +87,39 @@ export async function renderSummaryMarkdown(markdown: string): Promise<string> {
 }
 
 /**
- * Sentinel shielding a code span's literal text from the marker passes. NUL
- * cannot occur in the summaries we render, and it matches none of the patterns
- * below.
+ * The text a browser would show for rendered summary HTML.
+ *
+ * `<img>` becomes its alt text before tags are stripped — the alt is visible
+ * text, so dropping the tag outright would lose it. Entities are decoded last,
+ * because the HTML carries them escaped; feed writers re-escape afterwards.
  */
-const CODE_SPAN_SENTINEL = String.fromCharCode(0);
-
-/**
- * One character that micromark does NOT treat as word-internal when deciding
- * whether `_` may open or close emphasis.
- *
- * The class has to mirror micromark's own classification, which works on
- * UTF-16 code units: astral code points (every SMP emoji) look like lone
- * surrogates there and end up counted as neither whitespace nor punctuation,
- * and combining marks and format characters behave the same way. Treating any
- * of them as a boundary would delete underscores the renderer keeps — e.g.
- * `😀_重要_😀` or `⚠️_注意_⚠️`.
- */
-const NOT_WORD_INTERNAL = '[^\\p{L}\\p{N}\\p{M}\\p{Cf}_\\u{10000}-\\u{10FFFF}]';
-
-const UNDERSCORE_STRONG = new RegExp(
-  `(^|${NOT_WORD_INTERNAL})__(?=\\S)([^_]+?)(?<=\\S)__(?=${NOT_WORD_INTERNAL}|$)`,
-  'gu',
-);
-const UNDERSCORE_EMPHASIS = new RegExp(
-  `(^|${NOT_WORD_INTERNAL})_(?=\\S)([^_]+?)(?<=\\S)_(?=${NOT_WORD_INTERNAL}|$)`,
-  'gu',
-);
-
-/**
- * Strip markdown structure for contexts that render plain text rather than
- * HTML: the list card previews, the RSS descriptions (both of which truncate)
- * and the meta description.
- *
- * Deliberately shallow — it drops structural markers (headings, list and quote
- * markers, link and image syntax, emphasis, code ticks) and flattens newlines,
- * but never reorders or invents text, and never drops characters that could be
- * prose. These callers cannot use renderSummaryMarkdown: truncating rendered
- * HTML would cut tags in half.
- *
- * Where a rule cannot tell markup from ordinary text it stays its hand: losing
- * a `*` from `5*8=40` is a visible defect, while leaving an emphasised span
- * un-stripped is merely cosmetically imperfect in a one-line preview.
- *
- * The boundary guards differ per delimiter because CommonMark's rules do:
- * `_` cannot emphasise inside a word (Unicode-aware, so `进展_重要_突破`
- * renders literally) while `*` can.
- */
-export function markdownToPlainText(markdown: string): string {
-  // Code spans are literal in markdown, so shield their contents up front —
-  // otherwise `data_2026_08.csv` would lose its underscores to the rule below.
-  // If the input already carries the sentinel, shielding is skipped rather than
-  // mis-indexing: the restore step keys off the spans collected here.
-  const codeSpans: string[] = [];
-  const shielded = markdown.includes(CODE_SPAN_SENTINEL)
-    ? markdown
-    : markdown.replace(/`{1,3}([^`]+?)`{1,3}/g, (_match, code: string) => {
-        codeSpans.push(code);
-        return `${CODE_SPAN_SENTINEL}${codeSpans.length - 1}${CODE_SPAN_SENTINEL}`;
-      });
-
-  const stripped = shielded
-    .replace(/^ {0,3}#{1,6}\s+/gm, '')
-    .replace(/^ {0,3}>\s?/gm, '')
-    // A marker must be followed by content on the same line: a lone `+` or `-`
-    // is prose, and CommonMark does not let it interrupt a paragraph.
-    .replace(/^ {0,3}(?:[-*+]|\d+[.)])[ \t]+(?=\S)/gm, '')
-    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-    // Strong before emphasis, so `**x**` is consumed rather than left as `*x*`.
-    // Asterisks keep an ASCII `\w` boundary, which makes this stricter than the
-    // renderer for ASCII neighbours (`5*8=40` survives, where CommonMark would
-    // read an emphasis span) and looser for non-ASCII punctuation (`中*(b)*文`
-    // loses the asterisks the renderer keeps). Matching the renderer exactly
-    // would mean implementing its flanking rules; the asymmetry is accepted
-    // because leaving a marker is cheaper than deleting a multiplication sign,
-    // and no summary in the corpus reaches either shape.
-    .replace(/(^|[^\w])\*\*(?=\S)(.+?)(?<=\S)\*\*(?=[^\w]|$)/g, '$1$2')
-    .replace(/(^|[^\w])\*(?=\S)(.+?)(?<=\S)\*(?=[^\w]|$)/g, '$1$2')
-    // Underscores instead forbid intraword emphasis, so their boundaries must
-    // match micromark's word-internal class — see NOT_WORD_INTERNAL.
-    .replace(UNDERSCORE_STRONG, '$1$2')
-    .replace(UNDERSCORE_EMPHASIS, '$1$2');
-
-  return (codeSpans.length === 0
-    ? stripped
-    : stripped.replace(
-        new RegExp(`${CODE_SPAN_SENTINEL}(\\d+)${CODE_SPAN_SENTINEL}`, 'g'),
-        (_match, index: string) => codeSpans[Number(index)],
-      )
+function htmlToText(html: string): string {
+  return formatDisplayText(
+    html
+      .replace(/<img\b[^>]*\balt="([^"]*)"[^>]*>/g, '$1')
+      .replace(/<img\b[^>]*>/g, '')
+      .replace(/<[^>]+>/g, ''),
   )
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+/**
+ * Plain-text rendering of a summary, for the contexts that cannot take HTML:
+ * the list card previews, the RSS descriptions and the meta description.
+ *
+ * Derived from the renderer rather than re-derived by hand. Three review rounds
+ * each found a fresh divergence while that was done with regexes — intraword
+ * underscores (`model_name`), arithmetic asterisks (`5*8`), backslash escapes,
+ * astral neighbours (`😀_重要_😀`), a `2.` that cannot interrupt a paragraph,
+ * markers inside code spans — because matching CommonMark means implementing
+ * its flanking rules, not tuning a character class. Taking the renderer's own
+ * output cannot drift from it.
+ *
+ * The cost is that a shape the renderer misreads is misread here too: `5*8=40`
+ * loses its asterisks, because CommonMark reads an emphasis span. The item page
+ * shows the same thing, so card and page agree — the property that matters.
+ */
+export async function summaryPlainText(markdown: string): Promise<string> {
+  return htmlToText(await renderSummaryMarkdown(markdown));
 }

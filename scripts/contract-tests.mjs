@@ -755,104 +755,57 @@ console.log('\n[8] Item summary markdown rendering');
 console.log('\n[9] Plain-text summaries (card previews, RSS, meta descriptions)');
 // ===========================================================================
 {
-  const { markdownToPlainText } = await lib('markdown.ts');
+  const { summaryPlainText } = await lib('markdown.ts');
 
-  // The shape ai_news summaries actually take once the producer complies.
-  const sections = markdownToPlainText(
-    '## 🧠 模型进展\n\n1. 第一条\n2. 第二条\n\n## 🏭 产业新闻\n\n1. 第三条',
-  );
-  check('headings and list markers are removed', !/[#*[\]`]/.test(sections), sections);
-  check(
-    'the words survive in order',
-    sections === '🧠 模型进展 第一条 第二条 🏭 产业新闻 第三条',
-    sections,
-  );
+  // Plain text is DERIVED from the renderer — render, then take the visible
+  // text — so the two cannot disagree. Three review rounds each found a fresh
+  // divergence while the stripping rules were written out by hand.
+  //
+  // These are golden expectations, every one captured from renderSummaryMarkdown
+  // itself. They document what survives and what is removed, and they fail if
+  // the derivation is ever replaced by hand-rolled rules again: the second block
+  // below is exactly the set those rules kept getting wrong.
+  const expectations = [
+    // Markers the renderer consumes — gone here too, along with their delimiters.
+    ['🏢 **中国移动四川公司** — 2027秋季校园招聘', '🏢 中国移动四川公司 — 2027秋季校园招聘'],
+    ['_重点_', '重点'],
+    ['## 🧠 模型进展\n\n1. 第一条\n2. 第二条', '🧠 模型进展 第一条 第二条'],
+    ['> 引用的一行', '引用的一行'],
+    ['见 [原文](https://example.org/a)', '见 原文'],
+    ['![示意](https://example.org/i.png)', '示意'],
+    ['第一段\n\n第二段', '第一段 第二段'],
 
-  check('bold markers are removed', markdownToPlainText('🏢 **中国移动四川公司**') === '🏢 中国移动四川公司');
-  check('italic markers are removed', markdownToPlainText('前缀 *强调* 后缀') === '前缀 强调 后缀');
-  check(
-    'links collapse to their text',
-    markdownToPlainText('见 [原文](https://example.org/a)') === '见 原文',
-  );
-  check(
-    'images collapse to their alt text',
-    markdownToPlainText('![示意](https://example.org/i.png)') === '示意',
-  );
-  check(
-    'quote markers are removed',
-    markdownToPlainText('> 引用的一行') === '引用的一行',
-  );
-  check(
-    'line breaks collapse so truncation counts visible length',
-    markdownToPlainText('第一段\n\n第二段') === '第一段 第二段',
-  );
-  check(
-    'plain prose is returned unchanged',
-    markdownToPlainText('该研究揭示了 LLM 智能体工作流中的普遍现象。') ===
-      '该研究揭示了 LLM 智能体工作流中的普遍现象。',
-  );
+    // Markers the renderer keeps as literal text. Deleting these is the defect
+    // class every hand-written rule re-introduced: intraword underscores,
+    // arithmetic asterisks, escapes, astral neighbours, a 2. that cannot
+    // interrupt a paragraph, and markers inside code spans.
+    ['中*(b)*文', '中*(b)*文'],
+    ['成本*(万元)*下降', '成本*(万元)*下降'],
+    ['\\*不是强调\\*', '*不是强调*'],
+    ['总结如下\n2. 第二', '总结如下 2. 第二'],
+    ['进展_重要_突破', '进展_重要_突破'],
+    ['中文_English_中文', '中文_English_中文'],
+    ['😀_重要_😀', '😀_重要_😀'],
+    ['⚠️_注意_⚠️', '⚠️_注意_⚠️'],
+    ['变量 model_name 与 config_value', '变量 model_name 与 config_value'],
+    ['文件名 `data_2026_08.csv`', '文件名 data_2026_08.csv'],
+    ['使用 `*args` 和 `**kwargs` 参数', '使用 *args 和 **kwargs 参数'],
 
-  // Boundary guards. A rule that cannot tell markup from ordinary text must
-  // stay its hand: dropping characters from prose is a visible defect, whereas
-  // leaving one span un-stripped is merely an imperfect preview.
-  check(
-    'intraword underscores are not treated as emphasis',
-    markdownToPlainText('变量 model_name 与 config_value') === '变量 model_name 与 config_value',
-    markdownToPlainText('变量 model_name 与 config_value'),
-  );
-  check(
-    'arithmetic asterisks are not treated as emphasis',
-    markdownToPlainText('5*8=40 与 3*4=12') === '5*8=40 与 3*4=12',
-    markdownToPlainText('5*8=40 与 3*4=12'),
-  );
-  check(
-    'code spans are shielded from the emphasis rules',
-    markdownToPlainText('使用 `*args` 和 `**kwargs` 参数') === '使用 *args 和 **kwargs 参数' &&
-      markdownToPlainText('文件名 `data_2026_08.csv`') === '文件名 data_2026_08.csv',
-    markdownToPlainText('文件名 `data_2026_08.csv`'),
-  );
-  // \w is ASCII-only, so CJK never counts as "inside a word" and the guards
-  // above must not stop Chinese text from being un-marked.
-  check(
-    'CJK runs adjacent to asterisks are still stripped',
-    markdownToPlainText('进展**重要**突破') === '进展重要突破',
-    markdownToPlainText('进展**重要**突破'),
-  );
-  // Underscores are the opposite case: CommonMark forbids intraword `_`
-  // emphasis using Unicode letters, so the renderer shows these literally and
-  // this function must not delete what the page displays. Asserted against
-  // renderSummaryMarkdown's behaviour, which is the ground truth here.
-  check(
-    'CJK-adjacent underscores survive (no intraword emphasis)',
-    markdownToPlainText('进展_重要_突破') === '进展_重要_突破' &&
-      markdownToPlainText('中文_English_中文') === '中文_English_中文',
-    markdownToPlainText('进展_重要_突破'),
-  );
-  check(
-    'a lone list marker on its own line is prose, not a list',
-    markdownToPlainText('2a\n+\n1') === '2a + 1',
-    JSON.stringify(markdownToPlainText('2a\n+\n1')),
-  );
-  // micromark classifies by UTF-16 code unit, so an astral code point looks
-  // like a lone surrogate and ends up word-internal, as do combining marks.
-  // The boundary class mirrors that, otherwise these underscores vanish here
-  // while the rendered page still shows them.
-  check(
-    'underscores beside astral and combining characters survive',
-    markdownToPlainText('😀_重要_😀') === '😀_重要_😀' &&
-      markdownToPlainText('⚠️_注意_⚠️') === '⚠️_注意_⚠️',
-    markdownToPlainText('😀_重要_😀'),
-  );
-  // The sentinel is an implementation detail, but an input containing it must
-  // not silently turn into "undefined"; the guard in markdown.ts skips
-  // shielding entirely in that case.
-  {
-    const sentinel = String.fromCharCode(0);
-    const withNul = `正文${sentinel}0${sentinel}文字`;
+    // Accepted consequence of matching the renderer: CommonMark reads this as
+    // an emphasis span, so the item page drops the asterisks too. Card and page
+    // agreeing matters more than a single faithful-to-source case.
+    ['5*8=40 与 3*4=12', '58=40 与 34=12'],
+
+    // Plain prose is untouched.
+    ['该研究揭示了 LLM 智能体工作流中的普遍现象。', '该研究揭示了 LLM 智能体工作流中的普遍现象。'],
+  ];
+
+  for (const [input, expected] of expectations) {
+    const actual = await summaryPlainText(input);
     check(
-      'input already containing the shield sentinel survives',
-      markdownToPlainText(withNul) === withNul,
-      JSON.stringify(markdownToPlainText(withNul)),
+      `plain text: ${JSON.stringify(input).slice(0, 44)}`,
+      actual === expected,
+      `expected ${JSON.stringify(expected)}, got ${JSON.stringify(actual)}`,
     );
   }
 }

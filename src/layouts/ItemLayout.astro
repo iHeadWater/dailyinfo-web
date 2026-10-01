@@ -7,7 +7,7 @@ import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { briefingRoute, categoryRoute, itemRoute, dailyRoute } from '../lib/urls.ts';
 import { withBase, absoluteUrl } from '../lib/site.ts';
 import { formatDateTime, formatDisplayText, formatEditorialDate } from '../lib/format.ts';
-import { markdownToPlainText, renderSummaryMarkdown } from '../lib/markdown.ts';
+import { renderSummaryMarkdown, summaryPlainText } from '../lib/markdown.ts';
 import { type SiteContent } from '../lib/content.ts';
 
 interface Props {
@@ -24,7 +24,7 @@ const updated = item.data.updated_at ?? item.data.published_at;
 const displayTitle = formatDisplayText(item.data.title);
 // Only feeds <meta description>, so markers are stripped rather than rendered —
 // a share card would otherwise show `## 🧠 模型进展` and `**bold**` verbatim.
-const metaDescription = formatDisplayText(markdownToPlainText(item.data.summary));
+const metaDescription = await summaryPlainText(item.data.summary);
 const displayWhyItMatters = item.data.why_it_matters
   ? formatDisplayText(item.data.why_it_matters)
   : undefined;
