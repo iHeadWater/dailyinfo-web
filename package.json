@@ -15,7 +15,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "validate": "node scripts/validate-content.mjs",
-    "test": "node scripts/contract-tests.mjs && node scripts/dailyinfo-sync.tests.mjs && node scripts/dailyinfo-publish.tests.mjs",
+    "test": "node scripts/contract-tests.mjs && node scripts/dailyinfo-sync.tests.mjs && node scripts/dailyinfo-publish.tests.mjs && node scripts/dailyinfo-fallback.tests.mjs",
     "dailyinfo:sync": "node scripts/dailyinfo-sync.mjs",
     "dailyinfo:publish": "node scripts/dailyinfo-publish.mjs",
     "dailyinfo:fallback": "node scripts/dailyinfo-fallback.mjs",
