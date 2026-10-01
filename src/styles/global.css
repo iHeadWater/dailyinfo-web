@@ -1752,6 +1752,14 @@ html[data-theme='dark'] [data-category='arxiv'] {
   line-height: 1.82;
 }
 
+/* --text-muted measures 4.38–4.43:1 on the tinted panel backgrounds in both
+   themes — under the 4.5:1 this 0.68rem label needs (WCAG 2.2 SC 1.4.3). The
+   same colour passes on the page background, so the override stays scoped to
+   panels rather than weighing down every eyebrow on the site. */
+.content-panel .eyebrow {
+  color: var(--text-secondary);
+}
+
 .content-panel--context {
   border-left-color: var(--editorial);
   background: color-mix(in srgb, var(--surface-muted), transparent 22%);
