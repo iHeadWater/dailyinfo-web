@@ -7,14 +7,21 @@ import { CATEGORIES } from '../lib/categories.ts';
 import { categoryRoute, dailyRoute, archiveRoute, feedRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
 import { itemsOnDate, loadSiteContent } from '../lib/content.ts';
+import { rankForCategory } from '../lib/ranking/index.ts';
 
 const site = await loadSiteContent();
 const latestDate = site.latestDate;
 const latestBriefings = site.briefingsByDate.get(latestDate) ?? [];
 const latestItems = latestDate ? itemsOnDate(site, latestDate) : [];
+// The homepage is the only surface that has to choose — it shows three Papers
+// out of the day's several hundred. Every other list stays chronological; see
+// src/lib/ranking/index.ts for why the choice is made this way.
 const sections = CATEGORIES.map((category) => ({
   category,
-  items: latestItems.filter((item) => item.data.category === category.id),
+  items: rankForCategory(
+    category.id,
+    latestItems.filter((item) => item.data.category === category.id),
+  ),
 }));
 ---
 

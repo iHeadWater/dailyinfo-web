@@ -18,6 +18,7 @@
  *   7. Publication labels (shared format helpers)
  *   8. Item summary markdown rendering (sanitized, heading levels)
  *   9. Plain-text summaries (card previews, RSS descriptions)
+ *  10. Homepage ranking (topic slots + journal prestige, injected policy)
  *
  * Run: npm test
  */
@@ -808,6 +809,325 @@ console.log('\n[9] Plain-text summaries (card previews, RSS, meta descriptions)'
       `expected ${JSON.stringify(expected)}, got ${JSON.stringify(actual)}`,
     );
   }
+}
+
+// ===========================================================================
+console.log('\n[10] Homepage ranking (papers: topic slots + prestige)');
+// ===========================================================================
+{
+  const { rankForCategory } = await lib('ranking/index.ts');
+  const { allocateSlots, computeRelevance, computePrestige } = await lib('ranking/rank.ts');
+  const { PAPERS_POLICY } = await lib('ranking/policy.ts');
+
+  // Mechanism tests inject their OWN policy, so retuning the shipped tables in
+  // policy.ts cannot break a single one of them. That separation is the whole
+  // point of the module split: the shipped values are pinned separately, in the
+  // handful of assertions that are actually about those values.
+  const TEST_POLICY = {
+    relevantSources: new Set(['hydro_j']),
+    titlePattern: /\b(hydrolog|streamflow)/i,
+    relevanceGate: 2,
+    prestige: new Map([
+      ['top_j', 4],
+      ['mid_j', 2],
+    ]),
+    defaultPrestige: 1,
+    relevantSlots: 2,
+  };
+
+  const paper = ({
+    id,
+    journal,
+    title = 'A neutral paper title',
+    sourceTime = null,
+    publishedAt = '2026-10-01T01:00:15Z',
+  }) => ({
+    id,
+    data: {
+      title,
+      source: { name: journal },
+      source_published_at: sourceTime,
+      published_at: publishedAt,
+    },
+  });
+  const idsOf = (entries) => entries.map((entry) => entry.id).join(' | ');
+  const relevanceOf = (item, policy = TEST_POLICY) => computeRelevance(item, policy);
+  const prestigeOf = (item, policy = TEST_POLICY) => computePrestige(item, policy);
+
+  // --- A. mechanism: scoring ------------------------------------------------
+  const onTopic = paper({ id: 'a', journal: 'hydro_j' });
+  check('topic source alone scores 2', relevanceOf(onTopic) === 2, relevanceOf(onTopic));
+  check(
+    'topic title alone scores 1',
+    relevanceOf(paper({ id: 'a', journal: 'plain_j', title: 'Streamflow forecasting with transformers' })) === 1,
+  );
+  check(
+    'source and title add rather than max',
+    relevanceOf(paper({ id: 'a', journal: 'hydro_j', title: 'Streamflow forecasting' })) === 3,
+  );
+  check('an off-topic item scores 0', relevanceOf(paper({ id: 'a', journal: 'plain_j' })) === 0);
+  // 'river' is a substring of 'driver'; the leading \b is what stops this.
+  check(
+    'the title pattern does not match inside a word',
+    relevanceOf(paper({ id: 'a', journal: 'plain_j', title: 'A driver-based framework for model selection' })) === 0,
+  );
+  check(
+    'the title pattern is case-insensitive',
+    relevanceOf(paper({ id: 'a', journal: 'plain_j', title: 'HYDROLOGICAL PROCESSES AT SCALE' })) === 1,
+  );
+  check(
+    'prestige reads the table and falls back to the default',
+    prestigeOf(paper({ id: 'a', journal: 'top_j' })) === 4 &&
+      prestigeOf(paper({ id: 'a', journal: 'mid_j' })) === 2 &&
+      prestigeOf(paper({ id: 'a', journal: 'plain_j' })) === 1,
+  );
+  // If the mechanism had its own hard-coded table, swapping the policy object
+  // would change nothing.
+  check(
+    'scoring is driven by the injected policy, not by module state',
+    relevanceOf(onTopic, { ...TEST_POLICY, relevantSources: new Set() }) === 0 &&
+      relevanceOf(onTopic, { ...TEST_POLICY, relevanceGate: 0 }) === 2,
+  );
+
+  // --- A2. the shipped policy ------------------------------------------------
+  const shippedRelevance = (sourceName, title = 'A neutral paper title') =>
+    computeRelevance(paper({ id: 'a', journal: sourceName, title }), PAPERS_POLICY);
+  check('shipped policy knows journal_hydrology', shippedRelevance('journal_hydrology') >= 2);
+  check('shipped policy knows nature_water', shippedRelevance('nature_water') >= 2);
+  check('shipped policy knows hydrological_processes', shippedRelevance('hydrological_processes') >= 2);
+  // The publisher emits the underscored slug. Matching is exact, not fuzzy, so
+  // a renamed source drops out silently rather than half-matching -- pinning
+  // the near miss documents that this is the intended behaviour.
+  check(
+    'source matching is exact on the slug the publisher emits',
+    shippedRelevance('shuili_xuebao') >= 2 && shippedRelevance('shuilixuebao') < 2,
+  );
+  check(
+    'shipped prestige tiers hold',
+    computePrestige(paper({ id: 'a', journal: 'nature' }), PAPERS_POLICY) === 4 &&
+      computePrestige(paper({ id: 'a', journal: 'journal_hydrology' }), PAPERS_POLICY) === 3 &&
+      computePrestige(paper({ id: 'a', journal: 'unlisted_journal' }), PAPERS_POLICY) === 1,
+  );
+  check('shipped policy reserves two topic slots', PAPERS_POLICY.relevantSlots === 2);
+  // Both sides are exact: a plain_j source contributes 0, so the title is the
+  // only term in play and `< 2` would be true even for a pattern that matched
+  // everything.
+  check(
+    'shipped title pattern keeps the word-boundary guard',
+    shippedRelevance('plain_j', 'A driver-based framework') === 0 &&
+      shippedRelevance('plain_j', 'River discharge') === 1,
+  );
+  // rank.ts calls `.test()` on this object directly. g and y are the two flags
+  // that advance lastIndex, and either one makes the match stateful: three
+  // `.test()` calls on one title give [true,true,true] for /i but
+  // [true,false,true] for both /ig and /iy, i.e. every other Item is missed.
+  check(
+    'shipped title pattern is stateless',
+    PAPERS_POLICY.titlePattern.global === false && PAPERS_POLICY.titlePattern.sticky === false,
+  );
+
+  // --- B. mechanism: slot allocation -----------------------------------------
+  const acceptance = [
+    paper({ id: 'hydro_j-3', journal: 'hydro_j', sourceTime: '2026-10-01T01:00:01Z' }),
+    paper({ id: 'hydro_j-2', journal: 'hydro_j', sourceTime: '2026-10-01T01:00:02Z' }),
+    paper({ id: 'hydro_j-1', journal: 'hydro_j', sourceTime: '2026-10-01T01:00:03Z' }),
+    paper({ id: 'top_j-1', journal: 'top_j' }),
+    paper({ id: 'mid_j-1', journal: 'mid_j' }),
+    paper({ id: 'plain_j-1', journal: 'plain_j' }),
+  ];
+  const ranked = allocateSlots(acceptance, TEST_POLICY);
+  check(
+    'the leading slots go to on-topic items',
+    idsOf(ranked.slice(0, 2)) === 'hydro_j-1 | hydro_j-2',
+    idsOf(ranked),
+  );
+  check(
+    'the next slot goes to the most prestigious item left',
+    ranked[2].id === 'top_j-1',
+    idsOf(ranked),
+  );
+  // Without the relevance key in the fallback comparator this reverses: both
+  // items tie on prestige and time, so the id tiebreak would pick -plain.
+  const fallbackTie = [
+    paper({ id: 'top_j-plain', journal: 'top_j' }),
+    paper({ id: 'top_j-topic', journal: 'top_j', title: 'Streamflow forecasting' }),
+  ];
+  check(
+    'within equal prestige the fallback prefers the on-topic item',
+    allocateSlots(fallbackTie, TEST_POLICY)[0].id === 'top_j-topic',
+    idsOf(allocateSlots(fallbackTie, TEST_POLICY)),
+  );
+  // The fallback comparator's THIRD key. Ids are ordered opposite to the dates,
+  // so dropping the date key leaves the id tiebreak to decide and silently
+  // reverses card 3 -- no other assertion in this section notices, because
+  // every other input either ties on the date or is filtered into the topic
+  // comparator, which has its own pinned copy of the key.
+  const fallbackDates = [
+    paper({ id: 'top_j-a', journal: 'top_j', sourceTime: '2026-09-01T00:00:00Z' }),
+    paper({ id: 'top_j-b', journal: 'top_j', sourceTime: '2026-09-30T00:00:00Z' }),
+  ];
+  check(
+    'the fallback breaks equal prestige on the real source date',
+    idsOf(allocateSlots(fallbackDates, TEST_POLICY)) === 'top_j-b | top_j-a',
+    idsOf(allocateSlots(fallbackDates, TEST_POLICY)),
+  );
+  // relevantSlots is a knob, and 0 is a legitimate setting: topic slots off.
+  check(
+    'zero topic slots yields the plain general ranking',
+    idsOf(allocateSlots(acceptance, { ...TEST_POLICY, relevantSlots: 0 })) ===
+      'top_j-1 | mid_j-1 | hydro_j-1 | hydro_j-2 | hydro_j-3 | plain_j-1',
+    idsOf(allocateSlots(acceptance, { ...TEST_POLICY, relevantSlots: 0 })),
+  );
+  // Both orders below are deliberately not the expected order, so a passthrough
+  // implementation fails them instead of matching by coincidence.
+  check(
+    'a single on-topic item is topped up from the general ranking',
+    idsOf(
+      allocateSlots(
+        [
+          paper({ id: 'plain_j-1', journal: 'plain_j' }),
+          paper({ id: 'top_j-1', journal: 'top_j' }),
+          paper({ id: 'hydro_j-1', journal: 'hydro_j' }),
+        ],
+        TEST_POLICY,
+      ).slice(0, 2),
+    ) === 'hydro_j-1 | top_j-1',
+  );
+  check(
+    'with no on-topic items the ranking is pure prestige',
+    idsOf(
+      allocateSlots(
+        [
+          paper({ id: 'plain_j-1', journal: 'plain_j' }),
+          paper({ id: 'top_j-1', journal: 'top_j' }),
+          paper({ id: 'mid_j-1', journal: 'mid_j' }),
+        ],
+        TEST_POLICY,
+      ),
+    ) === 'top_j-1 | mid_j-1 | plain_j-1',
+  );
+  check(
+    'with no off-topic items the topic fills every slot',
+    idsOf(allocateSlots(acceptance.slice(0, 3), TEST_POLICY)) === 'hydro_j-1 | hydro_j-2 | hydro_j-3',
+  );
+  check('a short input is returned whole', allocateSlots([paper({ id: 'a', journal: 'top_j' })], TEST_POLICY).length === 1);
+  check('an empty input stays empty', allocateSlots([], TEST_POLICY).length === 0);
+  check(
+    'no item is emitted twice',
+    new Set(ranked.map((entry) => entry.id)).size === ranked.length,
+    idsOf(ranked),
+  );
+  // The gate is a policy field, not a constant baked into the allocator.
+  const gateItems = [
+    paper({ id: 'title-only', journal: 'plain_j', title: 'Streamflow forecasting' }),
+    paper({ id: 'source-only', journal: 'top_j' }),
+  ];
+  check(
+    'the relevance gate is policy-driven',
+    allocateSlots(gateItems, TEST_POLICY)[0].id === 'source-only' &&
+      allocateSlots(gateItems, { ...TEST_POLICY, relevanceGate: 1 })[0].id === 'title-only',
+  );
+
+  // --- C. mechanism: comparator details --------------------------------------
+  const timeTie = [
+    paper({ id: 'hydro_j-aaa', journal: 'hydro_j', sourceTime: '2026-09-29T02:30:00Z' }),
+    paper({ id: 'hydro_j-zzz', journal: 'hydro_j', sourceTime: '2026-10-01T01:00:15Z' }),
+  ];
+  // Both share published_at; only source_published_at separates them. Ranking
+  // on the batch timestamp would leave the id tiebreak to decide, putting -aaa
+  // first -- the wrong answer, and the one the site shipped before this module.
+  check(
+    'topic slots break ties on the real source date, not the batch stamp',
+    allocateSlots(timeTie, TEST_POLICY)[0].id === 'hydro_j-zzz',
+    idsOf(allocateSlots(timeTie, TEST_POLICY)),
+  );
+  // Listed in the WRONG order on purpose: only a real fallback puts -null
+  // first, so "unchanged input order" cannot pass this by accident.
+  const nullSourceTime = [
+    paper({ id: 'hydro_j-dated', journal: 'hydro_j', sourceTime: '2026-09-30T08:00:00Z', publishedAt: '2026-10-01T01:00:15Z' }),
+    paper({ id: 'hydro_j-null', journal: 'hydro_j', sourceTime: null, publishedAt: '2026-10-01T01:00:15Z' }),
+  ];
+  // Date.parse(null) is NaN, and a NaN in a comparator silently degrades the
+  // whole sort to input order rather than failing.
+  check(
+    'a null source date falls back to published_at',
+    allocateSlots(nullSourceTime, TEST_POLICY)[0].id === 'hydro_j-null',
+    idsOf(allocateSlots(nullSourceTime, TEST_POLICY)),
+  );
+  // '.' is 0x2E and '_' is 0x5F, so code-unit order puts x.y first -- while
+  // 'x.y'.localeCompare('x_y') is 1, i.e. the opposite. This pins the tiebreak
+  // to code units: localeCompare would follow the host locale (see sources.ts).
+  const idTie = [paper({ id: 'x_y', journal: 'plain_j' }), paper({ id: 'x.y', journal: 'plain_j' })];
+  check(
+    'fully tied items order by code unit, not locale',
+    idsOf(allocateSlots(idTie, TEST_POLICY)) === 'x.y | x_y',
+    idsOf(allocateSlots(idTie, TEST_POLICY)),
+  );
+  check(
+    'ranking is idempotent',
+    idsOf(allocateSlots(allocateSlots(acceptance, TEST_POLICY), TEST_POLICY)) === idsOf(ranked),
+  );
+  // ISO_TIMESTAMP validates a timestamp's SHAPE, not its calendar range, so
+  // these reach the comparator and parse to NaN. An unguarded NaN drops out of
+  // the `||` chain, making the comparison non-transitive.
+  //
+  // The sorting-last clause is what detects that regression here. The
+  // permutation clauses on top of it guard a different breakage: an
+  // implementation that is order-dependent yet happens to be right on the
+  // first permutation. Both clauses earn their place; do not read the
+  // permutations as the detector for this particular bug.
+  const unparseable = [
+    paper({ id: 'plain_j-b', journal: 'plain_j', sourceTime: '2026-06-01T00:00:00Z' }),
+    paper({ id: 'plain_j-a', journal: 'plain_j', sourceTime: '2026-13-01T00:00:00Z' }),
+    paper({ id: 'plain_j-c', journal: 'plain_j', sourceTime: '2026-01-01T00:00:00Z' }),
+  ];
+  const unparseableOrder = (items) => idsOf(allocateSlots(items, TEST_POLICY));
+  check(
+    'an unparseable timestamp sorts last without breaking transitivity',
+    unparseableOrder(unparseable) === 'plain_j-b | plain_j-c | plain_j-a' &&
+      unparseableOrder([...unparseable].reverse()) === 'plain_j-b | plain_j-c | plain_j-a' &&
+      unparseableOrder([unparseable[1], unparseable[2], unparseable[0]]) === 'plain_j-b | plain_j-c | plain_j-a',
+    unparseableOrder(unparseable),
+  );
+
+  // --- D. scope, purity, immutability ----------------------------------------
+  // Pre-shuffled, and carrying an item that the papers policy would happily
+  // rank -- otherwise "unchanged" is satisfied by any sort at all.
+  const offTopicCategories = ['ai_news', 'code', 'resource', 'arxiv'];
+  const shuffled = [
+    paper({ id: 'z-3', journal: 'hydro_j', title: 'Streamflow forecasting' }),
+    paper({ id: 'a-1', journal: 'top_j' }),
+    paper({ id: 'm-2', journal: 'plain_j' }),
+  ];
+  check(
+    'every other category is returned untouched',
+    offTopicCategories.every((category) => idsOf(rankForCategory(category, shuffled)) === 'z-3 | a-1 | m-2'),
+  );
+  check(
+    'the public entry is a pure forward to the allocator',
+    idsOf(rankForCategory('papers', acceptance)) === idsOf(allocateSlots(acceptance, PAPERS_POLICY)),
+  );
+  const frozen = Object.freeze(acceptance.map((entry) => Object.freeze({ ...entry, data: Object.freeze(entry.data) })));
+  let frozeThrew = false;
+  try {
+    allocateSlots(frozen, TEST_POLICY);
+  } catch {
+    frozeThrew = true;
+  }
+  // A mutating implementation calls items.sort(), which throws on a frozen
+  // array in ESM strict mode -- a louder failure than comparing before/after.
+  check('ranking never mutates its input', !frozeThrew);
+  const before = idsOf(acceptance);
+  const returned = allocateSlots(acceptance, TEST_POLICY);
+  check(
+    'ranking returns a new array and leaves the input in input order',
+    returned !== acceptance && idsOf(acceptance) === before,
+  );
+  check(
+    'ranking drops nothing',
+    returned.length === acceptance.length &&
+      [...returned].map((entry) => entry.id).sort().join() === [...acceptance].map((entry) => entry.id).sort().join(),
+  );
 }
 
 // ---------------------------------------------------------------------------
