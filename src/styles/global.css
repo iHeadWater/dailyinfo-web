@@ -1552,6 +1552,15 @@ html[data-theme='dark'] [data-category='arxiv'] {
   cursor: pointer;
   font-size: 0.72rem;
   font-weight: 640;
+  /* `display: flex` replaces the native list-item display, which drops the
+     summary marker in every engine. Hiding it explicitly stops the two from
+     doubling up where one is still painted; .details-action supplies the
+     visible affordance instead. */
+  list-style: none;
+}
+
+.item-batch > summary::-webkit-details-marker {
+  display: none;
 }
 
 .item-batch > summary:hover {
@@ -1559,8 +1568,16 @@ html[data-theme='dark'] [data-category='arxiv'] {
   color: var(--text);
 }
 
-.item-batch > summary span:last-child {
-  color: var(--text-muted);
+.item-batch__tail {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* --text-secondary, not --text-muted: muted measures 4.39:1 against
+   --surface-hover, under the 4.5:1 required at this size (WCAG 2.2 SC 1.4.3). */
+.item-batch__count {
+  color: var(--text-secondary);
   font-size: 0.65rem;
   font-weight: 500;
 }
@@ -1572,6 +1589,27 @@ html[data-theme='dark'] [data-category='arxiv'] {
 
 .item-batch .item-list {
   border-bottom: 0;
+}
+
+/* Journal grouping: only the label presentation differs from the shared shell. */
+.item-batch--source > summary {
+  font-size: 0.78rem;
+}
+
+.item-batch__label {
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--category-accent, var(--rule-strong));
+  color: var(--text);
+}
+
+/* Compact +/- rather than the .briefing-body wording ("展开 +"): this renders
+   once per journal, up to ~28 per page, where the words would dominate the row. */
+.item-batch--source .details-action::before {
+  content: '+';
+}
+
+.item-batch--source[open] .details-action::before {
+  content: '−';
 }
 
 /* Article reading page */

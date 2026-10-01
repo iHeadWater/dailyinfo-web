@@ -7,7 +7,7 @@ import EditionSpine from '../components/EditionSpine.astro';
 import { CATEGORIES } from '../lib/categories.ts';
 import { briefingRoute, categoryRoute, dailyRoute, archiveRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
-import { formatEditorialDate } from '../lib/format.ts';
+import { articleCount, formatEditorialDate } from '../lib/format.ts';
 import { itemsOnDate, type SiteContent } from '../lib/content.ts';
 
 interface Props {
@@ -92,7 +92,7 @@ const seo = {
         <section class="daily-category" data-category={category.id} aria-labelledby={`daily-${category.id}`}>
           <header class="daily-category__header">
             <div>
-              <p class="daily-category__count">{items.length} Articles</p>
+              <p class="daily-category__count">{articleCount(items.length)}</p>
               <h2 id={`daily-${category.id}`}>{category.label}</h2>
               <p>{category.description}</p>
             </div>

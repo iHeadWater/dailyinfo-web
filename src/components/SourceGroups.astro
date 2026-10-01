@@ -1,0 +1,61 @@
+---
+import ItemCard from './ItemCard.astro';
+import { articleCount } from '../lib/format.ts';
+import type { SourceGroup } from '../lib/sources.ts';
+import type { ItemEntry } from '../lib/content.ts';
+
+/**
+ * Collapsible source (journal) groupings for item lists.
+ *
+ * Shared by the category page and the briefing page so both render identical
+ * grouping semantics — the rules themselves live in src/lib/sources.ts, which
+ * is Node-safe and pinned by scripts/contract-tests.mjs.
+ *
+ * Callers render this only when there is more than one group; a single-source
+ * list stays flat, so this component never produces a shell for a lone group.
+ * (A single group may of course still contain only one item — that is a
+ * different thing, and it does render inside a shell.)
+ */
+interface Props {
+  groups: SourceGroup<ItemEntry>[];
+  /** Key of the group that starts expanded; every other group starts collapsed. */
+  openKey?: string | undefined;
+  /** Inner list variant, matching the surrounding page. */
+  variant: 'category' | 'briefing';
+}
+const { groups, openKey, variant } = Astro.props;
+---
+
+<div class="item-batches">
+  {groups.map((group) => (
+    <details class="item-batch item-batch--source" open={group.key === openKey}>
+      {/*
+        Two direct children of <summary>, matching the shape the shared
+        .item-batch styles expect (label left, trailing meta right).
+
+        <summary>'s content model is phrasing content, so the journal name is
+        deliberately NOT a heading — the document outline stays
+        h1 -> h2 (list toolbar) -> h3 (item title). The .details-action span
+        supplies the expand/collapse affordance that `display: flex` removes
+        from the native summary marker.
+      */}
+      <summary>
+        <span class="item-batch__label">{group.label}</span>
+        <span class="item-batch__tail">
+          <span class="item-batch__count">{articleCount(group.items.length)}</span>
+          <span class="details-action" aria-hidden="true" />
+        </span>
+      </summary>
+      <div
+        class:list={[
+          'item-list',
+          variant === 'category' ? 'item-list--category' : 'item-list--briefing',
+        ]}
+      >
+        {group.items.map((item) => (
+          <ItemCard item={item} showCategory={false} compact showTechnicalId headingLevel={3} />
+        ))}
+      </div>
+    </details>
+  ))}
+</div>

@@ -1,5 +1,6 @@
 ---
 import type { Category } from '../lib/categories.ts';
+import { articleLabel } from '../lib/format.ts';
 
 interface Props {
   category: Category;
@@ -18,6 +19,6 @@ const { category, count, eyebrow } = Astro.props;
   </div>
   <p class="count-block" aria-label={`${count} 条内容`}>
     <strong>{count}</strong>
-    <span>Articles</span>
+    <span>{articleLabel(count)}</span>
   </p>
 </header>

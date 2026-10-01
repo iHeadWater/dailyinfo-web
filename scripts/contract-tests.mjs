@@ -14,6 +14,8 @@
  *      root cause: fresh syncs enforce refinements; a stale
  *      node_modules/.astro cache does not re-validate unchanged entries
  *      after the schema is tightened.
+ *   6. Source grouping (journal presentation, pure functions)
+ *   7. Publication labels (shared format helpers)
  *
  * Run: npm test
  */
@@ -306,6 +308,32 @@ console.log('\n[2] Schema validation (shared zod core) — fail closed');
   rejects('malformed stable id rejected', { ...RAW_ITEM, id: 'Bad Id!' });
   rejects('unknown field rejected (.strict())', { ...RAW_ITEM, extra_field: 'x' });
 
+  // -- source.display_name: optional display/grouping field ------------------
+  // RAW_ITEM stays a "no display_name" baseline on purpose: most rejects()
+  // above use it, so the absent-field path is covered by every one of them.
+  const withDisplayName = parseItemFrontmatter(
+    { ...RAW_ITEM, source: { ...RAW_ITEM.source, display_name: 'Journal of Hydrology' } },
+    'items/a.md',
+  );
+  check(
+    'source.display_name accepted when non-empty',
+    withDisplayName.data?.source.display_name === 'Journal of Hydrology',
+    JSON.stringify(withDisplayName.issues),
+  );
+  const nullDisplayName = parseItemFrontmatter(
+    { ...RAW_ITEM, source: { ...RAW_ITEM.source, display_name: null } },
+    'items/a.md',
+  );
+  check(
+    'source.display_name accepts explicit null',
+    !!nullDisplayName.data,
+    JSON.stringify(nullDisplayName.issues),
+  );
+  rejects('empty source.display_name rejected', {
+    ...RAW_ITEM,
+    source: { ...RAW_ITEM.source, display_name: '' },
+  });
+
   const b = parseBriefingFrontmatter(RAW_BRIEFING, 'briefings/x.md');
   check('valid fixture briefing parses', !!b.data, JSON.stringify(b.issues));
   const badBriefing = parseBriefingFrontmatter(
@@ -392,6 +420,51 @@ console.log('\n[3] Publication integrity (shared validator) — fail closed');
       problemsOf([I({ source: { name: 'X', url: 'ftp://example.org/x' } })], [B()]),
       'http(s)',
     ),
+  );
+
+  // -- source labels must be consistent across a source (§11 rule 9) --------
+  // Compares the RESOLVED label, so only genuinely different renderings fail.
+  const labelProblems = (sources) =>
+    problemsOf(
+      sources.map((source, index) =>
+        I({ source }, index === 0 ? 'items/a.md' : `items/${index}.md`),
+      ),
+      [B({ item_ids: [] })],
+    );
+
+  check(
+    'differing resolved labels fail',
+    hasProblem(
+      labelProblems([
+        { name: 'nature', display_name: 'Nature', url: 'https://example.org/a' },
+        { name: 'nature', display_name: 'NATURE', url: 'https://example.org/b' },
+      ]),
+      'renders as',
+    ),
+  );
+  check(
+    'a display_name equal to source.name matches an omitted field',
+    !hasProblem(
+      labelProblems([
+        { name: 'nature', display_name: 'nature', url: 'https://example.org/a' },
+        { name: 'nature', url: 'https://example.org/b' },
+      ]),
+      'renders as',
+    ),
+  );
+  check(
+    'absent and explicit null display_name agree',
+    !hasProblem(
+      labelProblems([
+        { name: 'nature', url: 'https://example.org/a' },
+        { name: 'nature', display_name: null, url: 'https://example.org/b' },
+      ]),
+      'renders as',
+    ),
+  );
+  check(
+    'a single item can never disagree with itself',
+    !hasProblem(labelProblems([{ name: 'nature', display_name: 'Nature', url: 'https://example.org/a' }]), 'renders as'),
   );
 }
 
@@ -484,6 +557,128 @@ console.log('\n[5] Astro content-layer probe (W1-001 regression matrix)');
     { clearStore: false, force: true },
   );
   check('cache-seq 4: --force clears the content cache ⇒ build fails', r.code !== 0);
+}
+
+// ===========================================================================
+console.log('\n[6] Source grouping (journal presentation)');
+// ===========================================================================
+{
+  const { groupItemsBySource, sourceDisplayName, defaultOpenSourceKey } = await lib('sources.ts');
+
+  // Minimal structural stand-in for an ItemEntry — the helpers only read
+  // data.source, so the tests need no astro:content types.
+  const item = (name, display_name, published_at = '2026-08-26T01:00:00Z') => ({
+    data: { source: { name, ...(display_name === undefined ? {} : { display_name }) }, published_at },
+  });
+  const labelsOf = (groups) => groups.map((group) => group.label).join(' | ');
+
+  // -- display name resolution ---------------------------------------------
+  check(
+    'missing display_name falls back to source.name',
+    sourceDisplayName({ name: 'journal_hydrology' }) === 'journal_hydrology',
+  );
+  check(
+    'explicit null display_name falls back to source.name',
+    sourceDisplayName({ name: 'journal_hydrology', display_name: null }) === 'journal_hydrology',
+  );
+  check(
+    'non-empty display_name wins over source.name',
+    sourceDisplayName({ name: 'journal_hydrology', display_name: 'Journal of Hydrology' }) ===
+      'Journal of Hydrology',
+  );
+
+  // -- grouping -------------------------------------------------------------
+  const single = groupItemsBySource([
+    item('arxiv_cs_ai', 'arXiv CS.AI'),
+    item('arxiv_cs_ai', 'arXiv CS.AI'),
+  ]);
+  check('single source ⇒ exactly one group', single.length === 1);
+  check('single group keeps its display name', single[0].label === 'arXiv CS.AI');
+  check('single group key is source.name', single[0].key === 'arxiv_cs_ai');
+  check('empty input ⇒ no groups', groupItemsBySource([]).length === 0);
+
+  const ordered = groupItemsBySource([
+    item('pnas', 'PNAS', '2026-08-26T03:00:00Z'),
+    item('nature', 'Nature', '2026-08-26T02:00:00Z'),
+    item('pnas', 'PNAS', '2026-08-26T01:00:00Z'),
+  ]);
+  check(
+    'grouping preserves input order within a group',
+    ordered
+      .find((group) => group.key === 'pnas')
+      .items.map((entry) => entry.data.published_at)
+      .join() === ['2026-08-26T03:00:00Z', '2026-08-26T01:00:00Z'].join(),
+    ordered.find((group) => group.key === 'pnas').items.length,
+  );
+  check(
+    'groups are returned sorted by label, not by input order',
+    labelsOf(ordered) === 'Nature | PNAS',
+    labelsOf(ordered),
+  );
+
+  // -- ordering (pinned: do not swap for a bare localeCompare, which would
+  //    follow the host locale and make build output machine-dependent) ------
+  const latinAndCjk = groupItemsBySource([
+    item('shuili_xuebao', '水利学报'),
+    item('nature', 'Nature'),
+    item('pnas', 'PNAS'),
+    item('essd', 'Earth System Science Data'),
+  ]);
+  check(
+    'journals sort alphabetically, CJK labels after Latin',
+    labelsOf(latinAndCjk) === 'Earth System Science Data | Nature | PNAS | 水利学报',
+    labelsOf(latinAndCjk),
+  );
+  check(
+    'sorting is case- and accent-insensitive',
+    labelsOf(groupItemsBySource([item('a', 'zeta'), item('b', 'Écologie'), item('c', 'Alpha')])) ===
+      'Alpha | Écologie | zeta',
+    labelsOf(groupItemsBySource([item('a', 'zeta'), item('b', 'Écologie'), item('c', 'Alpha')])),
+  );
+  check(
+    'groups without display_name still sort deterministically',
+    labelsOf(groupItemsBySource([item('water_research'), item('journal_hydrology')])) ===
+      'journal_hydrology | water_research',
+    labelsOf(groupItemsBySource([item('water_research'), item('journal_hydrology')])),
+  );
+
+  // -- default open group ---------------------------------------------------
+  check(
+    'default open = the largest group',
+    defaultOpenSourceKey(
+      groupItemsBySource([
+        item('pnas', 'PNAS'),
+        item('nature', 'Nature'),
+        item('pnas', 'PNAS'),
+        item('pnas', 'PNAS'),
+      ]),
+    ) === 'pnas',
+  );
+  check(
+    'default open tie-breaks to the alphabetically first group',
+    defaultOpenSourceKey(
+      groupItemsBySource([item('pnas', 'PNAS'), item('nature', 'Nature')]),
+    ) === 'nature',
+  );
+  check('no default open for a single group', defaultOpenSourceKey(single) === undefined);
+  check('no default open for empty input', defaultOpenSourceKey([]) === undefined);
+}
+
+// ===========================================================================
+console.log('\n[7] Publication labels (shared format helpers)');
+// ===========================================================================
+{
+  const { articleCount, articleLabel } = await lib('format.ts');
+
+  check('singular article label', articleLabel(1) === 'Article');
+  check(
+    'plural article label covers zero and many',
+    articleLabel(0) === 'Articles' && articleLabel(2) === 'Articles',
+  );
+  check(
+    'article count composes number and label',
+    articleCount(1) === '1 Article' && articleCount(20) === '20 Articles',
+  );
 }
 
 // ---------------------------------------------------------------------------

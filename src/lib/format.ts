@@ -86,3 +86,13 @@ export function truncate(text: string, max: number): string {
   if (text.length <= max) return text;
   return `${text.slice(0, max).trimEnd()}…`;
 }
+
+/** The noun alone, for layouts that render the number in its own element. */
+export function articleLabel(count: number): string {
+  return count === 1 ? 'Article' : 'Articles';
+}
+
+/** Number and noun together, e.g. "1 Article" / "20 Articles". */
+export function articleCount(count: number): string {
+  return `${count} ${articleLabel(count)}`;
+}

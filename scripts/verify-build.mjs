@@ -12,6 +12,7 @@ import { join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { SITE, absoluteUrl, withBase } from '../src/lib/site.ts';
 import { briefingRoute, dailyRoute, itemRoute } from '../src/lib/urls.ts';
+import { CATEGORIES } from '../src/lib/categories.ts';
 import { findRenderedItem } from './verify-build-helpers.mjs';
 
 const repo = new URL('..', import.meta.url).pathname;
@@ -197,6 +198,54 @@ check(
 );
 if (sampleItem) {
   check('sitemap contains representative Item URL', sitemapUrls.includes(itemUrl));
+}
+
+console.log('\n[4] Source (journal) grouping in category pages');
+// Conditional by necessity: a category with a single source must stay flat, and
+// an empty category is a valid state. The count of rendered group shells is
+// derived from the content on disk, not hardcoded.
+const sourcesByCategory = new Map();
+for (const contentItem of contentItems) {
+  if (!contentItem.source?.name) continue;
+  const bucket = sourcesByCategory.get(contentItem.category) ?? new Set();
+  bucket.add(contentItem.source.name);
+  sourcesByCategory.set(contentItem.category, bucket);
+}
+
+for (const category of CATEGORIES) {
+  const sourceCount = (sourcesByCategory.get(category.id) ?? new Set()).size;
+  if (sourceCount === 0) continue;
+
+  // read() swallows file errors and returns '', so a missing artifact must be a
+  // failure here — otherwise a dist layout change would silently turn every
+  // assertion below into a no-op that still reports "passed".
+  const categoryHtml = read(`${category.slug}/index.html`);
+  check(`${category.slug}: category page artifact exists`, categoryHtml.length > 0);
+  if (categoryHtml.length === 0) continue;
+
+  const batches = [
+    ...categoryHtml.matchAll(/<details class="item-batch item-batch--source"[^>]*>/g),
+  ].map((match) => match[0]);
+  const expanded = batches.filter((tag) => / open(=|>|\s|$)/.test(tag));
+
+  if (sourceCount > 1) {
+    check(
+      `${category.slug}: renders one group per source`,
+      batches.length === sourceCount,
+      `${batches.length} group(s) for ${sourceCount} source(s)`,
+    );
+    check(
+      `${category.slug}: exactly one group starts expanded`,
+      expanded.length === 1,
+      `${expanded.length} expanded`,
+    );
+  } else {
+    check(
+      `${category.slug}: single-source category stays a flat list`,
+      batches.length === 0,
+      `${batches.length} group(s)`,
+    );
+  }
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

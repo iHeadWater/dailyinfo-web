@@ -5,6 +5,8 @@ category: papers
 title: "Example Paper: Interpretable Attention Maps for Protein Structure Prediction"
 source:
   name: "OpenReview"
+  # Deliberately omits display_name while openreview-example-001 declares it:
+  # both resolve to the same label, so the consistency rule must accept them.
   url: "https://openreview.net/forum?id=demo-002"
   external_id: "demo-002"
 authors:

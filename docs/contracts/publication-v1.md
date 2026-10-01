@@ -59,6 +59,7 @@ table below is its semantic contract.
 | `source.name` | ✔ | — | non-empty |
 | `source.url` | ✔ | — | absolute http(s) URL (zod `.url()` + http(s) refinement) |
 | `source.external_id` | ✖ | — | non-empty string when present |
+| `source.display_name` | ✖ | falls back to `source.name` | non-empty string or explicit `null`; display and grouping only — never part of identity, URLs or GUIDs |
 | `authors` | ✖ | `[]` | list of non-empty strings |
 | `source_published_at` | ✔ | — | ISO 8601 timestamp with timezone or explicit `null` when the source does not provide a reliable publication time |
 | `retrieved_at` | ✔ | — | ISO 8601 timestamp with timezone |
@@ -72,6 +73,14 @@ table below is its semantic contract.
 
 All objects are `.strict()`: unknown fields fail validation instead of being
 silently dropped.
+
+`source.display_name` is an **additive extension made after the v1 freeze**,
+not a change of v1 semantics: it is optional (every Item published before the
+field existed simply omits it), nothing in §4–§8 derives from it, and
+`schema_version` stays `1`. Because §2 is `.strict()`, a consumer still running
+pre-extension v1 tooling rejects Items that carry the field — the Web
+repository's schema must therefore be deployed **before** any producer starts
+emitting it.
 
 ## 3. Briefing Schema
 
@@ -222,8 +231,9 @@ syntax, language enum, array shapes, unknown-key rejection.
 
 Owns cross-object / cross-collection relationship constraints: duplicate Item
 and Briefing IDs, Briefing id determinism, Briefing↔Item reference resolution
-and bidirectional membership, category consistency, plus one re-applied schema
-rule (http(s) source URL) that guards against the stale-cache behavior below.
+and bidirectional membership, category consistency, source display-label
+consistency (§11 rule 9), plus one re-applied schema rule (http(s) source URL)
+that guards against the stale-cache behavior below.
 
 **Entry points — the same core, never duplicated:**
 
@@ -291,6 +301,10 @@ content into this repository. Its output **must** satisfy:
    Item, and membership is bidirectional (`item.briefing_ids` lists back).
 8. **Category consistency**: briefing category equals every member item's
    category.
+9. **Consistent `source.display_name`**: when emitted, it must come from the
+   source registry's `display_name` and be identical for every Item sharing a
+   `source.name`. Omit it (or emit explicit `null`) rather than inventing a
+   display string; a source whose Items disagree fails the Web build.
 
 **dailyinfo-web does not guess, repair, or silently tolerate malformed
 publications.** Every rule above fails the build (fail closed). The WebPublisher

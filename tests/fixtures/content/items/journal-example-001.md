@@ -5,6 +5,7 @@ category: papers
 title: "Example Paper: Benchmarking Rainfall-Runoff Simulation with Sparse Observations"
 source:
   name: "Journal of Example Hydrology"
+  display_name: "J. Example Hydrology"
   url: "https://example.org/journal-example-001"
 authors: []
 source_published_at: "2026-08-24T09:00:00Z"

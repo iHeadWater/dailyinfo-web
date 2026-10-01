@@ -65,6 +65,14 @@ export const itemSchema = z
     source: z
       .object({
         name: z.string().min(1),
+        /**
+         * Human-readable source name, supplied by the producer from its
+         * source registry (e.g. journal_hydrology -> "Journal of Hydrology").
+         * Display/grouping only — never part of identity, URLs or GUIDs.
+         * Optional and nullable: Python serializes "no value" as null, and
+         * every Item published before this field existed simply omits it.
+         */
+        display_name: z.string().min(1).nullable().optional(),
         url: httpUrl,
         external_id: z.string().min(1).optional(),
       })

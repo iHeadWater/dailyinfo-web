@@ -3,7 +3,7 @@ import type { BriefingEntry } from '../lib/content.ts';
 import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { briefingRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
-import { formatDateTime, formatEditorialDate } from '../lib/format.ts';
+import { articleCount, formatDateTime, formatEditorialDate } from '../lib/format.ts';
 
 interface Props {
   briefing: BriefingEntry;
@@ -22,7 +22,7 @@ const updated = briefing.data.updated_at ?? briefing.data.published_at;
       <p class="briefing-card__meta">
         {showDate && <time datetime={briefing.data.date}>{formatEditorialDate(briefing.data.date)}</time>}
         {showDate && <span aria-hidden="true">·</span>}
-        <span>{briefing.data.item_ids.length} Articles</span>
+        <span>{articleCount(briefing.data.item_ids.length)}</span>
       </p>
       <h3>
         <a href={withBase(briefingRoute(briefing.data.date, briefing.data.category))}>

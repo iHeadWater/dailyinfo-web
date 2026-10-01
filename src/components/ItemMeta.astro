@@ -1,6 +1,7 @@
 ---
 import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { formatDate } from '../lib/format.ts';
+import { sourceDisplayName } from '../lib/sources.ts';
 import type { ItemEntry } from '../lib/content.ts';
 import SourceBadge from './SourceBadge.astro';
 
@@ -19,7 +20,7 @@ const technicalId =
 
 <div class="item-meta">
   {showCategory && <SourceBadge category={category} />}
-  <span class="item-meta__source">{item.data.source.name}</span>
+  <span class="item-meta__source">{sourceDisplayName(item.data.source)}</span>
   {item.data.source_published_at && (
     <>
       <span class="item-meta__separator" aria-hidden="true">·</span>

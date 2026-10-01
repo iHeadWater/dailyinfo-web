@@ -1,6 +1,7 @@
 ---
 import type { ItemEntry } from '../lib/content.ts';
 import { formatDateTime } from '../lib/format.ts';
+import { sourceDisplayName } from '../lib/sources.ts';
 import TagList from './TagList.astro';
 
 interface Props {
@@ -17,7 +18,7 @@ const { item } = Astro.props;
       <dt>Source</dt>
       <dd>
         <a href={item.data.source.url} rel="external noopener noreferrer">
-          {item.data.source.name}<span class="sr-only">（外部链接）</span>
+          {sourceDisplayName(item.data.source)}<span class="sr-only">（外部链接）</span>
         </a>
       </dd>
     </div>

@@ -23,6 +23,9 @@ try {
   const firstItem = readFileSync(itemPath, 'utf8');
   const firstBriefing = readFileSync(briefingPath, 'utf8');
   assert.match(firstItem, /id: "dailyinfo-code-github_trending-2026-09-26"/);
+  // Registry display_name must reach the frontmatter, so this publisher's
+  // output carries the same journal label as the backend's.
+  assert.match(firstItem, /display_name: "GitHub Trending"/);
   assert.match(briefingPath, /2026\/09\/26\/code\.md$/);
 
   const second = syncDailyInfo(options);

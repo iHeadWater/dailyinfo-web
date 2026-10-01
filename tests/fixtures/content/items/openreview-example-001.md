@@ -5,6 +5,7 @@ category: papers
 title: "Example Paper: A Foundation Model for Regional Hydrological Forecasting Across Heterogeneous Basins"
 source:
   name: "OpenReview"
+  display_name: "OpenReview"
   url: "https://openreview.net/forum?id=demo-001"
   external_id: "demo-001"
 authors:

@@ -7,6 +7,7 @@ import {
   type BriefingData,
 } from './schemas.ts';
 import { briefingId } from './identity.ts';
+import { sourceDisplayName } from './sources.ts';
 
 /**
  * Shared validation core — the single implementation of the publication
@@ -177,6 +178,49 @@ export function validatePublicationIntegrity(
 }
 
 /**
+ * Every Item sharing a `source.name` must resolve to the same display label.
+ *
+ * The grouping helpers label a group from the first Item they see, so
+ * disagreement would silently render one journal under different names on
+ * different pages (the category page and the briefing page traverse Items in
+ * different orders).
+ *
+ * Compares the RESOLVED label (`display_name ?? name`), not the raw field —
+ * that is the value actually rendered, and it is the only comparison that does
+ * not fail closed on a set that renders identically. Two shapes that must NOT
+ * be reported: an Item carrying `display_name` equal to its `source.name` mixed
+ * with Items that omit the field, and `null` mixed with omission. Publishers
+ * that adopt the field later (see docs/contracts/publication-v1.md §2) rely on
+ * exactly this: existing Items omit it while new ones may carry the fallback.
+ *
+ * Frozen in docs/contracts/publication-v1.md §11 requirement 9.
+ */
+export function validateConsistentSourceLabels(items: LabeledItem[]): string[] {
+  const problems: string[] = [];
+  const firstSeen = new Map<string, { file: string; label: string }>();
+
+  for (const { file, data } of items) {
+    // The very function the pages render with — reusing it rather than
+    // re-deriving the fallback is what keeps this rule from drifting away
+    // from the thing it is meant to protect.
+    const label = sourceDisplayName(data.source);
+    const known = firstSeen.get(data.source.name);
+    if (!known) {
+      firstSeen.set(data.source.name, { file, label });
+      continue;
+    }
+    if (known.label !== label) {
+      problems.push(
+        `${file}: source "${data.source.name}" renders as ${JSON.stringify(label)} ` +
+          `but ${known.file} renders as ${JSON.stringify(known.label)}`,
+      );
+    }
+  }
+
+  return problems;
+}
+
+/**
  * Full post-parse validation for already-parsed collections.
  * Called by both the CLI gate and the build gate (loadSiteContent).
  */
@@ -184,7 +228,11 @@ export function validateParsedCollections(
   items: LabeledItem[],
   briefings: LabeledBriefing[],
 ): string[] {
-  return [...validateSkippedSchemaRules(items), ...validatePublicationIntegrity(items, briefings)];
+  return [
+    ...validateSkippedSchemaRules(items),
+    ...validateConsistentSourceLabels(items),
+    ...validatePublicationIntegrity(items, briefings),
+  ];
 }
 
 /** Format problems into the fail-closed error message used by both gates. */

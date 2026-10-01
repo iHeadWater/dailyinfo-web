@@ -3,12 +3,14 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import DateNavigation from '../components/DateNavigation.astro';
 import ItemCard from '../components/ItemCard.astro';
+import SourceGroups from '../components/SourceGroups.astro';
 import SourceBadge from '../components/SourceBadge.astro';
 import EditionSpine from '../components/EditionSpine.astro';
 import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { categoryRoute, dailyRoute, briefingRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
 import { formatEditorialDate } from '../lib/format.ts';
+import { groupItemsBySource, defaultOpenSourceKey } from '../lib/sources.ts';
 import { type SiteContent } from '../lib/content.ts';
 import { render } from 'astro:content';
 
@@ -20,12 +22,15 @@ const { site, briefingId } = Astro.props;
 const briefing = site.briefingsById.get(briefingId)!;
 const category = CATEGORY_BY_ID[briefing.data.category];
 const items = briefing.data.item_ids.map((id) => site.itemsById.get(id)!).filter(Boolean);
-const itemBatches = Array.from({ length: Math.ceil(items.length / 50) }, (_, index) => ({
-  start: index * 50,
-  items: items.slice(index * 50, (index + 1) * 50),
-}));
-const formatFolio = (start: number, length: number) =>
-  `${String(start + 1).padStart(3, '0')}–${String(start + length).padStart(3, '0')}`;
+
+// Journal grouping replaces the former fixed 50-item folio batches: both exist
+// to keep a long list scannable, so stacking them would nest two collapse
+// layers while making the folio ranges (001–050, …) meaningless once entries
+// are reordered by source.
+const sourceGroups = groupItemsBySource(items);
+const grouped = sourceGroups.length > 1;
+// defaultOpenSourceKey already yields undefined for fewer than two groups.
+const openKey = defaultOpenSourceKey(sourceGroups);
 
 const { Content } = await render(briefing);
 const updated = briefing.data.updated_at ?? briefing.data.published_at;
@@ -86,32 +91,25 @@ const updated = briefing.data.updated_at ?? briefing.data.published_at;
 
     <section class="briefing-items" aria-labelledby="items-title">
       <div class="list-toolbar">
-        <div><h2 id="items-title">Edition Index</h2><span>标题、来源与摘要</span></div>
+        <div>
+          <h2 id="items-title">Edition Index</h2>
+          <span>{grouped ? '按期刊分组 · 标题、来源与摘要' : '标题、来源与摘要'}</span>
+        </div>
         <span>{items.length} articles</span>
       </div>
       {items.length === 0 && <p class="empty-note">本日报无结构化条目。</p>}
 
-      {itemBatches.length <= 1 ? (
-        <div class="item-list item-list--briefing">
-          {items.map((item) => <ItemCard item={item} showCategory={false} compact showTechnicalId />)}
-        </div>
-      ) : (
-        <div class="item-batches">
-          {itemBatches.map((batch, index) => (
-            <details class="item-batch" open={index === 0}>
-              <summary>
-                <span>{formatFolio(batch.start, batch.items.length)}</span>
-                <span>{batch.items.length} Articles</span>
-              </summary>
-              <div class="item-list item-list--briefing">
-                {batch.items.map((item) => (
-                  <ItemCard item={item} showCategory={false} compact showTechnicalId />
-                ))}
-              </div>
-            </details>
-          ))}
-        </div>
-      )}
+      {
+        grouped ? (
+          <SourceGroups groups={sourceGroups} openKey={openKey} variant="briefing" />
+        ) : (
+          <div class="item-list item-list--briefing">
+            {items.map((item) => (
+              <ItemCard item={item} showCategory={false} compact showTechnicalId />
+            ))}
+          </div>
+        )
+      }
     </section>
 
     <nav class="context-navigation" aria-label="Briefing 上下文导航">

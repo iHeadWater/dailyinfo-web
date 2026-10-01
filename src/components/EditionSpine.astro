@@ -1,5 +1,5 @@
 ---
-import { formatDateTime, formatEditorialDate } from '../lib/format.ts';
+import { articleCount, formatDateTime, formatEditorialDate } from '../lib/format.ts';
 
 interface Props {
   date: string;
@@ -23,7 +23,6 @@ const {
   showLabel = true,
 } = Astro.props;
 
-const articleLabel = articles === 1 ? 'Article' : 'Articles';
 const sectionLabel = sections === 1 ? 'Section' : 'Sections';
 const formattedDate = formatEditorialDate(date);
 ---
@@ -54,7 +53,7 @@ const formattedDate = formatEditorialDate(date);
     </p>
   )}
   <p class="edition-spine__facts">
-    <span>{articles} {articleLabel}</span>
+    <span>{articleCount(articles)}</span>
     <span aria-hidden="true">·</span>
     <span>{sections} {sectionLabel}</span>
   </p>

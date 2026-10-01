@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ItemCard from '../../components/ItemCard.astro';
+import SourceGroups from '../../components/SourceGroups.astro';
 import CategoryHeader from '../../components/CategoryHeader.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { CATEGORIES } from '../../lib/categories.ts';
 import { categoryRoute } from '../../lib/urls.ts';
 import { loadSiteContent } from '../../lib/content.ts';
+import { groupItemsBySource, defaultOpenSourceKey } from '../../lib/sources.ts';
 
 export function getStaticPaths() {
   return CATEGORIES.map((category) => ({
@@ -18,6 +20,13 @@ const { categoryId } = Astro.props;
 const category = CATEGORIES.find((c) => c.id === categoryId)!;
 const site = await loadSiteContent();
 const items = site.itemsByCategory[category.id];
+
+// Group by source (journal) only when it buys the reader something — a
+// single-source category (e.g. arxiv) stays a flat list.
+const sourceGroups = groupItemsBySource(items);
+const grouped = sourceGroups.length > 1;
+// defaultOpenSourceKey already yields undefined for fewer than two groups.
+const openKey = defaultOpenSourceKey(sourceGroups);
 ---
 
 <BaseLayout
@@ -25,18 +34,35 @@ const items = site.itemsByCategory[category.id];
   description={`${category.label} — ${category.description}`}
   path={categoryRoute(category.id)}
 >
-  <div class="page-shell">
+  <div class="page-shell" data-category={category.id}>
     <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: category.label }]} />
     <CategoryHeader category={category} count={items.length} />
     <div class="list-toolbar" aria-label="列表说明">
-      <div><h2>Latest Articles</h2><span>按 DailyInfo 发布时间倒序</span></div>
+      <div>
+        <h2>Latest Articles</h2>
+        {
+          /* Once grouped, the list as a whole is ordered by journal, so the
+             unqualified "newest first" claim would be false. */
+          grouped ? (
+            <span>按期刊分组 · 组内按 DailyInfo 发布时间倒序</span>
+          ) : (
+            <span>按 DailyInfo 发布时间倒序</span>
+          )
+        }
+      </div>
       <span>{items.length} articles</span>
     </div>
     {items.length === 0 && <p class="empty-note">该分类暂无内容。</p>}
-    <div class="item-list item-list--category">
-      {items.map((item) => (
-        <ItemCard item={item} showCategory={false} compact showTechnicalId />
-      ))}
-    </div>
+    {
+      grouped ? (
+        <SourceGroups groups={sourceGroups} openKey={openKey} variant="category" />
+      ) : (
+        <div class="item-list item-list--category">
+          {items.map((item) => (
+            <ItemCard item={item} showCategory={false} compact showTechnicalId />
+          ))}
+        </div>
+      )
+    }
   </div>
 </BaseLayout>

@@ -90,16 +90,21 @@ export function syncDailyInfo(options) {
     if (!source?.url) { skipped.push({ file: file.path, reason: 'unknown-source' }); continue; }
     const markdown = readFileSync(file.path, 'utf8').trim();
     const sourceKey = `${sourceName}${suffix}`;
+    // Mirrors the backend registry default (display_name, falling back to name)
+    // so both publication paths emit the same field with the same value. `||`,
+    // not `??`: an empty configured display name must also fall back.
+    const displayName = source.display_name || sourceName;
     records.push({
       category: file.category,
       date,
       sourceName,
       sourceUrl: source.url,
       sourceKey,
+      displayName,
       markdown,
       reportedEntries: reportedEntryCount(markdown),
       id: `dailyinfo-${slug(file.category)}-${slug(sourceKey)}-${date}`,
-      title: firstHeading(markdown, `${source.display_name || sourceName} · ${date}`),
+      title: firstHeading(markdown, `${displayName} · ${date}`),
     });
   }
 
@@ -124,7 +129,12 @@ export function syncDailyInfo(options) {
       id: record.id,
       category: record.category,
       title: record.title,
-      source: { name: record.sourceName, url: record.sourceUrl, external_id: record.sourceKey },
+      source: {
+        name: record.sourceName,
+        display_name: record.displayName,
+        url: record.sourceUrl,
+        external_id: record.sourceKey,
+      },
       authors: [],
       source_published_at: null,
       retrieved_at: timestampFor(record.date),
