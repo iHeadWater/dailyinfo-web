@@ -7,6 +7,7 @@ import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { briefingRoute, categoryRoute, itemRoute, dailyRoute } from '../lib/urls.ts';
 import { withBase, absoluteUrl } from '../lib/site.ts';
 import { formatDateTime, formatDisplayText, formatEditorialDate } from '../lib/format.ts';
+import { markdownToPlainText, renderSummaryMarkdown } from '../lib/markdown.ts';
 import { type SiteContent } from '../lib/content.ts';
 
 interface Props {
@@ -21,16 +22,23 @@ const briefings = item.data.briefing_ids
   .filter(Boolean);
 const updated = item.data.updated_at ?? item.data.published_at;
 const displayTitle = formatDisplayText(item.data.title);
-const displaySummary = formatDisplayText(item.data.summary);
+// Only feeds <meta description>, so markers are stripped rather than rendered —
+// a share card would otherwise show `## 🧠 模型进展` and `**bold**` verbatim.
+const metaDescription = formatDisplayText(markdownToPlainText(item.data.summary));
 const displayWhyItMatters = item.data.why_it_matters
   ? formatDisplayText(item.data.why_it_matters)
   : undefined;
 const hasLongTitle = [...displayTitle].length > 100;
+// Summaries may carry markdown (section headings, bold). Render the RAW field,
+// not the entity-decoded `metaDescription`: a decoded `&lt;script&gt;` would
+// parse as a raw node and be dropped entirely, deleting the text between the
+// tags. See markdown.ts for why the decoded form is reserved for plain text.
+const summaryHtml = await renderSummaryMarkdown(item.data.summary);
 ---
 
 <BaseLayout
   title={displayTitle}
-  description={displaySummary}
+  description={metaDescription}
   path={itemRoute(item.data.category, item.data.id)}
   type="article"
   publishedTime={item.data.published_at}
@@ -55,7 +63,7 @@ const hasLongTitle = [...displayTitle].length > 100;
     <div class="article-body">
       <section class="content-panel content-panel--summary" aria-labelledby="summary-title">
         <h2 class="eyebrow" id="summary-title">DailyInfo Summary</h2>
-        <p>{displaySummary}</p>
+        <div class="markdown-body markdown-body--panel" set:html={summaryHtml} />
       </section>
 
       {displayWhyItMatters && (

@@ -3,7 +3,8 @@ import { SITE } from '../../lib/site.ts';
 import { CATEGORY_BY_ID, CATEGORIES } from '../../lib/categories.ts';
 import { loadSiteContent } from '../../lib/content.ts';
 import { itemCanonicalUrl, itemGuid } from '../../lib/identity.ts';
-import { truncate } from '../../lib/format.ts';
+import { formatDisplayText, truncate } from '../../lib/format.ts';
+import { markdownToPlainText } from '../../lib/markdown.ts';
 
 /**
  * Per-category feed: /feed/{category-slug}.xml
@@ -30,7 +31,8 @@ export async function GET(context) {
     items: site.itemsByCategory[category.id].map((item) => ({
       title: item.data.title,
       link: itemCanonicalUrl(item.data.category, item.data.id),
-      description: truncate(item.data.summary, 300),
+      // Plain text: a feed reader would otherwise show `## 🧠 模型进展` verbatim.
+      description: truncate(formatDisplayText(markdownToPlainText(item.data.summary)), 300),
       pubDate: new Date(item.data.published_at),
       categories: [category.label],
       customData: `<guid isPermaLink="true">${itemGuid(item.data.category, item.data.id)}</guid>`,

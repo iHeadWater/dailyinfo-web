@@ -3,6 +3,7 @@ import { CATEGORY_BY_ID } from '../lib/categories.ts';
 import { itemRoute } from '../lib/urls.ts';
 import { withBase } from '../lib/site.ts';
 import { formatDisplayText, truncate } from '../lib/format.ts';
+import { markdownToPlainText } from '../lib/markdown.ts';
 import type { ItemEntry } from '../lib/content.ts';
 import TagList from './TagList.astro';
 import ItemMeta from './ItemMeta.astro';
@@ -30,7 +31,10 @@ const category = CATEGORY_BY_ID[item.data.category];
 const href = withBase(itemRoute(item.data.category, item.data.id));
 const Heading = headingLevel === 4 ? 'h4' : 'h3';
 const displayTitle = formatDisplayText(item.data.title);
-const displaySummary = formatDisplayText(item.data.summary);
+// Strip markers from the raw field, then decode: decoding first could turn an
+// escaped entity back into a marker and have it removed. Truncating rendered
+// HTML instead is not an option — it would cut tags in half.
+const displaySummary = formatDisplayText(markdownToPlainText(item.data.summary));
 ---
 
 <article class:list={['item-card', { 'item-card--compact': compact }]} data-category={category.id}>

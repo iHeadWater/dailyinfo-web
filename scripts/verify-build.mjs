@@ -74,10 +74,19 @@ const { item: sampleItem, href: itemHref } = findRenderedItem(
   home,
   (contentItem) => withBase(itemRoute(contentItem.category, contentItem.id)),
 );
+// The homepage links only the latest date's briefings, but a cross-day Item can
+// belong to several. Picking by file order would select a stale one and fail the
+// homepage assertions below on a perfectly good build, so prefer a briefing the
+// homepage actually rendered and fall back to the most recent.
+const itemBriefings = (sampleItem?.briefing_ids ?? [])
+  .map((briefingId) => contentBriefings.find((entry) => entry.id === briefingId))
+  .filter(Boolean);
 const sampleBriefing =
-  contentBriefings.find(
-    (briefing) => sampleItem?.briefing_ids?.includes(briefing.id),
-  ) ?? contentBriefings[0];
+  itemBriefings.find((entry) =>
+    home.includes(withBase(briefingRoute(entry.date, entry.category))),
+  ) ??
+  [...itemBriefings].sort((a, b) => String(b.date).localeCompare(String(a.date)))[0] ??
+  contentBriefings[0];
 const sampleDate = sampleBriefing?.date ?? '';
 const sampleCategory = sampleBriefing?.category ?? 'papers';
 const sampleItemRoute = sampleItem
