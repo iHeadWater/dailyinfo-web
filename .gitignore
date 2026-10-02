@@ -12,7 +12,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-runtime/dailyinfo-sync/
+
+# publisher runtime state: publication reports, the .publish.lock, and the
+# scheduler's own stdout/stderr log. The publisher refuses to run from a dirty
+# worktree, so anything written here has to be ignored or a run's own log file
+# makes the NEXT run refuse to start.
+runtime/
 
 # environment variables
 .env
