@@ -15,5 +15,5 @@ summary: "提供MiniMax-H3模型的Turbo LoRA无审查加速版，在提升生�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

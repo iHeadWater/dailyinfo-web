@@ -15,5 +15,5 @@ summary: "小米 MiMo-V2.6 强化学习开源版本，面向复杂推理与智�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

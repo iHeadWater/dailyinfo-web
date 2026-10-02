@@ -15,5 +15,5 @@ summary: "Qwen官方Qwen-Image-2.1图像生成与编辑演示，展示新一代�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

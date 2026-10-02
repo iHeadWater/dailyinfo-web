@@ -15,5 +15,5 @@ summary: "经过万倍筛选强化的 Fable-5.1-Max 推理数据集，专注高�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

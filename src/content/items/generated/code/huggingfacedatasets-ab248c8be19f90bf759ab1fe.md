@@ -15,5 +15,5 @@ summary: "面向数据任务的轻量级环境集合，用于训练和评估智�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

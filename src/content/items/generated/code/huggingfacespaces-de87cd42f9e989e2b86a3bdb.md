@@ -15,5 +15,5 @@ summary: "Laya多模态对话演示，突出实时交互与生成式AI集成的�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

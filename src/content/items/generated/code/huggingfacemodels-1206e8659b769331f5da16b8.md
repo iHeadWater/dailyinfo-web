@@ -15,5 +15,5 @@ summary: "CLM-v0.1-8B是一个基于对比学习范式的80亿参数文本排序
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

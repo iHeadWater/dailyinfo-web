@@ -15,5 +15,5 @@ summary: "让 AI 代理像'最懒的资深开发者'一样思考，以'少写代
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

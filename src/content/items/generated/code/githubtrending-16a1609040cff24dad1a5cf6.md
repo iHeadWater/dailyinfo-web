@@ -15,5 +15,5 @@ summary: "基于 Claude Code、Codex 和 Pi 构建持久化多代理网络，支
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

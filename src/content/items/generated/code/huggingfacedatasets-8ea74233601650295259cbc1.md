@@ -15,5 +15,5 @@ summary: "ESPnet 生态下的 YODAS3 大规模语音数据资源，支持多语�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

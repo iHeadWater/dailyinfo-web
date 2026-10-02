@@ -15,5 +15,5 @@ summary: "基于Qwen-Image-2.1的无审查GGUF量化版文生图模型，下载�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

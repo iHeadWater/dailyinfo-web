@@ -15,5 +15,5 @@ summary: "维基百科全文数据集，提供多语言高质量知识语料，�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

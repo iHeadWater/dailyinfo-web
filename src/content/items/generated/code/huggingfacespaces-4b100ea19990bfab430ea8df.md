@@ -15,5 +15,5 @@ summary: "MiniMax-H3模型的可交互Gradio演示，便于快速试用其高保
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

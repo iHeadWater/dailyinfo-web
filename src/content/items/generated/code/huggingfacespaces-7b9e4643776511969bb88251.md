@@ -15,5 +15,5 @@ summary: "基于Qwen的图像编辑工作流，支持指令式修图和快速图
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

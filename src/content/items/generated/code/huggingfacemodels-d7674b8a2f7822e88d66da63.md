@@ -15,5 +15,5 @@ summary: "TeleOCR是一款将图像文本转换为结构化文本输出的OCR多
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

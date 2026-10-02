@@ -15,5 +15,5 @@ summary: "完整 arXiv 论文数据集，适合科学文献检索、学术预训
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

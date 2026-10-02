@@ -15,5 +15,5 @@ summary: "Nemotron-3-Diarization是NVIDIA推出的语音活动检测/说话人�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

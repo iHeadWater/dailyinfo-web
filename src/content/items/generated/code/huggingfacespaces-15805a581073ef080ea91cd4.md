@@ -15,5 +15,5 @@ summary: "以静态页面呈现JEV决策指数，用于可视化评估和对比�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---

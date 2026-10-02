@@ -15,5 +15,5 @@ summary: "Qwen3.8-27B是通义千问的270亿参数图像-文本多模态大模�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
 ---
