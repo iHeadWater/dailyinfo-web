@@ -9,11 +9,11 @@ source:
   external_id: "cursor/plugins"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T03:45:06.768050+08:00"
+retrieved_at: "2026-10-03T03:45:05.966042+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "Cursor 官方插件规范及配套插件集合，为 AI 编辑器提供扩展生态。"
+summary: "cursor/plugins：Cursor 的插件规范与官方插件集合，用于扩展编辑器与 Agent 能力生态。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
 ---

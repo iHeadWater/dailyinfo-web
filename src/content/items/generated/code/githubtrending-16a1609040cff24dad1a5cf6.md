@@ -9,11 +9,11 @@ source:
   external_id: "mvschwarz/openrig"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T03:45:06.768050+08:00"
+retrieved_at: "2026-10-03T03:45:05.966042+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "基于 Claude Code、Codex 和 Pi 构建持久化多代理网络，支持角色分工、共享上下文与任务归属。"
+summary: "openrig：用 Claude Code、Codex 和 Pi 搭建持久化 agent 团队网络，支持角色、共享上下文与任务归属。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---

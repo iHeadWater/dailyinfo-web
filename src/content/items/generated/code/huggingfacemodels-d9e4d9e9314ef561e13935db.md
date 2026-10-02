@@ -9,11 +9,11 @@ source:
   external_id: "TaichuAI/ZDTaichu5.0-9B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-01T08:18:43.972035+08:00"
+retrieved_at: "2026-10-03T03:45:15.701832+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "TaichuAI/ZDTaichu5.0-9B 是 90 亿参数图文多模态模型，面向知识增强的视觉语言理解与生成。"
+summary: "紫东太初 90 亿参数多模态图文模型，强化中文场景下的跨模态推理与生成能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-03"]
 ---

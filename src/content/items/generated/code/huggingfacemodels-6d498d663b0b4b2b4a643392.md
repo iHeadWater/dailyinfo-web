@@ -9,11 +9,11 @@ source:
   external_id: "Lightricks/LTX-2.5"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T04:30:41.795915+08:00"
+retrieved_at: "2026-10-03T03:45:15.701832+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "LTX-2.5是Lightricks旗下的图生视频模型，下载量近160万，以高效的图像驱动视频生成和流畅的运动表现见长。"
+summary: "Lightricks 图像转视频模型，支持从静态图生成高保真动态视频，提升时序一致性与运动自然度。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---

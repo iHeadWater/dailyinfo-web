@@ -9,11 +9,11 @@ source:
   external_id: "heygen-com/hyperframes"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T03:45:06.768050+08:00"
+retrieved_at: "2026-10-03T03:45:05.966042+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "为 AI 代理打造的'写 HTML 即渲染视频'工具，用网页技术直接生成视频内容。"
+summary: "hyperframes：让 agent 用 HTML 编写并直接渲染视频的框架，把网页技术变成视频生成流水线。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---

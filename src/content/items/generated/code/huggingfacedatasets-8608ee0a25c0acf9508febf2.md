@@ -9,11 +9,11 @@ source:
   external_id: "MoreThought/Fable-5.1-Max-Reasoning-Filtered-10000x"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T05:16:21.473874+08:00"
+retrieved_at: "2026-10-03T03:45:26.627712+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "经过万倍筛选强化的 Fable-5.1-Max 推理数据集，专注高质量思维链与复杂推理训练。"
+summary: "基于 Fable-5.1-Max 过滤出的高质量推理数据集，面向复杂推理能力蒸馏与强化学习。"
 why_it_matters: null
-tags: []
+tags: ["推理数据", "数据过滤", "模型蒸馏"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "kulkas2pintu/wan777"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T05:30:51.724112+08:00"
+retrieved_at: "2026-10-03T03:45:38.282590+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "以Gradio封装的Wan视频生成体验，面向低门槛文本或图像到视频创作。"
+summary: "Wan 系列视频生成模型的 Gradio 演示空间，提供一体化的文生视频与图生视频实验入口。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
 ---

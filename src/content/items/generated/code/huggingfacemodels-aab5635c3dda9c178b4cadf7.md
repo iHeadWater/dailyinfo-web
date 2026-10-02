@@ -9,11 +9,11 @@ source:
   external_id: "prism-ml/Ternary-Bonsai-2-27B-gguf"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T04:30:41.795915+08:00"
+retrieved_at: "2026-10-03T03:45:15.701832+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Ternary-Bonsai-2-27B-gguf是一个采用三值(ternary)量化的270亿参数文本生成模型，以超370万下载量证明其在极端压缩下仍保持高质量生成能力。"
+summary: "270 亿参数三值量化 GGUF 文本生成模型，以极低比特压缩实现高效本地推理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---

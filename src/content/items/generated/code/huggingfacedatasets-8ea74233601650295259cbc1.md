@@ -9,11 +9,11 @@ source:
   external_id: "espnet/yodas3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T05:16:21.473874+08:00"
+retrieved_at: "2026-10-03T03:45:26.627712+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "ESPnet 生态下的 YODAS3 大规模语音数据资源，支持多语言语音识别与语音基础模型训练。"
+summary: "ESPnet 生态中的 YODAS3 语音语料资源，服务大规模语音识别模型训练与评测。"
 why_it_matters: null
-tags: []
+tags: ["ESPnet", "数据集", "语音识别"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---

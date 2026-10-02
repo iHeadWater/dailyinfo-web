@@ -9,11 +9,11 @@ source:
   external_id: "Zaevlad/audit-findings-dataset"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T05:16:21.473874+08:00"
+retrieved_at: "2026-10-03T03:45:26.627712+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "审计发现数据集，汇集真实审计问题记录，用于风险识别、合规分析与审计文本建模。"
+summary: "结构化审计发现数据集，用于漏洞检测、合规风险分析与自动化审计模型研究。"
 why_it_matters: null
-tags: []
+tags: ["审计", "漏洞检测", "风险分析"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
 ---

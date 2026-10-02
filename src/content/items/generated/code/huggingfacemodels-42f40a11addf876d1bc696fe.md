@@ -9,11 +9,11 @@ source:
   external_id: "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-02T04:30:41.795915+08:00"
+retrieved_at: "2026-10-03T03:45:15.701832+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Qwen3.8-27B的GSQ-RCO GGUF量化版由ISTA-DASLab发布，以近170万下载量提供高压缩比下仍保留多模态能力的本地推理方案。"
+summary: "270 亿参数多模态 Qwen3.8 的 GSQ-RCO GGUF 量化版，降低显存占用同时保留图文理解能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
 ---
