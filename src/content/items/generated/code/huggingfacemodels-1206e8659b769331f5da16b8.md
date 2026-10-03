@@ -9,11 +9,11 @@ source:
   external_id: "Contrastive-LM/CLM-v0.1-8B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:15.701832+08:00"
+retrieved_at: "2026-10-04T03:45:35.728983+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "80 亿参数文本排序模型，采用对比学习优化相关性排序，适用于检索与 RAG 重排。"
+summary: "8B 对比式文本排序模型，以对比学习提升检索与重排序相关性，适用于 RAG 和搜索场景。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "SupersonicLabs/Julia-1"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:15.701832+08:00"
+retrieved_at: "2026-10-04T03:45:35.728983+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Supersonic Labs 的文本分类模型，主打快速精准的类别判别与轻量推理。"
+summary: "面向文本分类的轻量模型，强调快速推理与多类别识别，适合实时内容标签和意图判别。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

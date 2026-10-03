@@ -9,11 +9,11 @@ source:
   external_id: "Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:38.282590+08:00"
+retrieved_at: "2026-10-04T03:46:37.806884+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "基于 MiniMax-H3 的 Turbo LoRA 无审查版 Gradio 演示，主打低延迟、高自由度生成与定制化推理。"
+summary: "为 MiniMax-H3 Turbo 提供无审查 LoRA 微调与 Gradio 交互生成，主打解除内容限制并保持 Turbo 快速推理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

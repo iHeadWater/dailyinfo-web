@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/Nemotron-3-Diarization"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:15.701832+08:00"
+retrieved_at: "2026-10-04T03:45:35.728983+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "NVIDIA Nemotron-3 系列说话人分离模型，集成语音活动检测以定位并区分多人对话中的说话人。"
+summary: "NVIDIA Nemotron-3 的说话人分离与语音活动检测模型，支持多人语音场景中的分段和说话人识别。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

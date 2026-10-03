@@ -9,11 +9,11 @@ source:
   external_id: "LocalLLaMA/typed-decisions"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:26.627712+08:00"
+retrieved_at: "2026-10-04T03:46:29.924320+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "类型化决策数据资源，帮助 LLM 进行结构化、可解释的决策推理与行为建模。"
+summary: "类型化决策数据集，用于训练 LLM 智能体进行可解释、可验证的决策选择与推理。"
 why_it_matters: null
-tags: ["LLM", "决策数据", "可解释性"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

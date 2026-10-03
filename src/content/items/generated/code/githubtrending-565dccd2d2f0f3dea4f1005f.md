@@ -9,11 +9,11 @@ source:
   external_id: "Effect-TS/effect"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:05.966042+08:00"
+retrieved_at: "2026-10-04T03:45:05.770476+08:00"
 published_at: "2026-10-03T03:45:46.426270+08:00"
-summary: "Effect-TS/effect：用 TypeScript 构建生产级应用的效果系统与全栈框架，提升类型安全、可观测性与可组合性。"
+summary: "用 TypeScript 构建生产级应用的效果系统与运行时，提供类型安全、可组合的并发、错误处理和依赖注入能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
 ---

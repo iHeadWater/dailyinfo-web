@@ -9,11 +9,11 @@ source:
   external_id: "XiaomiMiMo/MiMo-V2.6-RL-oss"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:26.627712+08:00"
+retrieved_at: "2026-10-04T03:46:29.924320+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "小米开源 MiMo-V2.6 强化学习版本，旨在以 RL 后训练提升大模型推理与智能体能力。"
+summary: "小米开源的 MiMo-V2.6-RL 模型，聚焦强化学习驱动的复杂推理与可部署开源能力。"
 why_it_matters: null
-tags: ["大模型", "开源", "强化学习"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

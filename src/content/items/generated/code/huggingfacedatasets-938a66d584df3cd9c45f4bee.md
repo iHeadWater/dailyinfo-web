@@ -9,11 +9,11 @@ source:
   external_id: "LightwheelAI/EgoPro"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:26.627712+08:00"
+retrieved_at: "2026-10-04T03:46:29.924320+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "面向具身智能的第一人称操作交互数据资源，强化机器人从自我中心视角学习感知与动作。"
+summary: "面向第一视角操作场景的 EgoPro 数据集，用于具身智能、动作理解与机器人学习。"
 why_it_matters: null
-tags: ["具身智能", "机器人学习", "第一人称"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

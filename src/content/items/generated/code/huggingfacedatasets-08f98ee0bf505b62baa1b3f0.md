@@ -9,11 +9,11 @@ source:
   external_id: "wikimedia/wikipedia"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:26.627712+08:00"
+retrieved_at: "2026-10-04T03:46:29.924320+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "维基百科大规模多语种文本语料，是 LLM 预训练、知识问答与检索增强的基础资源。"
+summary: "维基百科全量文本数据集，为多语言预训练、检索增强生成与知识问答提供权威语料。"
 why_it_matters: null
-tags: ["多语种", "维基百科", "预训练"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

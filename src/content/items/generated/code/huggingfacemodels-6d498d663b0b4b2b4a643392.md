@@ -9,11 +9,11 @@ source:
   external_id: "Lightricks/LTX-2.5"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:15.701832+08:00"
+retrieved_at: "2026-10-04T03:45:35.728983+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Lightricks 图像转视频模型，支持从静态图生成高保真动态视频，提升时序一致性与运动自然度。"
+summary: "Lightricks 的图像转视频模型，支持从单帧生成连贯视频，面向高质量动态内容创作与短视频生产。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
 ---

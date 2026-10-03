@@ -9,11 +9,11 @@ source:
   external_id: "JuliusBrussee/caveman"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:05.966042+08:00"
+retrieved_at: "2026-10-04T03:45:05.770476+08:00"
 published_at: "2026-10-03T03:45:46.426270+08:00"
-summary: "caveman：通过让编码 agent 用“原始人语”交流并作为代理，削减 65% token 消耗的爆红技能。"
+summary: "通过“原始人式”极简表达压缩提示词，作为编码代理技能与代理可削减约 65% token 消耗。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
 ---
