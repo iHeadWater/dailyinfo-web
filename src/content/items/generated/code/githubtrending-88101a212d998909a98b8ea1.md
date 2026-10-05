@@ -9,11 +9,11 @@ source:
   external_id: "pingdotgg/t3code"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-04T03:45:05.770476+08:00"
+retrieved_at: "2026-10-05T14:07:25.555210+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "基于 TypeScript 的 t3code 项目，当前未提供官方描述，疑似围绕 T3 技术栈的代码实践或工具。"
+summary: "暂无官方描述——pingdotgg 出品的 TypeScript 新项目 t3code，具体能力待公开。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05"]
 ---

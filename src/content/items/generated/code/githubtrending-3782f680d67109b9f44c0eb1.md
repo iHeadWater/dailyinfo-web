@@ -9,11 +9,11 @@ source:
   external_id: "thedotmack/claude-mem"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-04T03:45:05.770476+08:00"
+retrieved_at: "2026-10-05T14:07:25.555210+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "为各类 AI 代理提供跨会话持久上下文：记录会话行为、AI 压缩记忆，并在未来会话中注入相关上下文。"
+summary: "为各类 AI 代理提供跨会话持久上下文：捕获会话全过程、用 AI 压缩并向前续会话回注相关记忆。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05"]
 ---

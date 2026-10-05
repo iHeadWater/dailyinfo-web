@@ -9,11 +9,11 @@ source:
   external_id: "DietrichGebert/ponytail"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-04T03:45:05.770476+08:00"
+retrieved_at: "2026-10-05T14:07:25.555210+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "让 AI 编码代理像“最懒的资深开发者”一样思考，以少写甚至不写代码为最优解，从源头减少冗余实现。"
+summary: "让 AI 代理像“房间里最懒的资深开发者”那样思考——最好的代码是从未写过的代码。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
 ---

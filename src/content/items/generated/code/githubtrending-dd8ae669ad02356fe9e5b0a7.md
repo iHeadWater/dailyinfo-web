@@ -9,11 +9,11 @@ source:
   external_id: "addyosmani/agent-skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-04T03:45:05.770476+08:00"
+retrieved_at: "2026-10-05T14:07:25.555210+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "为 AI 编码代理提供生产级工程技能，把资深工程实践沉淀为可复用代理能力。"
+summary: "面向 AI 编码代理的生产级工程技能集。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05"]
 ---

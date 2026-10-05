@@ -9,11 +9,11 @@ source:
   external_id: "coreyhaines31/marketingskills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-03T03:45:05.966042+08:00"
+retrieved_at: "2026-10-05T14:07:25.555210+08:00"
 published_at: "2026-10-03T03:45:46.426270+08:00"
-summary: "marketingskills：面向 Claude Code 与 AI agent 的营销技能包，覆盖 CRO、文案、SEO、分析与增长工程。"
+summary: "为 Claude Code 与 AI 代理提供 CRO、文案、SEO、分析与增长工程等营销技能包。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-05"]
 ---
