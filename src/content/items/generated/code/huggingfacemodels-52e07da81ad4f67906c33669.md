@@ -9,11 +9,11 @@ source:
   external_id: "Venastine-Research/Xing4.0-29B-A4B-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-05T14:07:33.497010+08:00"
+retrieved_at: "2026-10-06T03:45:15.065087+08:00"
 published_at: "2026-10-05T14:08:15.314783+08:00"
-summary: "Venastine Research 的 Xing4.0-29B-A4B 文本生成模型 GGUF 版，以稀疏激活架构平衡性能与本地推理成本。"
+summary: "Xing4.0 29B 稀疏激活文本生成模型的 GGUF 量化版，兼顾大模型能力与本地推理效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06"]
 ---

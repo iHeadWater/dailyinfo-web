@@ -9,11 +9,11 @@ source:
   external_id: "Contrastive-LM/CLM-v0.1-8B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-05T14:07:33.497010+08:00"
+retrieved_at: "2026-10-06T03:45:15.065087+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Contrastive-LM 的 8B 文本排序模型 CLM-v0.1，利用对比学习提升检索与重排相关性。"
+summary: "8B 对比学习文本排序模型，通过对比式训练提升检索、重排与相关性判断效果。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06"]
 ---

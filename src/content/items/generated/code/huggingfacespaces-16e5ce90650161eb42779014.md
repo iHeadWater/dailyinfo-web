@@ -9,11 +9,11 @@ source:
   external_id: "kulkas2pintu/wan777"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-05T14:08:02.666232+08:00"
+retrieved_at: "2026-10-06T03:46:14.491947+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "以 Gradio 封装的 wan777 视频生成工作流，便于快速体验 Wan 系列模型的文/图生视频能力。"
+summary: "Wan系列视频生成模型的Gradio演示与创作空间，突出快速生成和参数调试。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06"]
 ---
