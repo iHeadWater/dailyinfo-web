@@ -9,11 +9,11 @@ source:
   external_id: "msitarzewski/agency-agents"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-06T03:45:05.931084+08:00"
+retrieved_at: "2026-10-07T03:45:05.891659+08:00"
 published_at: "2026-10-06T03:46:23.168754+08:00"
-summary: "开箱即用的完整 AI 代理机构，每个智能体都是具备人格、流程与交付能力的专业专家。"
+summary: "开箱即用的完整 AI 代理团队，每个代理都是带有个性、流程与交付标准的专精角色。"
 why_it_matters: null
-tags: ["AI智能体", "Shell", "多代理"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06"]
+briefing_ids: ["code-2026-10-06", "code-2026-10-07"]
 ---
