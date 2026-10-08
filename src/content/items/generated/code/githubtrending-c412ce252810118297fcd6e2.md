@@ -15,5 +15,5 @@ summary: "codegraph：预索引代码知识图谱，随代码变更自动同步�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-03"]
 ---

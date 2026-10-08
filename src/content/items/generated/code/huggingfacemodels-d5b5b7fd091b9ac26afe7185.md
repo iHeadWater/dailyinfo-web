@@ -15,5 +15,5 @@ summary: "GLiNER2.5-Decide是GLiNER系列的词元级分类模型，支持零样
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-02"]
 ---

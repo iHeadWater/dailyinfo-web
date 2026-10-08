@@ -15,5 +15,5 @@ summary: "openrig：用 Claude Code、Codex 和 Pi 搭建持久化 agent 团队�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
 ---

@@ -15,5 +15,5 @@ summary: "270 亿参数多模态 Qwen3.8 的 GSQ-RCO GGUF 量化版，降低显�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
 ---

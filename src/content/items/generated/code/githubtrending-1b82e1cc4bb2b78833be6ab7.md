@@ -15,5 +15,5 @@ summary: "Firebase 官方 Apple 平台（iOS/macOS 等）开发 SDK，提供后�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-01", "code-2026-10-02"]
+briefing_ids: ["code-2026-10-02"]
 ---
