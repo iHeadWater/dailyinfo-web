@@ -9,11 +9,11 @@ source:
   external_id: "ayghri/i-have-adhd"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-07T03:45:05.891659+08:00"
+retrieved_at: "2026-10-08T03:45:05.781510+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "强制编码代理直给答案、避免结论被埋没的 ADHD 友好输出技能。"
+summary: "约束编码智能体别再铺垫废话，直接给出答案的 ADHD 友好输出技能。"
 why_it_matters: null
-tags: []
+tags: ["AI Agent", "Python", "提示工程"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08"]
 ---

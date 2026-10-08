@@ -9,11 +9,11 @@ source:
   external_id: "morluto/rea"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-07T03:45:05.891659+08:00"
+retrieved_at: "2026-10-08T03:45:05.781510+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "用代理对任意目标做逆向工程，从应用行为一路深入到原生二进制。"
+summary: "用智能体对任意目标做逆向工程，从应用行为一路下探到原生二进制。"
 why_it_matters: null
-tags: []
+tags: ["AI Agent", "TypeScript", "逆向工程"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08"]
 ---

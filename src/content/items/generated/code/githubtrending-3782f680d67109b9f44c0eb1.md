@@ -9,11 +9,11 @@ source:
   external_id: "thedotmack/claude-mem"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-07T03:45:05.891659+08:00"
+retrieved_at: "2026-10-08T03:45:05.781510+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "为各类代理提供跨会话持久记忆：自动捕获会话行为、AI 压缩并回注相关上下文，兼容 Claude Code、Codex、Gemini 等。"
+summary: "为各类智能体提供跨会话持久上下文：捕获会话行为、AI 压缩摘要，并把相关记忆回注到后续会话。"
 why_it_matters: null
-tags: []
+tags: ["AI Agent", "TypeScript", "记忆管理"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
 ---

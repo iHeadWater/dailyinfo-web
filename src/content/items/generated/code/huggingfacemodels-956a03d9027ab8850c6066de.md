@@ -9,11 +9,11 @@ source:
   external_id: "Infatoshi/GLM-5.3-UNCENSORED-EXL3-3.0bpw"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-07T03:45:12.571445+08:00"
+retrieved_at: "2026-10-08T03:45:13.463003+08:00"
 published_at: "2026-10-05T14:08:15.314783+08:00"
-summary: "GLM-5.3 去审查文本生成模型，以 EXL3 3.0bpw 量化实现低显存本地推理。"
+summary: "GLM-5.3 无审查版本的 EXL3 3.0bit 量化模型，以极低位宽实现本地高自由度文本生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
 ---
