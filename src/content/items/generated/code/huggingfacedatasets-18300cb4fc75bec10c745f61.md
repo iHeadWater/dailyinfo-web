@@ -9,11 +9,11 @@ source:
   external_id: "witfoo/precinct6-cybersecurity"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:46:00.223014+08:00"
+retrieved_at: "2026-10-09T07:59:45.541722+08:00"
 published_at: "2026-10-08T03:46:20.241478+08:00"
-summary: "Precinct6 网络安全数据集，面向威胁检测、日志分析与安全运营场景。"
+summary: "Precinct6网络安全数据集，为威胁检测、日志分析与安全评测提供场景化样本。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-08"]
+briefing_ids: ["code-2026-10-08", "code-2026-10-09"]
 ---

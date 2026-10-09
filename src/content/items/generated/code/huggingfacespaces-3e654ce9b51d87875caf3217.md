@@ -9,11 +9,11 @@ source:
   external_id: "autotrust/JEV-27B-Demo"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:46:13.353308+08:00"
+retrieved_at: "2026-10-09T07:59:54.510861+08:00"
 published_at: "2026-10-06T03:46:23.168754+08:00"
-summary: "JEV-27B 模型的 Docker 化演示环境，展示大规模模型在自动化信任评估与决策验证中的能力。"
+summary: "基于 Docker 部署的 JEV-27B 演示环境，展示 27B 模型在可信决策与评估场景的交互能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "jialinyyzz/humanizer"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:45:13.463003+08:00"
+retrieved_at: "2026-10-09T07:59:30.899218+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "专注“去 AI 味”的文本生成模型，可将机器文本改写为更自然的人类写作风格。"
+summary: "jialinyyzz/humanizer 是面向文本人性化改写的生成模型，帮助输出更自然、更接近人类写作风格的内容。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

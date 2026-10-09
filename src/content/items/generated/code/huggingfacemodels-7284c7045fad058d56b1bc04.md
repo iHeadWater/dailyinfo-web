@@ -9,11 +9,11 @@ source:
   external_id: "autotrust/GEV-26B-Decide"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:45:13.463003+08:00"
+retrieved_at: "2026-10-09T07:59:30.899218+08:00"
 published_at: "2026-10-06T03:46:23.168754+08:00"
-summary: "26B 规模的文本分类决策模型，面向高精度判别式任务，近 90 万下载量印证其工业级可用性。"
+summary: "autotrust/GEV-26B-Decide 是 26B 文本分类决策模型，强化业务场景下的高精度标签判定与自动化决策。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "datasocial/tiktok-5.6B-videos"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:46:00.223014+08:00"
+retrieved_at: "2026-10-09T07:59:45.541722+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "覆盖 56 亿条 TikTok 视频的大规模社交媒体数据集，支撑趋势分析、推荐与内容理解研究。"
+summary: "覆盖56亿条TikTok视频的大规模多模态数据集，面向推荐、内容理解与社交行为研究。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

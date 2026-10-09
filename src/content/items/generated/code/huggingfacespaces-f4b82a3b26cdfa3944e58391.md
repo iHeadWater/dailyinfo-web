@@ -9,11 +9,11 @@ source:
   external_id: "Viggle/Qwen-Image-2.1-viggle-turbo"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:46:13.353308+08:00"
+retrieved_at: "2026-10-09T07:59:54.510861+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Viggle 与 Qwen-Image 2.1 Turbo 结合的 Gradio 演示，强化快速图像生成与动作/视频驱动能力。"
+summary: "Viggle 版 Qwen-Image 2.1 Turbo Gradio 演示，主打高速图像生成与可控视觉创作。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

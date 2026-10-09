@@ -9,11 +9,11 @@ source:
   external_id: "nisten/opus5-5-doctor-patient-conversations-all-human-diseases"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:46:00.223014+08:00"
+retrieved_at: "2026-10-09T07:59:45.541722+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "覆盖全人类疾病的医患对话数据集，用于医疗问诊模型训练与临床对话评估。"
+summary: "覆盖全病种的医患对话数据集，用于医疗问诊、诊断推理与临床NLP训练评测。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---
