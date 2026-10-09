@@ -9,11 +9,11 @@ source:
   external_id: "aidigestorg/ai-village"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-09T07:59:45.541722+08:00"
+retrieved_at: "2026-10-10T03:45:28.915300+08:00"
 published_at: "2026-10-05T14:08:15.314783+08:00"
-summary: "AI村庄模拟数据集/环境，用于多智能体协作、社会互动与AI社区行为研究。"
+summary: "面向AI智能体社区协作与行为研究的AI Village项目，提供模拟交互数据以观察多智能体社会动态。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
 ---

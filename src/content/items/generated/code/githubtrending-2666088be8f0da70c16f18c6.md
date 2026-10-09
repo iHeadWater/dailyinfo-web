@@ -9,11 +9,11 @@ source:
   external_id: "storytold/artcraft"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-09T07:59:23.407957+08:00"
+retrieved_at: "2026-10-10T03:45:06.286585+08:00"
 published_at: "2026-10-09T08:00:04.594955+08:00"
-summary: "面向艺术家、设计师与电影制作人的Rust创作引擎，以有意设计的创作范式提供高性能图形与内容生成能力。"
+summary: "artcraft：面向艺术家、设计师和电影制作人的意图驱动创作引擎，以 Rust 实现精细可控的创意制作流程。"
 why_it_matters: null
-tags: ["Rust", "创作引擎", "图形渲染", "艺术设计"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10"]
 ---

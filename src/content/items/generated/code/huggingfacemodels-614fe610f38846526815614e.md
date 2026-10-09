@@ -9,11 +9,11 @@ source:
   external_id: "Cloudflare/clef"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-09T07:59:30.899218+08:00"
+retrieved_at: "2026-10-10T03:45:18.136760+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "Cloudflare/clef 是 Cloudflare 推出的图文到文本多模态模型，聚焦云端高效视觉理解与推理集成。"
+summary: "Cloudflare Clef 是图文到文本多模态模型，联合理解图像与文字，面向高效视觉语言推理任务。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
 ---

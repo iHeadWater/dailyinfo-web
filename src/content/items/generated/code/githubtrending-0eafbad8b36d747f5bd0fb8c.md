@@ -9,11 +9,11 @@ source:
   external_id: "anthropics/knowledge-work-plugins"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-09T07:59:23.407957+08:00"
+retrieved_at: "2026-10-10T03:45:06.286585+08:00"
 published_at: "2026-10-09T08:00:04.594955+08:00"
-summary: "Anthropic官方开源的知识工作者插件库，面向Claude Cowork场景提供即用型知识工作流扩展。"
+summary: "knowledge-work-plugins：Anthropic 开源的知识工作者插件库，让用户在 Claude Cowork 中扩展协作与知识处理能力。"
 why_it_matters: null
-tags: ["Claude Cowork", "Python", "插件", "知识工作"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10"]
 ---

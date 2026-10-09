@@ -9,11 +9,11 @@ source:
   external_id: "addyosmani/agent-skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-08T03:45:05.781510+08:00"
+retrieved_at: "2026-10-10T03:45:06.286585+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "为 AI 编码智能体提供生产级工程实践能力的技能合集。"
+summary: "agent-skills：为 AI 编程代理提供生产级工程技能，提升其在实际软件工程中的可靠性与交付质量。"
 why_it_matters: null
-tags: ["AI Agent", "JavaScript", "工程实践"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-08", "code-2026-10-10"]
 ---

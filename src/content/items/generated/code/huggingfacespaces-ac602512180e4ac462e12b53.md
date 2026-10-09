@@ -9,11 +9,11 @@ source:
   external_id: "arudradey/qwen-image-2.1-uncensored-gguf"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-09T07:59:54.510861+08:00"
+retrieved_at: "2026-10-10T03:45:37.270287+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "提供 Qwen-Image 2.1 无审查 GGUF 量化模型的 Gradio 推理界面，兼顾低显存部署与开放图像生成。"
+summary: "Qwen-Image 2.1 无审查 GGUF 量化版，搭配 Gradio 界面实现低门槛本地图像生成与低显存部署。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
 ---
