@@ -15,5 +15,5 @@ summary: "来自资深工程师.agents目录的实战技能集合，为真实工
 why_it_matters: null
 tags: ["AI代理", "Shell", "可复用模块", "工程技能"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

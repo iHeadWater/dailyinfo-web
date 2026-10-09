@@ -15,5 +15,5 @@ summary: "一条 CLI 让 AI 智能体零 API 费用地读取和搜索 Twitter、
 why_it_matters: null
 tags: ["CLI", "Python", "信息检索"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06"]
 ---

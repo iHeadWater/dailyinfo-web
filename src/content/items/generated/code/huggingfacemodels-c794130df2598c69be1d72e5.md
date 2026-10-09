@@ -15,5 +15,5 @@ summary: "基于 Qwen3.8-Flash 的 GSQ/RCO 量化多模态代码模型，面向�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---

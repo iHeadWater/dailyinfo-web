@@ -15,5 +15,5 @@ summary: "基于 MiniMax-H3 的角色替换 LoRA，实现视频到视频中的�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---

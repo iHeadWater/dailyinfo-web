@@ -15,5 +15,5 @@ summary: "Krea-2-Turbo v2 的 Gradio 图像生成演示，强调高速、高质�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05"]
 ---

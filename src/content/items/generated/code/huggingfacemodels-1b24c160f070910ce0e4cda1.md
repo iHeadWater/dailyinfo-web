@@ -15,5 +15,5 @@ summary: "图像到图像换脸模型，主打高保真、自然融合的人脸�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-08"]
 ---

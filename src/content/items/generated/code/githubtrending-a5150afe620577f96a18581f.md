@@ -15,5 +15,5 @@ summary: "为 Claude Code 与 AI 代理提供 CRO、文案、SEO、分析与增�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-05"]
 ---

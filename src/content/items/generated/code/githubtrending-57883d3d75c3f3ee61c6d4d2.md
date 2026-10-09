@@ -15,5 +15,5 @@ summary: "通过“原始人式”极简表达压缩提示词，作为编码代�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---

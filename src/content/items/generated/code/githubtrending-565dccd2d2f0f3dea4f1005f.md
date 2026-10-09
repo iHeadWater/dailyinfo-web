@@ -15,5 +15,5 @@ summary: "用 TypeScript 构建生产级应用的效果系统与运行时，提�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---

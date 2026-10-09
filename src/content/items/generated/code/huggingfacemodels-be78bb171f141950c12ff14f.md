@@ -15,5 +15,5 @@ summary: "DeepSeek V4.1 Flash 多模态模型，强调快速图文理解与高�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-07"]
 ---

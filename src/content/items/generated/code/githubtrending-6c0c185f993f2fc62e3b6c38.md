@@ -15,5 +15,5 @@ summary: "一套可落地的代理技能框架与软件开发方法论，让 AI 
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---

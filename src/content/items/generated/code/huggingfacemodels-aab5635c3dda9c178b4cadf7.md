@@ -15,5 +15,5 @@ summary: "Prism ML 的 Ternary-Bonsai-2-27B GGUF 三值量化文本生成模型�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-04", "code-2026-10-05"]
 ---

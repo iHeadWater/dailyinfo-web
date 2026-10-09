@@ -15,5 +15,5 @@ summary: "维基百科全量文本数据集，为多语言预训练、检索增�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---
