@@ -1,0 +1,19 @@
+---
+schema_version: 1
+id: "arxiv-2604.08295"
+category: "arxiv"
+title: "U-CECE: A Universal Multi-Resolution Framework for Conceptual Counterfactual Explanations"
+source:
+  name: "arxiv_cs_ai"
+  url: "https://arxiv.org/abs/2604.08295"
+  external_id: "2604.08295"
+authors: []
+source_published_at: "2026-10-08T12:00:00+08:00"
+retrieved_at: "2026-10-09T03:00:07.243747+08:00"
+published_at: "2026-10-09T03:04:27.074272+08:00"
+summary: "提出U-CECE通用多分辨率框架，为概念反事实解释提供跨模型和跨尺度的生成与评估能力。"
+why_it_matters: null
+tags: []
+language: "zh-CN"
+briefing_ids: ["arxiv-2026-10-09"]
+---
