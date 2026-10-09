@@ -1,0 +1,19 @@
+---
+schema_version: 1
+id: "arxiv-2610.10933"
+category: "arxiv"
+title: "Rethinking the Tradeoff Between Temporal Encoding and Nonlinear Computation in Spiking Language Models"
+source:
+  name: "arxiv_cs_ai"
+  url: "https://arxiv.org/abs/2610.10933"
+  external_id: "2610.10933"
+authors: []
+source_published_at: "2026-10-09T12:00:00+08:00"
+retrieved_at: "2026-10-10T03:00:07.659142+08:00"
+published_at: "2026-10-10T03:04:25.059452+08:00"
+summary: "重新审视脉冲语言模型中时间编码与非线性计算之间的权衡，为更优架构设计提供新视角。"
+why_it_matters: null
+tags: []
+language: "zh-CN"
+briefing_ids: ["arxiv-2026-10-10"]
+---

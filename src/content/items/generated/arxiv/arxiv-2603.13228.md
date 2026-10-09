@@ -1,0 +1,19 @@
+---
+schema_version: 1
+id: "arxiv-2603.13228"
+category: "arxiv"
+title: "PhysMoDPO: Physically-Plausible Humanoid Motion with Preference Optimization"
+source:
+  name: "arxiv_cs_ai"
+  url: "https://arxiv.org/abs/2603.13228"
+  external_id: "2603.13228"
+authors: []
+source_published_at: "2026-10-09T12:00:00+08:00"
+retrieved_at: "2026-10-10T03:00:07.659142+08:00"
+published_at: "2026-10-10T03:04:25.059452+08:00"
+summary: "提出PhysMoDPO，通过偏好优化生成物理合理的人形运动，提高仿真与真实场景中的运动可行性。"
+why_it_matters: null
+tags: []
+language: "zh-CN"
+briefing_ids: ["arxiv-2026-10-10"]
+---
