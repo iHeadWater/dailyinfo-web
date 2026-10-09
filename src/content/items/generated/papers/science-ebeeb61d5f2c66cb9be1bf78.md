@@ -1,0 +1,19 @@
+---
+schema_version: 1
+id: "science-ebeeb61d5f2c66cb9be1bf78"
+category: "papers"
+title: "New studies probe how menopause puts brain at risk"
+source:
+  name: "science"
+  url: "https://www.science.org/doi/abs/10.1126/science.aen0166?af=R"
+  external_id: "10.1126/science.aen0166"
+authors: []
+source_published_at: "2026-10-08T14:00:09+08:00"
+retrieved_at: "2026-10-10T04:01:16.676765+08:00"
+published_at: "2026-10-10T04:03:02.446592+08:00"
+summary: "新研究探讨绝经如何通过激素、血管或代谢等变化增加女性大脑健康受损与痴呆风险。"
+why_it_matters: null
+tags: []
+language: "zh-CN"
+briefing_ids: ["papers-2026-10-10"]
+---
