@@ -15,5 +15,5 @@ summary: "hyperframes：让 agent 用 HTML 编写并直接渲染视频的框架�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-03"]
 ---

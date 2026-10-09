@@ -15,5 +15,5 @@ summary: "cursor/plugins：Cursor 的插件规范与官方插件集合，用于�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-03"]
 ---

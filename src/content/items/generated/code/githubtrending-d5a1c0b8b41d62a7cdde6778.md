@@ -15,5 +15,5 @@ summary: "yoinks：在终端里无广告地下载任意视频，主打干净、�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-03"]
 ---

@@ -15,5 +15,5 @@ summary: "来自作者 .agents 目录的实战型智能体技能集，专为真�
 why_it_matters: null
 tags: ["AI Agent", "Shell", "技能库"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-07", "code-2026-10-08"]
 ---

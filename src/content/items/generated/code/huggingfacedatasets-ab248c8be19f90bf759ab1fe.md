@@ -15,5 +15,5 @@ summary: "轻量级数据环境集合，用于可复现地训练和评估智能�
 why_it_matters: null
 tags: ["数据环境", "智能体", "评测"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-03"]
 ---

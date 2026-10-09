@@ -15,5 +15,5 @@ summary: "让 AI 代理像“房间里最懒的资深开发者”那样思考—
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05"]
 ---

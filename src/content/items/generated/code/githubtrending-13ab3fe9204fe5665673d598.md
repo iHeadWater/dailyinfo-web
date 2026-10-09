@@ -15,5 +15,5 @@ summary: "NVIDIA/OpenShell：NVIDIA 推出的安全、私密自主 AI agent 运�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03"]
+briefing_ids: ["code-2026-10-03"]
 ---

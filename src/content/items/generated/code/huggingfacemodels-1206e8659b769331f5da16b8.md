@@ -15,5 +15,5 @@ summary: "8B 对比学习文本排序模型，通过对比式训练提升检索�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06"]
 ---

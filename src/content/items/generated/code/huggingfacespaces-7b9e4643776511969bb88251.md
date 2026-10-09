@@ -15,5 +15,5 @@ summary: "基于 Qwen 的图像编辑 Gradio 应用，提供指令式修图与�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
 ---

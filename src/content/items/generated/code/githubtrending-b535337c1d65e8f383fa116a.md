@@ -15,5 +15,5 @@ summary: "AI 代理工具包，统一 LLM API、代理循环、TUI 与编码代�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-04"]
 ---

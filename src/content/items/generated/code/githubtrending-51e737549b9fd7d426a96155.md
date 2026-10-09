@@ -15,5 +15,5 @@ summary: "面向 AI 编码代理的上下文窗口优化方案，通过沙箱化
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04"]
 ---

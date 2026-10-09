@@ -15,5 +15,5 @@ summary: "经万倍过滤的Fable-5.1 Max推理数据集，聚焦高质量思维
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-02", "code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-03", "code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07"]
 ---
