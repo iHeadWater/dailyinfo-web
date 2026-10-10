@@ -9,11 +9,11 @@ source:
   external_id: "FineEnvs/multi-harness-rl"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-10T03:45:37.270287+08:00"
+retrieved_at: "2026-10-11T03:45:43.620160+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "面向强化学习的多 harness 训练与评测框架，Docker 封装便于复现多环境策略实验。"
+summary: "FineEnvs/multi-harness-rl — 基于 Docker 的多环境强化学习 harness，可在统一接口下运行多种 RL 任务并提升可复现性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11"]
 ---

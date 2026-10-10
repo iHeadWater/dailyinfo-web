@@ -9,11 +9,11 @@ source:
   external_id: "tardellirs/model-pulse"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-10T03:45:37.270287+08:00"
+retrieved_at: "2026-10-11T03:45:43.620160+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "静态模型脉搏看板，聚合与追踪模型热度及动态指标，便于快速洞察开源模型趋势。"
+summary: "tardellirs/model-pulse — 静态模型热度脉搏面板，用于追踪并可视化 AI 模型趋势与社区关注度变化。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11"]
 ---

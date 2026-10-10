@@ -9,11 +9,11 @@ source:
   external_id: "LiquidAI/d1-3B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-10T03:45:18.136760+08:00"
+retrieved_at: "2026-10-11T03:45:18.155391+08:00"
 published_at: "2026-10-09T08:00:04.594955+08:00"
-summary: "LiquidAI d1-3B 是 30 亿参数多模态图文模型，强调轻量高效的理解与推理能力。"
+summary: "LiquidAI 的 3B 多模态模型 d1-3B，以轻量参数实现图文理解与文本生成，适合资源受限场景。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11"]
 ---

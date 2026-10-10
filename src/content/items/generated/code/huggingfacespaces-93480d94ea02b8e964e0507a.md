@@ -9,11 +9,11 @@ source:
   external_id: "aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-10T03:45:37.270287+08:00"
+retrieved_at: "2026-10-11T03:45:43.620160+08:00"
 published_at: "2026-10-10T03:45:45.006878+08:00"
-summary: "面向 Qwen-Image-Edit 的实验性 Rapid All-in-One LoRA 工具箱，Gradio 快速集成多种编辑 LoRA，实现高效图像编辑。"
+summary: "aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental — 实验性 Qwen-Image-Edit Rapid All-in-One LoRA 应用，集成多 LoRA 实现快速图像编辑与风格化。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-10"]
+briefing_ids: ["code-2026-10-10", "code-2026-10-11"]
 ---

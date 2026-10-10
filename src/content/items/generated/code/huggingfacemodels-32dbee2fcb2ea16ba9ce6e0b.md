@@ -9,11 +9,11 @@ source:
   external_id: "Qwen/Qwen-Image-2.1-Turbo"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-10T03:45:18.136760+08:00"
+retrieved_at: "2026-10-11T03:45:18.155391+08:00"
 published_at: "2026-10-10T03:45:45.006878+08:00"
-summary: "Qwen-Image-2.1-Turbo 是加速版文生图模型，主打更快推理速度与高吞吐图像生成。"
+summary: "Qwen-Image-2.1 的 Turbo 加速版文生图模型，主打更快推理速度与更低生成延迟。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-10"]
+briefing_ids: ["code-2026-10-10", "code-2026-10-11"]
 ---

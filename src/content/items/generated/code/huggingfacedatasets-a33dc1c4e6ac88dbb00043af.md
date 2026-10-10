@@ -9,11 +9,11 @@ source:
   external_id: "LocalLLaMA/typed-decisions"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-06T03:46:03.319564+08:00"
+retrieved_at: "2026-10-11T03:45:30.036019+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "带类型标注的决策数据集，面向大模型结构化输出、工具调用与可验证决策推理评估。"
+summary: "面向LLM决策任务的结构化类型化决策数据集，强调可验证输出与推理过程，助力智能体决策与函数调用训练。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-11"]
 ---

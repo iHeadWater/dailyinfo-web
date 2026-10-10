@@ -9,11 +9,11 @@ source:
   external_id: "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-10T03:45:18.136760+08:00"
+retrieved_at: "2026-10-11T03:45:18.155391+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "Qwen3.8-Flash-Next-GSQ-RCO-GGUF 是 GSQ-RCO 量化的多模态模型，降低显存占用并提升本地部署效率。"
+summary: "基于 Qwen3.8-Flash-Next 的 GSQ/RCO GGUF 量化多模态模型，面向高效本地图文理解与生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11"]
 ---
