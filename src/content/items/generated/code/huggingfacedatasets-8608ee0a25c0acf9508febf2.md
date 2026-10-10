@@ -15,5 +15,5 @@ summary: "Fable-5.1 Max推理过滤增强数据集，通过万倍级筛选保留
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-10"]
 ---

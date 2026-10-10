@@ -15,5 +15,5 @@ summary: "Cirquar-Tech的wm_imagined世界模型想象数据，提供合成环�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-07"]
 ---

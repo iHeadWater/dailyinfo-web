@@ -15,5 +15,5 @@ summary: "BFS-Best-Face-Swap 是图像到图像人脸交换模型，专注高质
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-08", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-08", "code-2026-10-10"]
 ---

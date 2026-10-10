@@ -15,5 +15,5 @@ summary: "开源的 CapCut（剪映）替代方案。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-05"]
+briefing_ids: ["code-2026-10-05"]
 ---

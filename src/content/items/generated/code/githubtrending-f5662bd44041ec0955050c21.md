@@ -15,5 +15,5 @@ summary: "基于 Cloudflare Workers 的智能体工作空间，可创建文档�
 why_it_matters: null
 tags: ["Cloudflare Workers", "TypeScript", "智能体"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-04", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-06"]
 ---
