@@ -15,5 +15,5 @@ summary: "全球首个开源的智能体视频制作系统，内置 12 条生产
 why_it_matters: null
 tags: ["AI智能体", "Python", "视频制作"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-06"]
 ---

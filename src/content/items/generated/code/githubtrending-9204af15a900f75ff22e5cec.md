@@ -9,11 +9,11 @@ source:
   external_id: "morluto/rea"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-11T03:45:06.375516+08:00"
+retrieved_at: "2026-10-12T03:45:05.806890+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "morluto/rea：用智能体实现从应用行为到原生二进制文件的任意逆向工程。"
+summary: "用 AI Agent 逆向工程任意目标，覆盖从应用行为到原生二进制的完整分析链路。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12"]
 ---

@@ -15,5 +15,5 @@ summary: "zai-org/OpenVuln：开源漏洞检测与治理 Docker 平台，自动�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-06", "code-2026-10-07"]
 ---

@@ -14,5 +14,5 @@ summary: "综合新闻栏目发布《中国高等教育》项昌乐等署名文�
 why_it_matters: null
 tags: ["中国高等教育", "综合新闻"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-10-05", "resource-2026-10-06"]
+briefing_ids: ["resource-2026-10-06"]
 ---

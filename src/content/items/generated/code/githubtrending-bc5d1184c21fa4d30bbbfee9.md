@@ -15,5 +15,5 @@ summary: "面向 Web 与移动应用的下一代端到端测试框架。"
 why_it_matters: null
 tags: ["E2E 测试", "TypeScript", "测试框架"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
 ---

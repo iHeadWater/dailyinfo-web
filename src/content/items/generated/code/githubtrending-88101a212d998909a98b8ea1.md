@@ -15,5 +15,5 @@ summary: "暂无官方描述，具体功能定位待确认。"
 why_it_matters: null
 tags: ["TypeScript"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-06"]
 ---

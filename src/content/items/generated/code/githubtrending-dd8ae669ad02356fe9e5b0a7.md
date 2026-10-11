@@ -15,5 +15,5 @@ summary: "agent-skills：为 AI 编程代理提供生产级工程技能，提升
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-08", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-08", "code-2026-10-10"]
 ---

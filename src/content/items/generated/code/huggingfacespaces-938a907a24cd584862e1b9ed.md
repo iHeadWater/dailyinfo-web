@@ -15,5 +15,5 @@ summary: "ChessFly静态项目，以国际象棋任务展示和检验语言模�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-05", "code-2026-10-06"]
+briefing_ids: ["code-2026-10-06"]
 ---
