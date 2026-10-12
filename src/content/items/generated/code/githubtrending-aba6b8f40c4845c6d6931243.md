@@ -15,5 +15,5 @@ summary: "自托管的健身与自重训练追踪器，支持训练计划、超�
 why_it_matters: null
 tags: ["JavaScript", "健身追踪", "自托管"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08"]
 ---

@@ -15,5 +15,5 @@ summary: "autotrust/GEV-26B-Decide 是 26B 文本分类决策模型，强化业�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
+briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09"]
 ---

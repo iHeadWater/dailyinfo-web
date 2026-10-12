@@ -15,5 +15,5 @@ summary: "面向LLM决策任务的结构化类型化决策数据集，强调可�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-11"]
+briefing_ids: ["code-2026-10-11"]
 ---

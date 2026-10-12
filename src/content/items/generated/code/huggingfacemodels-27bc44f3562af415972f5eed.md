@@ -15,5 +15,5 @@ summary: "FermionResearch 的 Phonon-2 自动语音识别模型，聚焦高精�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-07"]
 ---

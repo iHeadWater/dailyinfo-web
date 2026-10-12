@@ -9,11 +9,11 @@ source:
   external_id: "bilawalsidhu/gods-eye-view"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-12T03:45:05.806890+08:00"
+retrieved_at: "2026-10-13T03:45:05.800804+08:00"
 published_at: "2026-10-12T03:47:01.542031+08:00"
-summary: "浏览器内的间谍卫星模拟器，以真实开源空间情报驱动逼真 3D 地球上的实时态势感知。"
+summary: "浏览器中的间谍卫星模拟器，结合真实开源空间情报与照片级3D地球实时可视化。"
 why_it_matters: null
-tags: []
+tags: ["3D可视化", "地理空间情报", "开源数据"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13"]
 ---

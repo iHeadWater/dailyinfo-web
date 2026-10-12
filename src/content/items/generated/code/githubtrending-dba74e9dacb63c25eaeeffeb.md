@@ -15,5 +15,5 @@ summary: "开箱即用的完整 AI 代理团队，每个代理都是带有个性
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-06", "code-2026-10-07"]
+briefing_ids: ["code-2026-10-07"]
 ---
