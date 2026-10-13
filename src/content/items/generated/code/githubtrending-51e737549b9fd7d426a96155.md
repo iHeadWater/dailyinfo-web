@@ -9,11 +9,11 @@ source:
   external_id: "mksglu/context-mode"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-13T03:45:05.800804+08:00"
+retrieved_at: "2026-10-14T03:45:05.057378+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "面向AI编程代理的上下文窗口优化器，通过工具输出沙箱化减少98%上下文、持久化会话记忆，并借助MCP与钩子实现跨17平台路由。"
+summary: "为 AI 编码智能体优化上下文窗口：沙箱化工具输出降低 98% 占用、持久化会话记忆，并通过 MCP 与钩子在 17 个平台强制执行路由。"
 why_it_matters: null
-tags: ["AI编码代理", "MCP", "上下文优化"]
+tags: ["MCP", "TypeScript", "上下文优化"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-11", "code-2026-10-13", "code-2026-10-14"]
 ---

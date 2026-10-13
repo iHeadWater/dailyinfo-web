@@ -9,11 +9,11 @@ source:
   external_id: "00000tt/LTX-2.3-10Eros"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-12T03:46:55.628597+08:00"
+retrieved_at: "2026-10-14T03:45:44.405017+08:00"
 published_at: "2026-10-12T03:47:01.542031+08:00"
-summary: "基于 LTX-2.3 视频生成模型的 Gradio 应用，主打风格化视频内容的快速生成。"
+summary: "基于 LTX-2.3 视频模型的 10Eros Gradio 应用，面向快速无审查的成人向视频生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-14"]
 ---

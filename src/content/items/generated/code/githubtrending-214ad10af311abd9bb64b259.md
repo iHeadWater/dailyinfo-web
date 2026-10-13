@@ -15,5 +15,5 @@ summary: "约束编码智能体别再铺垫废话，直接给出答案的 ADHD �
 why_it_matters: null
 tags: ["AI Agent", "Python", "提示工程"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07", "code-2026-10-08"]
+briefing_ids: ["code-2026-10-08"]
 ---

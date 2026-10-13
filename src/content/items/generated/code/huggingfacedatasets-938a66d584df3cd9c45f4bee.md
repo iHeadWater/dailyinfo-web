@@ -9,11 +9,11 @@ source:
   external_id: "LightwheelAI/EgoPro"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-13T03:45:24.667751+08:00"
+retrieved_at: "2026-10-14T03:45:24.660330+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "LightwheelAI/EgoPro：第一人称专业操作数据集，助力具身智能从人类演示中学习精细操作技能。"
+summary: "高质量专业级第一视角操作数据集，聚焦复杂精细任务以提升机器人操作泛化能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
 ---

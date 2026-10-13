@@ -9,11 +9,11 @@ source:
   external_id: "LocalLLaMA/typed-decisions"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-11T03:45:30.036019+08:00"
+retrieved_at: "2026-10-14T03:45:24.660330+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "面向LLM决策任务的结构化类型化决策数据集，强调可验证输出与推理过程，助力智能体决策与函数调用训练。"
+summary: "类型化决策资源，通过结构化类型标签增强LLM智能体决策训练与评测的可控性和可解释性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11"]
+briefing_ids: ["code-2026-10-11", "code-2026-10-14"]
 ---

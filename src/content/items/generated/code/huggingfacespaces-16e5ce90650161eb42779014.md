@@ -9,11 +9,11 @@ source:
   external_id: "kulkas2pintu/wan777"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-13T03:45:37.470628+08:00"
+retrieved_at: "2026-10-14T03:45:44.405017+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "kulkas2pintu/wan777：集成 Wan 模型的 777 版 Gradio 交互应用，提供一键式高自由度视频生成体验。"
+summary: "Wan 系列视频生成模型的 Gradio 快速体验应用，聚焦文本或图像到视频的便捷生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-07", "code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
 ---
