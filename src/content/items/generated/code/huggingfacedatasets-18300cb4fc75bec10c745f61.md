@@ -15,5 +15,5 @@ summary: "Precinct6网络安全数据集，提供真实安全事件与日志样�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-08", "code-2026-10-09", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10"]
 ---

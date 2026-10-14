@@ -15,5 +15,5 @@ summary: "Qwen3.8-27B 是 Qwen 的大规模多模态模型，支持图文输入�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
 ---

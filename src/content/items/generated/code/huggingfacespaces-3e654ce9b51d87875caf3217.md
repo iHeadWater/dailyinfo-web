@@ -15,5 +15,5 @@ summary: "基于 Docker 部署的 JEV-27B 演示环境，展示 27B 模型在可
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-08", "code-2026-10-09"]
+briefing_ids: ["code-2026-10-09"]
 ---

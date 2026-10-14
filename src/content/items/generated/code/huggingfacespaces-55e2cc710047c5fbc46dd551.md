@@ -15,5 +15,5 @@ summary: "静态模型脉搏仪表盘，聚合展示 AI 模型热度、趋势与
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
 ---

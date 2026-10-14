@@ -15,5 +15,5 @@ summary: "Lightricks 的 LTX-2.5 图生视频模型，可将静态图像转化�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-08", "code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
 ---
