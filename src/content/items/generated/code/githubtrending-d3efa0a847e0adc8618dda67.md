@@ -9,11 +9,11 @@ source:
   external_id: "xtool-org/xtool"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-14T03:45:05.057378+08:00"
+retrieved_at: "2026-10-15T03:45:06.431926+08:00"
 published_at: "2026-10-14T03:45:59.341393+08:00"
-summary: "跨平台 Xcode 替代方案，在 Linux、Windows、macOS 上基于 SwiftPM 构建并部署 iOS 应用。"
+summary: "跨平台 Xcode 替代方案，在 Linux、Windows、macOS 上使用 SwiftPM 构建并部署 iOS 应用。"
 why_it_matters: null
-tags: ["Swift", "iOS 构建", "跨平台"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-14"]
+briefing_ids: ["code-2026-10-14", "code-2026-10-15"]
 ---
