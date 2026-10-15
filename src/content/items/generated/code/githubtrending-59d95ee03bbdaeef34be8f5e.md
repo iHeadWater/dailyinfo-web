@@ -15,5 +15,5 @@ summary: "mattpocock/skills：来自作者 .agents 目录的实战工程技能�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11"]
+briefing_ids: ["code-2026-10-10", "code-2026-10-11"]
 ---

@@ -15,5 +15,5 @@ summary: "clef 的轻量快速版本，以更低延迟完成图文到文本的�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13"]
 ---

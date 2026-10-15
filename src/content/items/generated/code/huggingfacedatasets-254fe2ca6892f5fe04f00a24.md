@@ -15,5 +15,5 @@ summary: "面向AI智能体社区协作与行为研究的AI Village项目，提�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09", "code-2026-10-10"]
+briefing_ids: ["code-2026-10-10"]
 ---

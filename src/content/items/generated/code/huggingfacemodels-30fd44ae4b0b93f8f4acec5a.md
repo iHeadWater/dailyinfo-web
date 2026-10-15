@@ -15,5 +15,5 @@ summary: "Unsloth 优化的 EmbeddingGemma-2 GGUF 量化版，便于在本地 CP
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-09", "code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13"]
 ---
