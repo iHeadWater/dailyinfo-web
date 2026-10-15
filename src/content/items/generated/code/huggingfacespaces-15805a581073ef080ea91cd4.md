@@ -9,11 +9,11 @@ source:
   external_id: "multimodalart/jev-decision-index"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-14T03:45:44.405017+08:00"
+retrieved_at: "2026-10-16T03:45:47.082021+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "以静态站点形式呈现 JEV 决策指数，聚焦关键指标的可视化追踪与决策支持。"
+summary: "multimodalart的JEV决策指数静态空间，用可视化指标评估并对比多模态模型的判断倾向与决策表现。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
 ---

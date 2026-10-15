@@ -9,11 +9,11 @@ source:
   external_id: "AtomicChat/Qwen-Image-2.1-Turbo-Uncensored-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-14T03:45:12.053408+08:00"
+retrieved_at: "2026-10-16T03:45:17.154033+08:00"
 published_at: "2026-10-12T03:47:01.542031+08:00"
-summary: "Qwen-Image-2.1-Turbo 的无审查 GGUF 量化版，面向本地文生图，兼顾低显存运行与自由创作。"
+summary: "Qwen-Image-2.1-Turbo 免审查 GGUF 量化版，兼顾低资源部署与高速文生图，方便本地或边缘运行。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
 ---

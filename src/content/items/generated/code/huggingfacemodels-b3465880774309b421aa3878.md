@@ -9,11 +9,11 @@ source:
   external_id: "openbmb/MiniCPM-V-4.7-35B-A3B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-14T03:45:12.053408+08:00"
+retrieved_at: "2026-10-16T03:45:17.154033+08:00"
 published_at: "2026-10-14T03:45:59.341393+08:00"
-summary: "MiniCPM-V 4.7 的 35B MoE 多模态模型，以 A3B 激活参数实现高效图文理解与文本生成，兼顾性能与推理成本。"
+summary: "MiniCPM-V 4.7 35B-A3B 采用稀疏 MoE 架构，面向图文理解与多模态对话，以高效激活实现强视觉语言能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-14"]
+briefing_ids: ["code-2026-10-14", "code-2026-10-16"]
 ---
