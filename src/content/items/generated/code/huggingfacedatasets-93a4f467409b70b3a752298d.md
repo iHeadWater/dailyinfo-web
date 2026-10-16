@@ -15,5 +15,5 @@ summary: "bakrianoo/jabarti-llm-dataset — 面向阿拉伯语大模型的高质
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-10", "code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-16"]
+briefing_ids: ["code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-16"]
 ---

@@ -15,5 +15,5 @@ summary: "aet256/Qwen-Image-Edit-Rapid-AIO-Loras-Experimental：基于 Qwen-Imag
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-10", "code-2026-10-11", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-11", "code-2026-10-13"]
 ---
