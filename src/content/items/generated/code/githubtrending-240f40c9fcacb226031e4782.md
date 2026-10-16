@@ -9,11 +9,11 @@ source:
   external_id: "K-Dense-AI/scientific-agent-skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-15T03:45:06.431926+08:00"
+retrieved_at: "2026-10-17T03:45:06.425901+08:00"
 published_at: "2026-10-15T03:49:42.170976+08:00"
-summary: "把任意 AI 代理升级为科研助手，提供 177 个经验证技能和 100+ 科学数据库，覆盖生物、化学、医学与药物发现。"
+summary: "将任意 AI 智能体变成 AI 科学家，内置 177 个即用科学技能与 100+ 科学数据库，覆盖生物、化学、医学和药物发现并兼容多平台。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-15"]
+briefing_ids: ["code-2026-10-15", "code-2026-10-17"]
 ---

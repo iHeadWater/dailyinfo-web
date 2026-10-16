@@ -9,11 +9,11 @@ source:
   external_id: "autotrust/shorts"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-16T03:45:47.082021+08:00"
+retrieved_at: "2026-10-17T03:45:40.892968+08:00"
 published_at: "2026-10-16T03:46:00.937703+08:00"
-summary: "autotrust的短视频静态空间，展示AI自动生成与优化短视频内容的流程或方案。"
+summary: "AutoTrust 的短视频方向静态展示页，聚焦自动化短视频生成与可信内容处理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17"]
 ---

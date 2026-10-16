@@ -9,11 +9,11 @@ source:
   external_id: "LiquidAI/LFM2.5-24B-A2B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-16T03:45:17.154033+08:00"
+retrieved_at: "2026-10-17T03:45:15.820301+08:00"
 published_at: "2026-10-16T03:46:00.937703+08:00"
-summary: "LiquidAI LFM2.5-24B-A2B 是 24B 总参、A2B 稀疏激活的文本生成模型，强调高效推理与长文本生成能力。"
+summary: "LiquidAI LFM2.5-24B-A2B 是 24B 参数、A2B 激活的文本生成模型，以高效稀疏架构平衡推理性能与部署成本。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17"]
 ---

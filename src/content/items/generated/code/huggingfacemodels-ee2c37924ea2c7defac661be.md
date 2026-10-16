@@ -9,11 +9,11 @@ source:
   external_id: "speridlabs/iris-3b"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-16T03:45:17.154033+08:00"
+retrieved_at: "2026-10-17T03:45:15.820301+08:00"
 published_at: "2026-10-13T03:45:48.389506+08:00"
-summary: "iris-3b 是轻量级 3B 文生图模型，面向低算力环境提供快速、可定制的图像生成能力。"
+summary: "speridlabs iris-3b 是 3B 轻量文生图模型，以较小参数量提供可控图像生成，适合低显存快速出图。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
+briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "vclnhihihi/qwen-image-21-uncensored"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-16T03:45:47.082021+08:00"
+retrieved_at: "2026-10-17T03:45:40.892968+08:00"
 published_at: "2026-10-16T03:46:00.937703+08:00"
-summary: "基于Qwen-Image 2.1的无审查图像生成Gradio空间，支持更开放提示词与自由创作。"
+summary: "基于 Qwen-Image-2.1 的免审查图像生成 Gradio 应用，强调低限制提示词与自由创作。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17"]
 ---
