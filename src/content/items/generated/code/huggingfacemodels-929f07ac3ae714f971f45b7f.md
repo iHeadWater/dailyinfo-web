@@ -9,11 +9,11 @@ source:
   external_id: "facebook/sam3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-17T03:45:15.820301+08:00"
+retrieved_at: "2026-10-18T03:45:14.121437+08:00"
 published_at: "2026-10-16T03:46:00.937703+08:00"
-summary: "Meta SAM 3 是通用分割掩码生成模型，延续 Segment Anything 能力并提升多物体、复杂场景的零样本分割。"
+summary: "Meta SAM 3 通用分割模型，支持可提示与开放词汇的掩码生成和对象分割。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
 ---

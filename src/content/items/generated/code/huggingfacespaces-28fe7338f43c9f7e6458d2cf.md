@@ -9,11 +9,11 @@ source:
   external_id: "Pepe104/MiniMax-H3-Turbo-Lora-UNCENSORED"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-17T03:45:40.892968+08:00"
+retrieved_at: "2026-10-18T03:45:33.931462+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "集成 MiniMax-H3-Turbo 与 Uncensored LoRA 的 Gradio 应用，主打低限制、高自由度的生成体验。"
+summary: "基于 MiniMax-H3-Turbo 的 LoRA 无审查生成空间，主打高自由度、可定制的人物与图像创作。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
 ---

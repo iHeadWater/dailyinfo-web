@@ -9,11 +9,11 @@ source:
   external_id: "LightwheelAI/EgoStandard"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-17T03:45:30.212609+08:00"
+retrieved_at: "2026-10-18T03:45:24.152458+08:00"
 published_at: "2026-10-09T08:00:04.594955+08:00"
-summary: "第一视角自我中心数据标准与基准，用于规范具身智能数据的训练、评测与质量对齐。"
+summary: "EgoStandard 提供标准化第一视角具身数据基准，统一采集与标注规范以提升评测可复现性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
 ---

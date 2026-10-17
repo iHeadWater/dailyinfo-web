@@ -9,11 +9,11 @@ source:
   external_id: "android/skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-17T03:45:06.425901+08:00"
+retrieved_at: "2026-10-18T03:45:05.161824+08:00"
 published_at: "2026-10-17T03:45:52.895924+08:00"
-summary: "Android 官方技能仓库，当前未提供描述，预期为 Android 开发生态提供可复用的智能体技能资源。"
+summary: "Android 官方维护的 Skills 项目，聚焦为 Android/Kotlin 生态构建可复用的 AI Agent 技能模块。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
 ---

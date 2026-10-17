@@ -9,11 +9,11 @@ source:
   external_id: "ConwayResearch/Underdog-Saluki-27B-1.0"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-17T03:45:15.820301+08:00"
+retrieved_at: "2026-10-18T03:45:14.121437+08:00"
 published_at: "2026-10-11T03:45:56.313648+08:00"
-summary: "Underdog-Saluki-27B-1.0 是 27B 文本生成模型，主打以小博大的推理与对话表现，适合高效开源部署。"
+summary: "27B参数文本生成模型，面向高质量长文本生成与对话推理场景。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
 ---

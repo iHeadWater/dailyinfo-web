@@ -9,11 +9,11 @@ source:
   external_id: "MadsLorentzen/ai-job-search"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-17T03:45:06.425901+08:00"
+retrieved_at: "2026-10-18T03:45:05.161824+08:00"
 published_at: "2026-10-17T03:45:52.895924+08:00"
-summary: "运行在本机的 AI 求职框架，基于 Claude Code 实现职位评估、简历定制、求职信撰写与面试准备。"
+summary: "基于 Claude Code 的本地化求职框架，可评估职位、定制简历、撰写求职信并准备面试，让求职流程在自有机器上可控运行。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
 ---
