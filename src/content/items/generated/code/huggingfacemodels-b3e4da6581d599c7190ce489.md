@@ -15,5 +15,5 @@ summary: "LiquidAI d1-3B 是 3B 级多模态图文理解模型，以轻量架构
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
 ---

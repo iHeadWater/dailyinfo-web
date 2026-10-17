@@ -15,5 +15,5 @@ summary: "Qwen3.8-27B 是通义千问 27B 多模态模型，统一图文理解�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
 ---

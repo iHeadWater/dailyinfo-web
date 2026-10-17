@@ -15,5 +15,5 @@ summary: "Humanizer 是文本生成模型，专注将机械或 AI 文本改写�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
 ---

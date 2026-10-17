@@ -14,5 +14,5 @@ summary: "[综合新闻] 学校关工委召开2026年下半年工作会议（标
 why_it_matters: null
 tags: ["综合新闻"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-10-11", "resource-2026-10-12"]
+briefing_ids: ["resource-2026-10-12"]
 ---

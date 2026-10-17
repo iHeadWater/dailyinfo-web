@@ -15,5 +15,5 @@ summary: "canberkkkkkk/ema-lightning 是低延迟文本转语音模型，主打�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
 ---

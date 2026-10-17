@@ -15,5 +15,5 @@ summary: "Qwen 官方最新一代文生图模型，重点提升图像质量与�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-12", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-12", "code-2026-10-13"]
 ---

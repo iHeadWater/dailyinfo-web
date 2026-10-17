@@ -15,5 +15,5 @@ summary: "提供 Python 张量计算与动态神经网络，并具备强大的 G
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-11", "code-2026-10-12"]
+briefing_ids: ["code-2026-10-12"]
 ---
