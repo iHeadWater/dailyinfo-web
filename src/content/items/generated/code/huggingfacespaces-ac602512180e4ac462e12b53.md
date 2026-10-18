@@ -15,5 +15,5 @@ summary: "Qwen-Image 2.1 无审查模型的 GGUF 量化 Gradio 应用，降低�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-13", "code-2026-10-14"]
 ---

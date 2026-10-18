@@ -15,5 +15,5 @@ summary: "27B参数文本生成模型，面向高质量长文本生成与对话�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
 ---

@@ -15,5 +15,5 @@ summary: "Cactus Compute whistle 是自动语音识别模型，主打高效与�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
+briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "Viggle/Qwen-Image-2.1-viggle-turbo"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-18T03:45:33.931462+08:00"
+retrieved_at: "2026-10-19T03:45:29.591467+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "面向 Viggle 视频工作流的 Qwen-Image 2.1 加速出图工具，强调快速生成与角色场景素材生产。"
+summary: "基于Qwen-Image 2.1与Viggle Turbo的图像/视频生成应用，聚焦快速角色动画与可控内容生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19"]
 ---

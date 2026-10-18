@@ -15,5 +15,5 @@ summary: "Aleph-Alpha 推出的新一代文本生成模型，主打高质量指�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13"]
+briefing_ids: ["code-2026-10-13"]
 ---

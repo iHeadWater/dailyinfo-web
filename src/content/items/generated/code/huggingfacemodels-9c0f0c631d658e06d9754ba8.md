@@ -15,5 +15,5 @@ summary: "ConvAI laya 是文本分类模型，面向对话与内容理解场景�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
+briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
 ---

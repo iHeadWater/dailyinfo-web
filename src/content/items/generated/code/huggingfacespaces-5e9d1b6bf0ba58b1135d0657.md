@@ -15,5 +15,5 @@ summary: "基于 LTX-2.3 视频模型的 10Eros Gradio 应用，面向快速无�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-12", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-14"]
 ---
