@@ -1,0 +1,19 @@
+---
+schema_version: 1
+id: "dlutrecruitment-6ffe0927d48b6b9763aa4678"
+category: "resource"
+title: "北京学而思教育科技有限公司2027年校园招聘"
+source:
+  name: "dlut_recruitment"
+  url: "https://job.dlut.edu.cn/frontpage/dlut/html/recruitmentinfoList.html"
+  external_id: "1ebe90c39e7b439ba2aa748072e72828"
+authors: []
+source_published_at: null
+retrieved_at: "2026-10-20T03:30:15.734361+08:00"
+published_at: "2026-10-20T03:30:34.868350+08:00"
+summary: "北京学而思教育科技有限公司 — 2027年校园招聘 | 截止：2027-04-16"
+why_it_matters: null
+tags: ["校园招聘"]
+language: "zh-CN"
+briefing_ids: ["resource-2026-10-20"]
+---
