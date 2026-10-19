@@ -9,11 +9,11 @@ source:
   external_id: "anthropics/claude-code"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-18T03:45:05.161824+08:00"
+retrieved_at: "2026-10-20T03:45:05.367169+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "Anthropic 的终端级 Agent 编码工具，可理解代码库并通过自然语言执行例行任务、解释复杂代码和处理 Git 工作流。"
+summary: "终端内运行的智能编码工具，理解代码库并通过自然语言执行日常任务、解释代码和处理 Git 工作流。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-18"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-20"]
 ---

@@ -15,5 +15,5 @@ summary: "突破显存限制，用单张 4GB GPU 完成 2.8T 参数大模型的�
 why_it_matters: null
 tags: ["LLM", "推理优化", "显存压缩"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-14"]
 ---

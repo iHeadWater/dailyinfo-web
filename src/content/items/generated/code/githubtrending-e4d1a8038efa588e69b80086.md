@@ -9,11 +9,11 @@ source:
   external_id: "akitaonrails/ai-memory"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-19T03:45:06.396319+08:00"
+retrieved_at: "2026-10-20T03:45:05.367169+08:00"
 published_at: "2026-10-19T03:45:37.990334+08:00"
-summary: "为编码智能体 CLI 提供长期记忆与跨厂商智能体交接的 Rust 解决方案。"
+summary: "Rust 实现的 AI 长期记忆方案，为编码 CLI 提供跨会话记忆并支持不同 Agent 厂商间交接。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19"]
+briefing_ids: ["code-2026-10-19", "code-2026-10-20"]
 ---

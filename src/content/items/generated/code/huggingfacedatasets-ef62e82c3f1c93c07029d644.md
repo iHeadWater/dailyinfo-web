@@ -9,11 +9,11 @@ source:
   external_id: "DeepLethe/FDE-Gym"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-19T03:45:23.956050+08:00"
+retrieved_at: "2026-10-20T03:45:22.781805+08:00"
 published_at: "2026-10-17T03:45:52.895924+08:00"
-summary: "面向数据工程与 FDE 场景的 Gym 式可交互训练与评测环境，将真实工程任务转化为可复现的强化学习与能力评估流程。"
+summary: "提供模块化Gym环境与可复现评测基准，用于构建、训练和评测FDE相关智能体与算法。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "FineEnvs/openai-math"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-19T03:45:23.956050+08:00"
+retrieved_at: "2026-10-20T03:45:22.781805+08:00"
 published_at: "2026-10-12T03:47:01.542031+08:00"
-summary: "将 OpenAI 数学推理题封装为可验证的交互式训练与评测环境，适用于数学推理强化学习的可复现实验。"
+summary: "面向OpenAI数学题目的训练与评测环境，用于提升和评估数学推理模型能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-14", "code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
 ---

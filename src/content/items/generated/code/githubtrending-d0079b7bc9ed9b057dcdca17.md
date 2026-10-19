@@ -15,5 +15,5 @@ summary: "浏览器里的间谍卫星模拟器，用真实开源数据在逼真 
 why_it_matters: null
 tags: ["JavaScript", "可视化", "地理空间"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-14"]
 ---

@@ -15,5 +15,5 @@ summary: "Qwen3.8-27B 的超长命名衍生多模态模型，融合 Coder、Opus
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
 ---

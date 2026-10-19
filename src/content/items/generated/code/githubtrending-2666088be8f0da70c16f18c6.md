@@ -15,5 +15,5 @@ summary: "面向艺术家、设计师与电影人的意图驱动创作引擎，�
 why_it_matters: null
 tags: ["Rust", "创作工具", "生成式"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14"]
+briefing_ids: ["code-2026-10-14"]
 ---

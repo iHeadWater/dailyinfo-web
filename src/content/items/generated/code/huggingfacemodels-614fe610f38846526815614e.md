@@ -15,5 +15,5 @@ summary: "Cloudflare clef 面向图像文本理解，将多模态解析能力带
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-13", "code-2026-10-14", "code-2026-10-16"]
+briefing_ids: ["code-2026-10-14", "code-2026-10-16"]
 ---
