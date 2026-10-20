@@ -9,11 +9,11 @@ source:
   external_id: "jialinyyzz/humanizer"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-20T03:45:12.872922+08:00"
+retrieved_at: "2026-10-21T07:41:56.633838+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "Humanizer 是面向文本人性化改写的生成模型，旨在降低机器味并提升表达自然度。"
+summary: "面向文本人性化改写与自然化生成的模型，降低机器感并提升表达流畅度。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21"]
 ---

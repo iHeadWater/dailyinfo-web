@@ -9,11 +9,11 @@ source:
   external_id: "google/embeddinggemma-2"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-20T03:45:12.872922+08:00"
+retrieved_at: "2026-10-21T07:41:56.633838+08:00"
 published_at: "2026-10-07T03:45:43.170211+08:00"
-summary: "Google EmbeddingGemma-2 是第二代文本嵌入模型，用于检索、聚类和语义相似度等特征提取任务。"
+summary: "Google EmbeddingGemma 第二代通用嵌入模型，面向高效语义检索、聚类与特征提取。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21"]
 ---

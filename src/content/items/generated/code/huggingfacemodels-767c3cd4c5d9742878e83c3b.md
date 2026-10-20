@@ -9,11 +9,11 @@ source:
   external_id: "OpenMOSS-Team/MOSS-Image-SFT"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-20T03:45:12.872922+08:00"
+retrieved_at: "2026-10-21T07:41:56.633838+08:00"
 published_at: "2026-10-18T03:45:42.777407+08:00"
-summary: "MOSS-Image-SFT 是监督微调版文生图模型，针对指令遵循与图像质量进行优化。"
+summary: "MOSS-Image 的监督微调版本，提升文本到图像生成的指令遵循与画质一致性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21"]
 ---

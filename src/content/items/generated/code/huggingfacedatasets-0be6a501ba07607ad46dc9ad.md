@@ -9,11 +9,11 @@ source:
   external_id: "venvoo/china-a-share-l2-level2-limit-order-book-tick-data"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-20T03:45:22.781805+08:00"
+retrieved_at: "2026-10-21T07:42:05.816527+08:00"
 published_at: "2026-10-11T03:45:56.313648+08:00"
-summary: "中国A股Level-2逐笔委托与订单簿tick数据，支持高频交易、市场微观结构与量化策略研究。"
+summary: "提供中国 A 股 Level-2 限价订单簿逐笔 Tick 数据，支撑高频交易、市场微观结构与量化策略回测研究。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21"]
 ---
