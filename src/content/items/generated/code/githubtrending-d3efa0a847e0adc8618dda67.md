@@ -15,5 +15,5 @@ summary: "跨平台 Xcode 替代方案，在 Linux、Windows、macOS 上使用 S
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-14", "code-2026-10-15"]
+briefing_ids: ["code-2026-10-15"]
 ---

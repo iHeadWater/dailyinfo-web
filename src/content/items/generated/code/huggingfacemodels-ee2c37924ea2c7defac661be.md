@@ -15,5 +15,5 @@ summary: "speridlabs iris-3b 是 3B 轻量文生图模型，以较小参数量�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-14", "code-2026-10-16", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-16", "code-2026-10-17"]
 ---
