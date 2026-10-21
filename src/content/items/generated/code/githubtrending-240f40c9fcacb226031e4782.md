@@ -15,5 +15,5 @@ summary: "让任意 AI Agent 变身 AI 科学家，提供 177 个经验证的科
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-15", "code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
 ---

@@ -15,5 +15,5 @@ summary: "面向 AI 编程智能体的上下文窗口优化系统，通过沙箱
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-15", "code-2026-10-17"]
+briefing_ids: ["code-2026-10-17"]
 ---
