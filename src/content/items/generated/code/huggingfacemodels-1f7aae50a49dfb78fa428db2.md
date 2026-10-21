@@ -9,11 +9,11 @@ source:
   external_id: "datalab-to/indra-ocr"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-21T07:41:56.633838+08:00"
+retrieved_at: "2026-10-22T03:45:10.947163+08:00"
 published_at: "2026-10-20T03:45:37.944745+08:00"
-summary: "面向复杂文档的图像转文本 OCR 模型，突出版面解析、表格公式识别与结构化抽取。"
+summary: "datalab-to/indra-ocr 是图像转文本 OCR 模型，面向复杂文档的高精度文字识别与结构化提取。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-20", "code-2026-10-21"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
 ---

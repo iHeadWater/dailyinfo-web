@@ -9,11 +9,11 @@ source:
   external_id: "Qwen/BlenderWorld"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-21T07:42:05.816527+08:00"
+retrieved_at: "2026-10-22T03:45:21.170418+08:00"
 published_at: "2026-10-21T07:42:21.029767+08:00"
-summary: "面向 Blender 三维建模与场景生成的基准或环境，用于评估模型在复杂 3D 创作任务中的理解与操作能力。"
+summary: "Qwen 推出的 BlenderWorld 3D 场景生成环境，支持可控世界构建以服务多模态与具身智能研究。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21"]
+briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "vllm-project/vllm"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-21T07:41:48.712871+08:00"
+retrieved_at: "2026-10-22T03:45:05.088835+08:00"
 published_at: "2026-10-21T07:42:21.029767+08:00"
-summary: "高吞吐、内存高效的 LLM 推理与服务引擎，面向大模型部署和规模化推理场景。"
+summary: "高吞吐、内存高效的LLM推理与服务引擎。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21"]
+briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
 ---

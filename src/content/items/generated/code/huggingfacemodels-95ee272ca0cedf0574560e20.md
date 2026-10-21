@@ -9,11 +9,11 @@ source:
   external_id: "mistralai/Timestral-209M"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-21T07:41:56.633838+08:00"
+retrieved_at: "2026-10-22T03:45:10.947163+08:00"
 published_at: "2026-10-21T07:42:21.029767+08:00"
-summary: "MistralAI 209M 时序预测模型，面向多变量时间序列的高效概率预测与趋势建模。"
+summary: "mistralai/Timestral-209M 是 209M 轻量时间序列预测模型，主打高效的多变量时序建模与预测。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21"]
+briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
 ---

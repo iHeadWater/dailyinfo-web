@@ -9,11 +9,11 @@ source:
   external_id: "fishaudio/Drama-3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-21T07:42:14.852730+08:00"
+retrieved_at: "2026-10-22T03:45:28.377495+08:00"
 published_at: "2026-10-18T03:45:42.777407+08:00"
-summary: "面向多角色语音与有声剧生成的 Gradio 应用，突出情感化 TTS 和戏剧化音频合成。"
+summary: "面向戏剧化语音与音频创作的Gradio演示，突出情感化配音和音频生成能力。"
 why_it_matters: null
-tags: []
+tags: ["Gradio", "语音生成", "音频创作"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
 ---
