@@ -9,11 +9,11 @@ source:
   external_id: "wank3r/minimax-h3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-22T03:45:28.377495+08:00"
+retrieved_at: "2026-10-23T03:45:31.655970+08:00"
 published_at: "2026-10-21T07:42:21.029767+08:00"
-summary: "MiniMax-H3模型的Gradio试用界面，聚焦多模态生成能力的快速体验与验证。"
+summary: "MiniMax H3模型的Gradio快速体验入口，聚焦高效生成与参数调试。"
 why_it_matters: null
-tags: ["Gradio", "MiniMax", "多模态"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23"]
 ---

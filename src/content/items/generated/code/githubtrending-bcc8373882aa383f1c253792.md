@@ -9,11 +9,11 @@ source:
   external_id: "supabase/supabase"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-22T03:45:05.088835+08:00"
+retrieved_at: "2026-10-23T03:45:05.178819+08:00"
 published_at: "2026-10-22T03:45:35.515439+08:00"
-summary: "基于Postgres的开发平台，为Web、移动和AI应用提供专用数据库与后端能力。"
+summary: "基于 Postgres 的开发平台，为 Web、移动和 AI 应用提供专用数据库与后端能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
 ---

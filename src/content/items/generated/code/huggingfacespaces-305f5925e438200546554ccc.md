@@ -9,11 +9,11 @@ source:
   external_id: "OpenMOSS-Team/MOSS-Image"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-22T03:45:28.377495+08:00"
+retrieved_at: "2026-10-23T03:45:31.655970+08:00"
 published_at: "2026-10-20T03:45:37.944745+08:00"
-summary: "MOSS-Image多模态图像应用，展示统一模型在图像生成与理解任务上的交互能力。"
+summary: "OpenMOSS团队推出的MOSS图像模型Gradio演示，展示交互式图像生成与编辑能力。"
 why_it_matters: null
-tags: ["Gradio", "图像生成", "多模态"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23"]
 ---

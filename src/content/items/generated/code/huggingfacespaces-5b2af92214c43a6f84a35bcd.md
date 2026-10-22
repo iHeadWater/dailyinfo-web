@@ -9,11 +9,11 @@ source:
   external_id: "glitchlab/MiniMax-H3-Turbo-Lora-UNCENSORED-Workflow"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-22T03:45:28.377495+08:00"
+retrieved_at: "2026-10-23T03:45:31.655970+08:00"
 published_at: "2026-10-22T03:45:35.515439+08:00"
-summary: "MiniMax-H3 Turbo LoRA无审查工作流，集成加速LoRA与可定制管线，强调高自由度生成实验。"
+summary: "集成MiniMax H3 Turbo与LoRA的免审查工作流，突出高速生成和可定制风格。"
 why_it_matters: null
-tags: ["Gradio", "LoRA", "工作流"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
 ---
