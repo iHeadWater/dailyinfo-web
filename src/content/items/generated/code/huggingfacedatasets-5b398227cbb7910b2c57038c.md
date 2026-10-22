@@ -15,5 +15,5 @@ summary: "EgoDemo 提供第一视角具身操作演示数据，用于模仿学�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
 ---

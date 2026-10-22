@@ -15,5 +15,5 @@ summary: "google/embeddinggemma-2 是 Gemma 系轻量文本嵌入模型升级版
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
 ---

@@ -15,5 +15,5 @@ summary: "MiniCPM-V-4.7-1B 是1B级轻量多模态模型，面向端侧和低资
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-16", "code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
 ---
