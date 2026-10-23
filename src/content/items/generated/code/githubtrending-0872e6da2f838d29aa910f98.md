@@ -15,5 +15,5 @@ summary: "面向 Claude Code、Codex、Cursor 等 Agent 工具的性能优化框
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-18"]
 ---

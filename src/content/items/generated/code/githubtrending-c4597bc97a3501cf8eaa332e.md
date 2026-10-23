@@ -15,5 +15,5 @@ summary: "Android 官方技能仓库，为 Android 开发场景提供可复用�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19"]
 ---

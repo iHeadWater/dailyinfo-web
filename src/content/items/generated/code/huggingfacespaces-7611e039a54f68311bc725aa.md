@@ -9,11 +9,11 @@ source:
   external_id: "black-forest-labs/flux-3-image-klein"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-23T03:45:31.655970+08:00"
+retrieved_at: "2026-10-24T03:45:36.732603+08:00"
 published_at: "2026-10-17T03:45:52.895924+08:00"
-summary: "Black Forest Labs的Flux 3图像生成轻量版Gradio演示，主打高效文生图体验。"
+summary: "Black Forest Labs 的 FLUX.3 Image Klein Gradio 演示，展示轻量高效图像生成模型的交互能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24"]
 ---

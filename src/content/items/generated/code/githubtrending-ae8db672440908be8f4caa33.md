@@ -15,5 +15,5 @@ summary: "Anthropic 官方维护的高质量 Claude Code 插件目录，为插�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19"]
 ---

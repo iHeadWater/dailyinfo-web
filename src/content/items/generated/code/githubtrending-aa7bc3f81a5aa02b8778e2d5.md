@@ -15,5 +15,5 @@ summary: "Cursor 插件规范与官方插件集合，帮助扩展 Cursor 编辑�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-19"]
 ---

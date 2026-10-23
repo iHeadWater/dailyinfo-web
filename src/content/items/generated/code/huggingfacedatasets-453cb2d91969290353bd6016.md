@@ -9,11 +9,11 @@ source:
   external_id: "Vyber07/cyber-security"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-23T03:45:23.516492+08:00"
+retrieved_at: "2026-10-24T03:45:25.648696+08:00"
 published_at: "2026-10-19T03:45:37.990334+08:00"
-summary: "面向网络安全领域的数据集，用于威胁检测、攻防行为分析与安全大模型的领域微调。"
+summary: "网络安全主题数据集，提供安全领域语料与样本以支撑威胁检测、安全分析和领域模型训练。"
 why_it_matters: null
-tags: ["安全大模型", "网络安全"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24"]
 ---

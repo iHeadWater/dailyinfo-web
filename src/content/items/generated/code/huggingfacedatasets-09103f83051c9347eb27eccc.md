@@ -9,11 +9,11 @@ source:
   external_id: "MaziyarPanahi/Jev-RAG-Claim-Verification-130K"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-23T03:45:23.516492+08:00"
+retrieved_at: "2026-10-24T03:45:25.648696+08:00"
 published_at: "2026-10-23T03:45:40.806372+08:00"
-summary: "13万条规模的RAG声明验证数据集，用于训练检索增强场景下的事实核查与幻觉检测模型。"
+summary: "含13万条样本的RAG声明验证数据集，用于训练和评估检索增强生成中的事实核查与声明验证能力。"
 why_it_matters: null
-tags: ["RAG", "事实核查", "幻觉检测"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24"]
 ---

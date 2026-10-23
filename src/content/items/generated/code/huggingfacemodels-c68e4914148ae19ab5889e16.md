@@ -15,5 +15,5 @@ summary: "百度 Unlimited-OCR 面向长文档与复杂场景，强调高精度�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20"]
 ---

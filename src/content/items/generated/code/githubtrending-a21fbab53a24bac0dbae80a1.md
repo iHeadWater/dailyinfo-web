@@ -9,11 +9,11 @@ source:
   external_id: "php/php-src"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-23T03:45:05.178819+08:00"
+retrieved_at: "2026-10-24T03:45:07.191514+08:00"
 published_at: "2026-10-23T03:45:40.806372+08:00"
-summary: "PHP 官方解释器源码仓库，承载 PHP 语言运行时与核心扩展的开发维护。"
+summary: "php/php-src：PHP 官方解释器源码，承载 PHP 语言核心运行时与标准实现。"
 why_it_matters: null
-tags: []
+tags: ["PHP", "解释器"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24"]
 ---

@@ -14,5 +14,5 @@ summary: "大连理工大学综合新闻栏目发布【学在大工】中国工�
 why_it_matters: null
 tags: ["综合新闻"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-10-17", "resource-2026-10-18", "resource-2026-10-19"]
+briefing_ids: ["resource-2026-10-18", "resource-2026-10-19"]
 ---

@@ -15,5 +15,5 @@ summary: "面向阿拉伯语的大模型训练数据集（Jabarti），补足低
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-19"]
 ---

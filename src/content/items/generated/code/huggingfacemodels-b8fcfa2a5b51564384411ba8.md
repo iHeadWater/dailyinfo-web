@@ -15,5 +15,5 @@ summary: "面向零样本分类的模型组件，支持无需标注数据的灵�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-18"]
 ---

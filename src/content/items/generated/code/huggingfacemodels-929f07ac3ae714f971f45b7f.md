@@ -15,5 +15,5 @@ summary: "facebook/sam3 是 SAM 3 通用分割模型，支持更统一的提示�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18", "code-2026-10-19", "code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-21", "code-2026-10-22"]
 ---

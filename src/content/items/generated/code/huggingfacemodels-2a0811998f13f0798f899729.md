@@ -15,5 +15,5 @@ summary: "Qwen-Image 2.1 Turbo 无审查GGUF量化版，面向低显存环境的
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-18"]
 ---

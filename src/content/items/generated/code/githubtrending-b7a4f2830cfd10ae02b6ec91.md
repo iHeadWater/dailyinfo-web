@@ -15,5 +15,5 @@ summary: "面向 AI 数据检索的 Rust 引擎，通过 autoindex 一键索引�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-17", "code-2026-10-18"]
+briefing_ids: ["code-2026-10-18"]
 ---
