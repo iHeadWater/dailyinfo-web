@@ -9,11 +9,11 @@ source:
   external_id: "kulkas2pintu/wan777"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-24T03:45:36.732603+08:00"
+retrieved_at: "2026-10-25T03:45:32.182458+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "Wan777 的 Gradio 交互空间，提供影像生成模型的一键式可视化试用与快速出图体验。"
+summary: "以 Wan 模型为核心的 Gradio 生成应用，封装推理流程并提供直观的参数化交互体验。"
 why_it_matters: null
-tags: []
+tags: ["Gradio", "Wan"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-18", "code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24"]
+briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
 ---

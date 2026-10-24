@@ -15,5 +15,5 @@ summary: "基于Qwen-Image 2.1的无审查图像生成Gradio应用，强调开�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-18", "code-2026-10-19"]
+briefing_ids: ["code-2026-10-19"]
 ---

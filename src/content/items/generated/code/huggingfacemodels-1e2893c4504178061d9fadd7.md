@@ -9,11 +9,11 @@ source:
   external_id: "MiniMaxAI/MiniMax-M3.1-Flash"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-24T03:45:14.355184+08:00"
+retrieved_at: "2026-10-25T03:45:13.664721+08:00"
 published_at: "2026-10-24T03:45:43.856039+08:00"
-summary: "MiniMax-M3.1-Flash 是轻量高效的多模态图文理解模型，主打快速响应的视觉问答与内容理解。"
+summary: "MiniMax-M3.1-Flash 面向图文到文本任务，以 Flash 架构实现高效多模态理解与响应。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24"]
+briefing_ids: ["code-2026-10-24", "code-2026-10-25"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "NVIDIA/OpenShell"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-24T03:45:07.191514+08:00"
+retrieved_at: "2026-10-25T03:45:07.229516+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "NVIDIA/OpenShell：用 Rust 构建的自主 AI 代理安全私有运行时，强调隔离与隐私保护。"
+summary: "NVIDIA 为自主 AI 代理打造的安全、私密运行时环境。"
 why_it_matters: null
-tags: ["AI Agent", "运行时", "隐私安全"]
+tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24"]
+briefing_ids: ["code-2026-10-24", "code-2026-10-25"]
 ---

@@ -15,5 +15,5 @@ summary: "终端内运行的智能编码工具，理解代码库并通过自然�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-18", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-20"]
 ---

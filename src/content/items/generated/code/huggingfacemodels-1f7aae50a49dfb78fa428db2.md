@@ -9,11 +9,11 @@ source:
   external_id: "datalab-to/indra-ocr"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-24T03:45:14.355184+08:00"
+retrieved_at: "2026-10-25T03:45:13.664721+08:00"
 published_at: "2026-10-20T03:45:37.944745+08:00"
-summary: "Indra-OCR 是面向文档图像的高精度 OCR 模型，主打复杂版面文字识别与结构化文本抽取。"
+summary: "Indra-OCR 面向图像到文本的 OCR 任务，提供文档与场景文字识别及结构化提取能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
 ---
