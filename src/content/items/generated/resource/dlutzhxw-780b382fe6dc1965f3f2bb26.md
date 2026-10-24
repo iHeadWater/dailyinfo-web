@@ -8,11 +8,11 @@ source:
   url: "https://news.dlut.edu.cn/info/1025/158295.htm"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-24T03:30:03.271489+08:00"
+retrieved_at: "2026-10-25T03:30:05.267448+08:00"
 published_at: "2026-10-24T03:30:18.023677+08:00"
-summary: "大连高新区管委会到访软件学院，开展交流访问。"
+summary: "大连高新区管委会到访软件学院。"
 why_it_matters: null
-tags: []
+tags: ["综合新闻"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-10-24"]
+briefing_ids: ["resource-2026-10-24", "resource-2026-10-25"]
 ---
