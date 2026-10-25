@@ -15,5 +15,5 @@ summary: "统一平台管理多代理舰队，支持自带订阅运行任意编�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
 ---

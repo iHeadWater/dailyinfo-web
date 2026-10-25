@@ -9,11 +9,11 @@ source:
   external_id: "cloudflare/security-audit-skill"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-25T03:45:07.229516+08:00"
+retrieved_at: "2026-10-26T03:45:03.962006+08:00"
 published_at: "2026-10-08T03:46:20.241478+08:00"
-summary: "面向编码代理的多阶段安全审计技能，可产出经独立验证且机器可读的安全发现。"
+summary: "面向编码智能体的多阶段安全审计技能，输出可独立验证、机器可读的漏洞发现。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
+briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
 ---

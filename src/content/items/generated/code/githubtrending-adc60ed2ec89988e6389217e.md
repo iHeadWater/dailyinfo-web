@@ -15,5 +15,5 @@ summary: "基于 Claude Code 的本机运行 AI 求职申请框架，可评估�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-21"]
 ---

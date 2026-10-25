@@ -15,5 +15,5 @@ summary: "LiquidAI/LFM2.5-24B-A2B 是 24B 总参、2B 激活的稀疏文本生�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
 ---

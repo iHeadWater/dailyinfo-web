@@ -15,5 +15,5 @@ summary: "面向 Viggle 场景的 Qwen-Image-2.1-Turbo Gradio 演示，提供加
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-20"]
 ---

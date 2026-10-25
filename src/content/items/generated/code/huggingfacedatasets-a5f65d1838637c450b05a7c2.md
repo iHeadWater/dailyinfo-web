@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/simready-assets"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-25T03:45:25.076798+08:00"
+retrieved_at: "2026-10-26T03:45:23.602708+08:00"
 published_at: "2026-10-25T03:45:44.605905+08:00"
-summary: "NVIDIA SimReady仿真就绪3D资产库，提供带物理属性的模型以加速机器人、自动驾驶仿真和数字孪生构建。"
+summary: "NVIDIA推出的SimReady标准化3D资产库，具备物理属性与仿真就绪特性，可直接用于数字孪生、机器人和自动驾驶仿真。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26"]
 ---

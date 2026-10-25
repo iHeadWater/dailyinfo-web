@@ -15,5 +15,5 @@ summary: "为代理编码CLI提供长期记忆并支持不同代理厂商间交�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-20", "code-2026-10-22"]
 ---

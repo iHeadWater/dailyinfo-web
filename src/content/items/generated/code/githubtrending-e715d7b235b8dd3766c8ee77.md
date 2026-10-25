@@ -9,11 +9,11 @@ source:
   external_id: "pollen-robotics/microduck"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-25T03:45:07.229516+08:00"
+retrieved_at: "2026-10-26T03:45:03.962006+08:00"
 published_at: "2026-10-25T03:45:44.605905+08:00"
-summary: "一只微型双足鸭子机器人，展示紧凑型双足机器人平台。"
+summary: "基于 Rust 的小型双足鸭子机器人，定位为轻量、可扩展的微型双足机器人平台。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26"]
 ---

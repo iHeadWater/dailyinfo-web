@@ -15,5 +15,5 @@ summary: "MiniCPM-V-4.7-35B-A3B 采用35B总参、3B激活的MoE架构，以高�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-19", "code-2026-10-20"]
+briefing_ids: ["code-2026-10-20"]
 ---
