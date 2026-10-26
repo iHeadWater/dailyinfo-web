@@ -9,11 +9,11 @@ source:
   external_id: "pbakaus/impeccable"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-26T03:45:03.962006+08:00"
+retrieved_at: "2026-10-27T03:45:06.442496+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "面向 AI 编码工具的设计语言，让 AI harness 在界面与视觉设计上表现得更专业。"
+summary: "让 AI 智能体框架更懂设计的设计语言，提升生成界面的设计质量与一致性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
 ---

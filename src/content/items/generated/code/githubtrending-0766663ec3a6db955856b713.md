@@ -9,11 +9,11 @@ source:
   external_id: "JetBrains/thinkrail"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-26T03:45:03.962006+08:00"
+retrieved_at: "2026-10-27T03:45:06.442496+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "JetBrains 推出的轻量级真实 IDE，主打 vibe coding，并能根据个人工作方式自适应定制开发环境。"
+summary: "JetBrains 推出的轻量级真实 IDE，支持用 pi 进行 Vibe Coding，并可按个人工作方式自我定制。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27"]
 ---

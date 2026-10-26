@@ -9,11 +9,11 @@ source:
   external_id: "dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-26T03:45:12.498890+08:00"
+retrieved_at: "2026-10-27T03:45:17.396971+08:00"
 published_at: "2026-10-23T03:45:40.806372+08:00"
-summary: "dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8 是 DeepSeek-V4.1-Flash 的去审查 FP8 多模态版本，强调开放内容理解与高效图文推理。"
+summary: "DeepSeek-V4.1-Flash 的无审查 FP8 版本，强调少限制多模态理解与高效 FP8 推理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
 ---

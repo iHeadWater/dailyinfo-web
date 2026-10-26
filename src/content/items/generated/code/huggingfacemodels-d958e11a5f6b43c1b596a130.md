@@ -9,11 +9,11 @@ source:
   external_id: "Nanbeige/Nanbeige4.3-33B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-26T03:45:12.498890+08:00"
+retrieved_at: "2026-10-27T03:45:17.396971+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "Nanbeige/Nanbeige4.3-33B 是 33B 级开源文本生成模型，主打大规模通用语言建模与推理能力。"
+summary: "Nanbeige4.3-33B 是 33B 规模文本生成模型，兼顾生成质量与部署成本。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "TauricResearch/TradingAgents"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-26T03:45:03.962006+08:00"
+retrieved_at: "2026-10-27T03:45:06.442496+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "基于多智能体 LLM 的金融交易框架，用于协同分析市场并构建交易决策流程。"
+summary: "基于多智能体 LLM 的金融交易框架，协同分析市场并辅助交易决策。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27"]
 ---

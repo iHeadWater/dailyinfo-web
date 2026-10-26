@@ -15,5 +15,5 @@ summary: "基于图/节点接口的模块化扩散模型GUI、API和后端，主
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-20", "code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
 ---

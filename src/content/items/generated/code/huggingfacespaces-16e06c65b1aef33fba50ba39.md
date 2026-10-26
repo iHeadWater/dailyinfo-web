@@ -15,5 +15,5 @@ summary: "基于 MiniMax H3 的 360° 环绕生成演示，突出多视角轨道
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-20", "code-2026-10-21"]
+briefing_ids: ["code-2026-10-21"]
 ---

@@ -15,5 +15,5 @@ summary: "Qwen Image 2.1 Turbo 的 Gradio 演示，主打高速文生图与低�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-20", "code-2026-10-21"]
+briefing_ids: ["code-2026-10-21"]
 ---
