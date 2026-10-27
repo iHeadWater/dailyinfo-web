@@ -15,5 +15,5 @@ summary: "Timestral-209M 是 209M 轻量时间序列预测模型，主打高效�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
 ---

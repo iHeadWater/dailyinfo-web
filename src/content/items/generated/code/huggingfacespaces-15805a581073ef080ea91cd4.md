@@ -15,5 +15,5 @@ summary: "静态决策索引应用，以可浏览页面汇总模型与工具选�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
 ---

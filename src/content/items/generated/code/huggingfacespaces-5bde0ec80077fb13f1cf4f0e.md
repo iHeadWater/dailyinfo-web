@@ -9,11 +9,11 @@ source:
   external_id: "fishpasters/uncensored-imageTOimage2Ref"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-27T03:45:37.650518+08:00"
+retrieved_at: "2026-10-28T03:45:36.030970+08:00"
 published_at: "2026-10-24T03:45:43.856039+08:00"
-summary: "面向参考图驱动的无审查图生图Gradio工具，强调多参考一致性与开放生成能力。"
+summary: "支持双参考图的无审查图生图 Gradio 工具，强化参考一致性与自由创作能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

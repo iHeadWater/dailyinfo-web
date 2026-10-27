@@ -9,11 +9,11 @@ source:
   external_id: "unsloth/flint-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-27T03:45:17.396971+08:00"
+retrieved_at: "2026-10-28T03:45:14.770397+08:00"
 published_at: "2026-10-25T03:45:44.605905+08:00"
-summary: "Flint 的 GGUF 量化版本，主打 Unsloth 高效本地推理与低门槛部署。"
+summary: "flint-GGUF 将 flint 文本生成模型封装为 GGUF 量化格式，便于本地高效推理与快速部署。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

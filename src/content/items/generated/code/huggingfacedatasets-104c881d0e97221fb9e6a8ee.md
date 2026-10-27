@@ -15,5 +15,5 @@ summary: "Qwen 推出的 BlenderWorld 3D 场景生成环境，支持可控世界
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-22"]
 ---

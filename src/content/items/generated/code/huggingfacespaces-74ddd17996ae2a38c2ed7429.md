@@ -9,11 +9,11 @@ source:
   external_id: "dlouapre/nlp-before-llms"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-27T03:45:37.650518+08:00"
+retrieved_at: "2026-10-28T03:45:36.030970+08:00"
 published_at: "2026-10-25T03:45:44.605905+08:00"
-summary: "以Docker复现LLM之前经典NLP方法与实验，帮助理解传统NLP技术演进与教学脉络。"
+summary: "以 Docker 封装的“大模型之前”NLP 教学实验环境，系统展示传统自然语言处理技术与方法演进。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

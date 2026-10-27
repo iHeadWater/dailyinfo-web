@@ -9,11 +9,11 @@ source:
   external_id: "HuggingFaceBio/Carbon-X"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-27T03:45:17.396971+08:00"
+retrieved_at: "2026-10-28T03:45:14.770397+08:00"
 published_at: "2026-10-27T03:45:47.117722+08:00"
-summary: "Carbon-X 是面向生物科学文本生成的模型，突出领域知识与生成能力。"
+summary: "Carbon-X 面向生物与科学文本生成，以轻量模型探索专业领域语言理解与内容生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27"]
+briefing_ids: ["code-2026-10-27", "code-2026-10-28"]
 ---

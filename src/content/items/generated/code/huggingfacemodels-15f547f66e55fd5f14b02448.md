@@ -15,5 +15,5 @@ summary: "EmbeddingGemma-2 提供高质量文本嵌入特征提取，适用于�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "abenzerps/Qwen-Image-2.1-Uncensored-Quantized"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-27T03:45:17.396971+08:00"
+retrieved_at: "2026-10-28T03:45:14.770397+08:00"
 published_at: "2026-10-13T03:45:48.389506+08:00"
-summary: "Qwen-Image-2.1 的无审查量化版，突出少限制文生图与高效量化部署。"
+summary: "Qwen-Image-2.1 的无审查量化版主打高自由度文生图与低显存部署，满足定制化图像创作需求。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

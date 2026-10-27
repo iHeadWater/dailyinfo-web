@@ -15,5 +15,5 @@ summary: "面向金融市场“语言”的基础模型。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-22"]
 ---

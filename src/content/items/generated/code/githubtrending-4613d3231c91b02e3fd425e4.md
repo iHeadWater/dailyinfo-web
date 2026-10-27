@@ -15,5 +15,5 @@ summary: "通过“最懒资深开发者”式约束让 AI 代理少写代码、
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
 ---

@@ -15,5 +15,5 @@ summary: "在工具输出、日志、文件和RAG块进入LLM前压缩，显著�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-21", "code-2026-10-22"]
+briefing_ids: ["code-2026-10-22"]
 ---

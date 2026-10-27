@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/Nemotron-Personas-Germany"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-27T03:45:28.581172+08:00"
+retrieved_at: "2026-10-28T03:45:28.501081+08:00"
 published_at: "2026-10-23T03:45:40.806372+08:00"
-summary: "提供德国本地化合成人物画像数据集，支持本地化模型评估与角色一致性研究。"
+summary: "提供面向德国语境的高质量人物角色数据，支撑本地化大模型人格设定与文化适配评测。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---
