@@ -15,5 +15,5 @@ summary: "腾讯 Hy-Memory 采用 30B 总参数、A3B 激活的稀疏架构，�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-23"]
 ---

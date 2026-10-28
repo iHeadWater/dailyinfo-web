@@ -9,11 +9,11 @@ source:
   external_id: "HKUDS/DeepTutor"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-28T03:45:05.554626+08:00"
+retrieved_at: "2026-10-29T03:45:05.391802+08:00"
 published_at: "2026-10-28T03:45:44.938103+08:00"
-summary: "提供终身个性化辅导的 AI 学习系统，根据学习者长期需求持续调整教学支持。"
+summary: "HKUDS推出的终身个性化辅导系统，利用AI为学习者提供持续、个性化的教学支持。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29"]
 ---

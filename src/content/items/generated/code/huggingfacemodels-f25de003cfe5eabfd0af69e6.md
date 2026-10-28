@@ -15,5 +15,5 @@ summary: "Humanizer 聚焦文本人性化生成，用于将机器文本改写得
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25"]
 ---

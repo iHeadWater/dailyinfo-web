@@ -15,5 +15,5 @@ summary: "FLUX.3 Image Klein 是轻量级图生图模型，主打高质量图像
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24"]
 ---

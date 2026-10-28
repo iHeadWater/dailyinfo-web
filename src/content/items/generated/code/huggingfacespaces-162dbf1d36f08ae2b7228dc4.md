@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/simready-central"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-28T03:45:36.030970+08:00"
+retrieved_at: "2026-10-29T03:45:33.310290+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "NVIDIA 推出的 SimReady 资产中心容器化方案，用于发现、验证和管理可直接用于仿真与数字孪生的 3D 资产。"
+summary: "提供 NVIDIA SimReady 资产的集中管理与校验/转换流水线，帮助构建符合仿真标准的 USD 资源。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
 ---

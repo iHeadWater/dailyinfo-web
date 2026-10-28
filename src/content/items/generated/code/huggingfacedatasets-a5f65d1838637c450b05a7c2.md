@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/simready-assets"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-28T03:45:28.501081+08:00"
+retrieved_at: "2026-10-29T03:45:26.477472+08:00"
 published_at: "2026-10-25T03:45:44.605905+08:00"
-summary: "提供物理属性完备、可直接用于仿真与数字孪生的SimReady 3D资产集合，加速机器人、自动驾驶等虚拟训练场景构建。"
+summary: "提供面向仿真与机器人开发的SimReady标准化3D资产，突出物理属性准确与即用部署。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
 ---

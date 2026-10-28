@@ -9,11 +9,11 @@ source:
   external_id: "deepseek-ai/DeepSeek-V4.1-Flash-1017"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-28T03:45:14.770397+08:00"
+retrieved_at: "2026-10-29T03:45:15.796740+08:00"
 published_at: "2026-10-18T03:45:42.777407+08:00"
-summary: "DeepSeek-V4.1-Flash-1017 以轻量高速的多模态图文理解与文本生成为核心，兼顾高人气与低成本推理。"
+summary: "面向图文理解与生成的Flash级多模态模型，兼顾高吞吐推理与跨模态语义对齐。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
 ---

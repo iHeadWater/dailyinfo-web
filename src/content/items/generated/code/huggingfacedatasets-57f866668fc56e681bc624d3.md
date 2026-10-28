@@ -15,5 +15,5 @@ summary: "小米开源MiMo V2.6的强化学习版本模型，通过RL训练强�
 why_it_matters: null
 tags: ["小米", "开源模型", "强化学习"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-23"]
 ---

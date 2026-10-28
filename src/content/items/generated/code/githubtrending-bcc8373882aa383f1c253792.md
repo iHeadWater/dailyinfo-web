@@ -15,5 +15,5 @@ summary: "基于 Postgres 的开发平台，为 Web、移动和 AI 应用提供�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-23"]
 ---

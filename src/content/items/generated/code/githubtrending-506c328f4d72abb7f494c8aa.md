@@ -15,5 +15,5 @@ summary: "将代码库及文档、SQL、配置和 PDF 转为可查询知识图�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-23"]
 ---

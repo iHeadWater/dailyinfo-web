@@ -15,5 +15,5 @@ summary: "NVIDIA 优化的 Qwen3.8 Flash Next FP4 本地版主打低比特量化
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-22", "code-2026-10-23"]
+briefing_ids: ["code-2026-10-23"]
 ---
