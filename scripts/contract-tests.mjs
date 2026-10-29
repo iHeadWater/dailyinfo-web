@@ -19,6 +19,7 @@
  *   8. Item summary markdown rendering (sanitized, heading levels)
  *   9. Plain-text summaries (card previews, RSS descriptions)
  *  10. Homepage ranking (topic slots + journal prestige, injected policy)
+ *  11. Listing windowing (RSS feed limit + category pagination)
  *
  * Run: npm test
  */
@@ -90,6 +91,7 @@ console.log('\n[1] Identity / URL / RSS GUID contracts');
   const { SITE, withBase, absoluteUrl } = await lib('site.ts');
   const {
     categoryRoute,
+    categoryPageRoute,
     itemRoute,
     dailyRoute,
     briefingRoute,
@@ -236,6 +238,21 @@ console.log('\n[1] Identity / URL / RSS GUID contracts');
   check(
     'RSS absolute URL includes configured base',
     absoluteUrl(feedRoute()) === `${SITE.origin}${SITE.base}${feedRoute()}`,
+  );
+  check(
+    'category page 1 is the category index URL',
+    categoryPageRoute('papers', 1) === categoryRoute('papers') &&
+      categoryPageRoute('papers') === '/papers/',
+  );
+  check(
+    'category page n≥2 uses the reserved /page/{n}/ segment',
+    categoryPageRoute('papers', 2) === '/papers/page/2/' &&
+      categoryPageRoute('ai_news', 3) === '/ai-news/page/3/',
+  );
+  check(
+    'paginated listing URL is not an Item identity URL',
+    categoryPageRoute('papers', 2) !== itemRoute('papers', 'page') &&
+      !categoryPageRoute('papers', 2).startsWith(itemRoute('papers', 'openreview-example-001')),
   );
   check(
     'canonical Item URL includes configured origin and base',
@@ -1127,6 +1144,81 @@ console.log('\n[10] Homepage ranking (papers: topic slots + prestige)');
     'ranking drops nothing',
     returned.length === acceptance.length &&
       [...returned].map((entry) => entry.id).sort().join() === [...acceptance].map((entry) => entry.id).sort().join(),
+  );
+}
+
+// ===========================================================================
+console.log('\n[11] Listing windowing (RSS feed limit + category pagination)');
+// ===========================================================================
+{
+  const {
+    FEED_ITEM_LIMIT,
+    CATEGORY_PAGE_SIZE,
+    comparePublishedDesc,
+    takeRecentItems,
+    totalPages,
+    paginate,
+    extraListingPages,
+    paginationSequence,
+  } = await lib('listing.ts');
+  const { itemGuid, itemCanonicalUrl } = await lib('identity.ts');
+
+  check('default RSS window is 50 Items', FEED_ITEM_LIMIT === 50);
+  check('default category page size is 50 Items', CATEGORY_PAGE_SIZE === 50);
+
+  const newestFirst = Array.from({ length: 80 }, (_, index) => `item-${index}`);
+  const windowed = takeRecentItems(newestFirst, 50);
+  check('takeRecentItems keeps the first N of a newest-first list', windowed.join() === newestFirst.slice(0, 50).join());
+  check('takeRecentItems does not mutate its input', newestFirst.length === 80);
+  check(
+    'takeRecentItems on a short list returns the whole list',
+    takeRecentItems(['a', 'b'], 50).join() === 'a,b',
+  );
+
+  const ordered = [
+    { id: 'b', published_at: '2026-10-02T00:00:00Z' },
+    { id: 'a', published_at: '2026-10-02T00:00:00Z' },
+    { id: 'c', published_at: '2026-10-03T00:00:00Z' },
+  ];
+  const sorted = [...ordered].sort(comparePublishedDesc);
+  check(
+    'comparePublishedDesc is newest-first and ties break on id',
+    sorted.map((entry) => entry.id).join() === 'c,a,b',
+  );
+
+  const items = Array.from({ length: 120 }, (_, index) => index + 1);
+  const page1 = paginate(items, 1, 50);
+  const page2 = paginate(items, 2, 50);
+  const page3 = paginate(items, 3, 50);
+  check(
+    'paginate page 1 is the leading window',
+    page1.items.join() === items.slice(0, 50).join() &&
+      page1.startIndex === 1 &&
+      page1.endIndex === 50 &&
+      page1.totalPages === 3,
+  );
+  check(
+    'paginate page 2 is the middle window',
+    page2.items.join() === items.slice(50, 100).join() && page2.startIndex === 51 && page2.endIndex === 100,
+  );
+  check(
+    'paginate last page is the remainder',
+    page3.items.join() === items.slice(100).join() && page3.endIndex === 120,
+  );
+  check('empty collection still occupies page 1', totalPages(0, 50) === 1 && paginate([], 1, 50).items.length === 0);
+  check('extra listing routes start at page 2', extraListingPages(3).join() === '2,3' && extraListingPages(1).join() === '');
+  check(
+    'pagination sequence keeps first, last, and a window around current',
+    paginationSequence(1, 1).join() === '1' &&
+      paginationSequence(2, 5).join() === '1,2,3,ellipsis,5' &&
+      paginationSequence(20, 40).join() === '1,ellipsis,19,20,21,ellipsis,40',
+  );
+
+  const guidBefore = itemGuid('arxiv', 'arxiv-2610.31478');
+  const guidAfter = itemCanonicalUrl('arxiv', 'arxiv-2610.31478');
+  check(
+    'an Item omitted from the feed window keeps the same GUID',
+    guidBefore === guidAfter,
   );
 }
 

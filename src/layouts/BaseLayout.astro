@@ -1,5 +1,5 @@
 ---
-import { SITE, withBase } from '../lib/site.ts';
+import { SITE, absoluteUrl, withBase } from '../lib/site.ts';
 import { buildSeo, type SeoInput } from '../lib/seo.ts';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -8,9 +8,13 @@ import '../styles/global.css';
 interface Props extends SeoInput {
   /** Root-relative path of the current page, e.g. '/papers/'. */
   path: string;
+  /** Logical route of the previous listing page, when paginated. */
+  prevPath?: string;
+  /** Logical route of the next listing page, when paginated. */
+  nextPath?: string;
 }
 
-const { path, ...seoInput } = Astro.props;
+const { path, prevPath, nextPath, ...seoInput } = Astro.props;
 const seo = buildSeo({ path, ...seoInput });
 ---
 
@@ -22,6 +26,8 @@ const seo = buildSeo({ path, ...seoInput });
     <title>{seo.title}</title>
     <meta name="description" content={seo.description} />
     <link rel="canonical" href={seo.canonical} />
+    {prevPath && <link rel="prev" href={absoluteUrl(prevPath)} />}
+    {nextPath && <link rel="next" href={absoluteUrl(nextPath)} />}
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
     <link
       rel="alternate"

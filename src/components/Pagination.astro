@@ -1,0 +1,75 @@
+---
+import { withBase } from '../lib/site.ts';
+import { categoryPageRoute } from '../lib/urls.ts';
+import { paginationSequence } from '../lib/listing.ts';
+import type { CategoryId } from '../lib/categories.ts';
+
+/**
+ * Static pager for category listings. Every control is a real <a href>, so
+ * the full collection remains browsable with JavaScript disabled.
+ */
+interface Props {
+  categoryId: CategoryId;
+  page: number;
+  totalPages: number;
+  totalItems: number;
+  startIndex: number;
+  endIndex: number;
+}
+
+const { categoryId, page, totalPages, totalItems, startIndex, endIndex } = Astro.props;
+const sequence = paginationSequence(page, totalPages);
+const prevHref = page > 1 ? withBase(categoryPageRoute(categoryId, page - 1)) : undefined;
+const nextHref = page < totalPages ? withBase(categoryPageRoute(categoryId, page + 1)) : undefined;
+---
+
+{
+  totalPages > 1 && (
+    <nav class="pagination" aria-label="分页">
+      <p class="pagination__status">
+        第 {startIndex}–{endIndex} 条，共 {totalItems} 条 · {page} / {totalPages} 页
+      </p>
+      <div class="pagination__controls">
+        {prevHref ? (
+          <a class="pagination__step" href={prevHref} rel="prev">
+            <span aria-hidden="true">←</span> 上一页
+          </a>
+        ) : (
+          <span class="pagination__step pagination__step--disabled">
+            <span aria-hidden="true">←</span> 上一页
+          </span>
+        )}
+        <ol class="pagination__pages">
+          {sequence.map((entry) =>
+            entry === 'ellipsis' ? (
+              <li class="pagination__ellipsis" aria-hidden="true">
+                …
+              </li>
+            ) : (
+              <li>
+                {entry === page ? (
+                  <span class="pagination__page pagination__page--current" aria-current="page">
+                    {entry}
+                  </span>
+                ) : (
+                  <a class="pagination__page" href={withBase(categoryPageRoute(categoryId, entry))}>
+                    {entry}
+                  </a>
+                )}
+              </li>
+            ),
+          )}
+        </ol>
+        {nextHref ? (
+          <a class="pagination__step" href={nextHref} rel="next">
+            下一页 <span aria-hidden="true">→</span>
+          </a>
+        ) : (
+          <span class="pagination__step pagination__step--disabled">
+            下一页 <span aria-hidden="true">→</span>
+          </span>
+        )}
+      </div>
+    </nav>
+  )
+}
