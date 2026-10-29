@@ -15,5 +15,5 @@ summary: "php/php-src：PHP 官方解释器源码，承载 PHP 语言核心运�
 why_it_matters: null
 tags: ["PHP", "解释器"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24"]
+briefing_ids: ["code-2026-10-24"]
 ---

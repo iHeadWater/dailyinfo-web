@@ -15,5 +15,5 @@ summary: "OpenMOSS-Team/MOSS-Image-Base 是 MOSS 图像生成基础模型，提�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
+briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
 ---

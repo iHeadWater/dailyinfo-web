@@ -9,11 +9,11 @@ source:
   external_id: "elayadesign/ai-design-skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-29T03:45:05.391802+08:00"
+retrieved_at: "2026-10-30T03:45:05.894665+08:00"
 published_at: "2026-10-29T03:45:43.946956+08:00"
-summary: "面向AI设计场景的技能集合，用于把设计相关能力模块化并复用到智能体工作流中。"
+summary: "ai-design-skills：面向 AI 设计场景的技能集合，帮助将设计流程与智能体能力结合。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30"]
 ---

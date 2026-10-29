@@ -15,5 +15,5 @@ summary: "基于 Qwen-Image 2.1 的无审查全能 LoRA 集合，提供一站式
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24"]
+briefing_ids: ["code-2026-10-24"]
 ---

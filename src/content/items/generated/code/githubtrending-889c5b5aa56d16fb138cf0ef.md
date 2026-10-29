@@ -9,11 +9,11 @@ source:
   external_id: "nightly-labs/openbot"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-29T03:45:05.391802+08:00"
+retrieved_at: "2026-10-30T03:45:05.894665+08:00"
 published_at: "2026-10-27T03:45:47.117722+08:00"
-summary: "本地优先的桌面工作空间，支持Codex、Claude、Grok等持久化AI队友，并提供任务队列、文件共享、浏览器控制和Agent间协作。"
+summary: "openbot：本地优先的桌面工作区，让 Codex、Claude、Grok 作为持久 AI 队友进行任务队列、文件共享、浏览器控制和智能体协作。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
+briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
 ---

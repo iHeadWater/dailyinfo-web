@@ -15,5 +15,5 @@ summary: "datalab-to/indra-ocr 是图像到文本 OCR 模型，主打复杂文�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
+briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
 ---

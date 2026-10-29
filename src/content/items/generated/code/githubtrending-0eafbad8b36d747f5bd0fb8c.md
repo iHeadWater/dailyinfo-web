@@ -15,5 +15,5 @@ summary: "anthropics/knowledge-work-plugins：面向知识工作者的开源 Cla
 why_it_matters: null
 tags: ["Claude", "插件", "知识工作"]
 language: "zh-CN"
-briefing_ids: ["code-2026-10-23", "code-2026-10-24"]
+briefing_ids: ["code-2026-10-24"]
 ---
