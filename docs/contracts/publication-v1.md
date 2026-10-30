@@ -149,10 +149,16 @@ explicit, deliberate operation (out of scope for v1; no redirect store exists).
 | Briefing | `/daily/{date}/{category-slug}/` | `/daily/2026-08-26/papers/` |
 | Daily | `/daily/{date}/` | `/daily/2026-08-26/` |
 | Category | `/{category-slug}/` | `/ai-news/` |
+| Category listing page `n≥2` | `/{category-slug}/page/{n}/` | `/papers/page/2/` |
 | Archive | `/archive/` | — |
 | Home | `/` | — |
 
 - **Item title NEVER participates in the canonical URL.**
+- Category listing pagination (`/{category-slug}/page/{n}/`) is a
+  **presentation URL**, not publication identity. Page 1 remains the
+  category index from the table above; later pages are a window over the
+  same newest-first Item list. The reserved path segment `page` is not an
+  Item id prefix and does not change Item or Briefing URLs.
 - URL builders live in `src/lib/urls.ts` (paths) and `src/lib/identity.ts`
   (absolute canonical URLs); every page, card, feed and sitemap entry derives
   from these functions — the URL contract is enforced by construction.
@@ -200,6 +206,26 @@ Consequences:
   mutation is forbidden (§5).
 - GUIDs are constructed in `src/lib/identity.ts` (`itemGuid`), which by
   construction returns the canonical URL.
+
+### Feed window (publication surface)
+
+Each RSS feed (`/feed.xml` and `/feed/{category-slug}.xml`) contains only the
+**most recent N Items** in that feed's scope, ordered by `published_at` DESC
+with stable `id` ASC as tiebreaker (the same order as the site Item index).
+
+- Default **N = 50**, overridable at build time via `FEED_ITEM_LIMIT`.
+- CI fail-closed cap: a generated feed must contain at most N `<item>`
+  elements and stay at or under **200 KiB** (`FEED_MAX_BYTES`).
+- Feed **paths are frozen**; `/feed.xml` and `/feed/{slug}.xml` do not
+  change. This window is additive documentation of publish semantics — it
+  does not change the GUID identity rule above and does not require
+  `schema_version` 2.
+- **History is not discarded.** Items omitted from the current window remain
+  on the site at their canonical Item URLs, on paginated category listings
+  (`/{category-slug}/` and `/{category-slug}/page/{n}/`), and in `/archive/`.
+- When an Item rotates out of the window and later rotates back in, its GUID
+  is unchanged (still the canonical Item URL). Readers must not treat
+  re-entry as a new publication identity.
 
 ### Deployment Note
 

@@ -11,8 +11,15 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse as parseYaml } from 'yaml';
 import { SITE, absoluteUrl, withBase } from '../src/lib/site.ts';
-import { briefingRoute, dailyRoute, itemRoute } from '../src/lib/urls.ts';
+import { briefingRoute, categoryPageRoute, dailyRoute, itemRoute } from '../src/lib/urls.ts';
 import { CATEGORIES } from '../src/lib/categories.ts';
+import {
+  CATEGORY_INDEX_MAX_BYTES,
+  CATEGORY_PAGE_SIZE,
+  FEED_ITEM_LIMIT,
+  FEED_MAX_BYTES,
+  comparePublishedDesc,
+} from '../src/lib/listing.ts';
 import { findRenderedItem } from './verify-build-helpers.mjs';
 
 const repo = new URL('..', import.meta.url).pathname;
@@ -174,18 +181,59 @@ if (sampleItem && sampleBriefing) {
   );
 }
 
+function rssItemBodies(xml) {
+  return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => match[1]);
+}
+
+function rssPermalinkGuid(itemXml) {
+  return itemXml.match(/<guid isPermaLink="true">([^<]*)<\/guid>/)?.[1] ?? '';
+}
+
+function rssLink(itemXml) {
+  return itemXml.match(/<link>([^<]*)<\/link>/)?.[1] ?? '';
+}
+
+function byteSize(relativePath) {
+  try {
+    return readFileSync(join(dist, relativePath)).byteLength;
+  } catch {
+    return 0;
+  }
+}
+
 console.log('\n[3] RSS, robots and sitemap');
 const feed = read('feed.xml');
 const papersFeed = read('feed/papers.xml');
 check('global feed artifact exists', feed.length > 0);
 check('papers feed artifact exists', papersFeed.length > 0);
 check('global feed site link uses current public URL', feed.includes(`<link>${SITE.publicUrl}</link>`));
-if (sampleItem) {
-  check('RSS item link uses current public URL', feed.includes(`<link>${itemUrl}</link>`));
+
+const feedFiles = [
+  ['feed.xml', feed],
+  ...CATEGORIES.map((category) => [`feed/${category.slug}.xml`, read(`feed/${category.slug}.xml`)]),
+];
+for (const [relativePath, xml] of feedFiles) {
+  const items = rssItemBodies(xml);
+  const size = byteSize(relativePath);
   check(
-    'RSS GUID equals canonical Item URL',
-    feed.includes(`<guid isPermaLink="true">${itemUrl}</guid>`,
-    ),
+    `${relativePath} stays within the ${FEED_ITEM_LIMIT}-item window`,
+    xml.length > 0 && items.length <= FEED_ITEM_LIMIT,
+    `${items.length} item(s)`,
+  );
+  check(
+    `${relativePath} stays at or under ${FEED_MAX_BYTES} bytes`,
+    xml.length > 0 && size <= FEED_MAX_BYTES,
+    `${size} bytes`,
+  );
+  const mismatched = items.filter((itemXml) => {
+    const link = rssLink(itemXml);
+    const guid = rssPermalinkGuid(itemXml);
+    return !link.startsWith(SITE.publicUrl) || guid !== link;
+  });
+  check(
+    `${relativePath} GUID equals canonical Item URL for every entry`,
+    xml.length > 0 && mismatched.length === 0,
+    mismatched.slice(0, 2).map((itemXml) => rssLink(itemXml)).join(', '),
   );
 }
 const robots = read('robots.txt');
@@ -209,39 +257,38 @@ if (sampleItem) {
   check('sitemap contains representative Item URL', sitemapUrls.includes(itemUrl));
 }
 
-console.log('\n[4] Source (journal) grouping in category pages');
-// Conditional by necessity: a category with a single source must stay flat, and
-// an empty category is a valid state. The count of rendered group shells is
-// derived from the content on disk, not hardcoded.
-const sourcesByCategory = new Map();
-for (const contentItem of contentItems) {
-  if (!contentItem.source?.name) continue;
-  const bucket = sourcesByCategory.get(contentItem.category) ?? new Set();
-  bucket.add(contentItem.source.name);
-  sourcesByCategory.set(contentItem.category, bucket);
+function pageOneItems(categoryId) {
+  return contentItems
+    .filter((item) => item.category === categoryId && item.published_at && item.id)
+    .sort(comparePublishedDesc)
+    .slice(0, CATEGORY_PAGE_SIZE);
 }
 
+console.log('\n[4] Source (journal) grouping in category pages');
+// Grouping is evaluated on the first listing page only: pagination windows
+// Items before grouping, so a journal that has no Items on page 1 must not
+// appear as an empty shell.
 for (const category of CATEGORIES) {
-  const sourceCount = (sourcesByCategory.get(category.id) ?? new Set()).size;
-  if (sourceCount === 0) continue;
+  const visible = pageOneItems(category.id);
+  if (visible.length === 0 && contentItems.filter((item) => item.category === category.id).length === 0) {
+    continue;
+  }
 
-  // read() swallows file errors and returns '', so a missing artifact must be a
-  // failure here — otherwise a dist layout change would silently turn every
-  // assertion below into a no-op that still reports "passed".
   const categoryHtml = read(`${category.slug}/index.html`);
   check(`${category.slug}: category page artifact exists`, categoryHtml.length > 0);
   if (categoryHtml.length === 0) continue;
 
+  const sources = new Set(visible.map((item) => item.source?.name).filter(Boolean));
   const batches = [
     ...categoryHtml.matchAll(/<details class="item-batch item-batch--source"[^>]*>/g),
   ].map((match) => match[0]);
   const expanded = batches.filter((tag) => / open(=|>|\s|$)/.test(tag));
 
-  if (sourceCount > 1) {
+  if (sources.size > 1) {
     check(
-      `${category.slug}: renders one group per source`,
-      batches.length === sourceCount,
-      `${batches.length} group(s) for ${sourceCount} source(s)`,
+      `${category.slug}: page 1 renders one group per visible source`,
+      batches.length === sources.size,
+      `${batches.length} group(s) for ${sources.size} source(s)`,
     );
     check(
       `${category.slug}: exactly one group starts expanded`,
@@ -250,9 +297,47 @@ for (const category of CATEGORIES) {
     );
   } else {
     check(
-      `${category.slug}: single-source category stays a flat list`,
+      `${category.slug}: single-source (or empty) page 1 stays a flat list`,
       batches.length === 0,
       `${batches.length} group(s)`,
+    );
+  }
+}
+
+console.log('\n[5] Category listing pagination and HTML size');
+for (const category of CATEGORIES) {
+  const total = contentItems.filter((item) => item.category === category.id).length;
+  const indexHtml = read(`${category.slug}/index.html`);
+  const indexBytes = byteSize(`${category.slug}/index.html`);
+  check(
+    `${category.slug}: first-page HTML ≤ ${CATEGORY_INDEX_MAX_BYTES} bytes`,
+    indexHtml.length > 0 && indexBytes <= CATEGORY_INDEX_MAX_BYTES,
+    `${indexBytes} bytes`,
+  );
+
+  const needsPagination = total > CATEGORY_PAGE_SIZE;
+  const pageTwoPath = `${category.slug}/page/2/index.html`;
+  const pageTwoHtml = read(pageTwoPath);
+  if (needsPagination) {
+    check(`${category.slug}: page 2 artifact exists`, pageTwoHtml.length > 0);
+    check(
+      `${category.slug}: first page links to page 2`,
+      indexHtml.includes(`href="${withBase(categoryPageRoute(category.id, 2))}"`),
+    );
+    check(
+      `${category.slug}: page 2 links back to the category index`,
+      pageTwoHtml.includes(`href="${withBase(categoryPageRoute(category.id, 1))}"`),
+    );
+    const pageTwoBytes = byteSize(pageTwoPath);
+    check(
+      `${category.slug}: page 2 HTML ≤ ${CATEGORY_INDEX_MAX_BYTES} bytes`,
+      pageTwoHtml.length > 0 && pageTwoBytes <= CATEGORY_INDEX_MAX_BYTES,
+      `${pageTwoBytes} bytes`,
+    );
+  } else {
+    check(
+      `${category.slug}: no extra page when the list fits on page 1`,
+      pageTwoHtml.length === 0,
     );
   }
 }

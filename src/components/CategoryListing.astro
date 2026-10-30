@@ -1,0 +1,89 @@
+---
+import ItemCard from './ItemCard.astro';
+import SourceGroups from './SourceGroups.astro';
+import CategoryHeader from './CategoryHeader.astro';
+import Breadcrumb from './Breadcrumb.astro';
+import Pagination from './Pagination.astro';
+import { categoryRoute } from '../lib/urls.ts';
+import { groupItemsBySource, defaultOpenSourceKey } from '../lib/sources.ts';
+import { CATEGORY_PAGE_SIZE, paginate } from '../lib/listing.ts';
+import type { Category } from '../lib/categories.ts';
+import type { ItemEntry } from '../lib/content.ts';
+
+/**
+ * Shared category listing body used by /{slug}/ (page 1) and
+ * /{slug}/page/{n}/. Pagination happens before source grouping so a
+ * multi-journal category still groups only the Items on the current page.
+ */
+interface Props {
+  category: Category;
+  items: ItemEntry[];
+  page: number;
+}
+
+const { category, items, page } = Astro.props;
+const window = paginate(items, page, CATEGORY_PAGE_SIZE);
+const pageItems = window.items;
+
+// Group by source (journal) only when it buys the reader something — a
+// single-source category (e.g. arxiv) stays a flat list.
+const sourceGroups = groupItemsBySource(pageItems);
+const grouped = sourceGroups.length > 1;
+// defaultOpenSourceKey already yields undefined for fewer than two groups.
+const openKey = defaultOpenSourceKey(sourceGroups);
+
+const crumbs =
+  page > 1
+    ? [
+        { label: 'Home', href: '/' },
+        { label: category.label, href: categoryRoute(category.id) },
+        { label: `Page ${page}` },
+      ]
+    : [{ label: 'Home', href: '/' }, { label: category.label }];
+---
+
+<div class="page-shell" data-category={category.id}>
+  <Breadcrumb items={crumbs} />
+  <CategoryHeader category={category} count={items.length} />
+  <div class="list-toolbar" aria-label="列表说明">
+    <div>
+      <h2>Latest Articles</h2>
+      {
+        /* Once grouped, the list as a whole is ordered by journal, so the
+           unqualified "newest first" claim would be false. */
+        grouped ? (
+          <span>按期刊分组 · 组内按 DailyInfo 发布时间倒序</span>
+        ) : (
+          <span>按 DailyInfo 发布时间倒序</span>
+        )
+      }
+    </div>
+    <span>
+      {
+        window.totalItems === 0
+          ? '0 articles'
+          : `${window.startIndex}–${window.endIndex} / ${window.totalItems}`
+      }
+    </span>
+  </div>
+  {pageItems.length === 0 && <p class="empty-note">该分类暂无内容。</p>}
+  {
+    grouped ? (
+      <SourceGroups groups={sourceGroups} openKey={openKey} variant="category" />
+    ) : (
+      <div class="item-list item-list--category">
+        {pageItems.map((item) => (
+          <ItemCard item={item} showCategory={false} compact showTechnicalId />
+        ))}
+      </div>
+    )
+  }
+  <Pagination
+    categoryId={category.id}
+    page={window.page}
+    totalPages={window.totalPages}
+    totalItems={window.totalItems}
+    startIndex={window.startIndex}
+    endIndex={window.endIndex}
+  />
+</div>

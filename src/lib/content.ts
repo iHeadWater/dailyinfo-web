@@ -1,5 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { CATEGORIES, type CategoryId } from './categories.ts';
+import { comparePublishedDesc } from './listing.ts';
 import {
   validateParsedCollections,
   formatProblems,
@@ -70,13 +71,7 @@ async function buildSiteContent(): Promise<SiteContent> {
   for (const entry of briefingEntries) briefingsById.set(entry.data.id, entry);
 
   // --- indexes ------------------------------------------------------------
-  const byTimestamp = (a: string, b: string) => Date.parse(b) - Date.parse(a);
-
-  const items = [...itemEntries].sort(
-    (a, b) =>
-      byTimestamp(a.data.published_at, b.data.published_at) ||
-      a.data.id.localeCompare(b.data.id),
-  );
+  const items = [...itemEntries].sort((a, b) => comparePublishedDesc(a.data, b.data));
 
   const categoryOrder = new Map(CATEGORIES.map((c, i) => [c.id, i] as const));
   const briefings = [...briefingEntries].sort(
