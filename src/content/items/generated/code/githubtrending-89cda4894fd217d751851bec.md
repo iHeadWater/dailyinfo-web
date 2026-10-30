@@ -9,11 +9,11 @@ source:
   external_id: "togg53192-cmd/jailbreaks"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:05.894665+08:00"
+retrieved_at: "2026-10-31T03:45:06.125737+08:00"
 published_at: "2026-10-28T03:45:44.938103+08:00"
-summary: "jailbreaks：汇总作者发布的各类 jailbreak 提示与方法清单。"
+summary: "togg53192-cmd/jailbreaks — 个人整理的 jailbreak 提示词集合，集中收录多种越狱与绕过策略，使用时需注意安全风险。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

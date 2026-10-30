@@ -15,5 +15,5 @@ summary: "提供面向越南市场的人物画像合成数据，助力本地化A
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
 ---

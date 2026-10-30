@@ -9,11 +9,11 @@ source:
   external_id: "obra/superpowers"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:05.894665+08:00"
+retrieved_at: "2026-10-31T03:45:06.125737+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "superpowers：可落地的智能体技能框架与软件开发方法论，强调工程实践中的可用性。"
+summary: "obra/superpowers — 可落地的 Agent 技能框架与软件开发方法论，将技能、流程和工程实践结合以提升代理开发可靠性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

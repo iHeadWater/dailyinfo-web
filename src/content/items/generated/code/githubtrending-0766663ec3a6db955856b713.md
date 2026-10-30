@@ -9,11 +9,11 @@ source:
   external_id: "JetBrains/thinkrail"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:05.894665+08:00"
+retrieved_at: "2026-10-31T03:45:06.125737+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "thinkrail：JetBrains 推出的轻量真实 IDE，支持与 pi 进行 vibe coding，并围绕个人工作方式自适应定制。"
+summary: "JetBrains/thinkrail — JetBrains 推出的轻量真实 IDE，支持用 pi 进行 vibe coding，并围绕个人工作方式自适应定制。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

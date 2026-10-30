@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/simready-central-library"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:28.456592+08:00"
+retrieved_at: "2026-10-31T03:45:30.083847+08:00"
 published_at: "2026-10-29T03:45:43.946956+08:00"
-summary: "作为SimReady中央资源库，集中管理与分发可复用的仿真就绪资产。"
+summary: "提供 SimReady 中央资产库，集中管理与复用符合仿真标准的 3D 资产。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

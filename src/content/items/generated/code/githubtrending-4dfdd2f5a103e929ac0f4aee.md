@@ -9,11 +9,11 @@ source:
   external_id: "expo/skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-29T03:45:05.391802+08:00"
+retrieved_at: "2026-10-31T03:45:06.125737+08:00"
 published_at: "2026-10-29T03:45:43.946956+08:00"
-summary: "面向Expo项目和EAS服务的AI Agent技能集合，帮助智能体更高效地开发和操作Expo应用。"
+summary: "expo/skills — 面向 Expo 项目与 EAS 的 AI Agent 技能集合，帮助代理更规范地完成 Expo 开发与云服务操作。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-31"]
 ---

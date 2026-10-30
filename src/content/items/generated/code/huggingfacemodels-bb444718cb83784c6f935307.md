@@ -15,5 +15,5 @@ summary: "DeepSeek-V4.1-Flash 的无审查 FP8 版本，强调少限制多模态
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
 ---

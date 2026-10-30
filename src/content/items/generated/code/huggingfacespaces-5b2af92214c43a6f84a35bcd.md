@@ -15,5 +15,5 @@ summary: "基于 MiniMax-H3 的 Turbo LoRA 无审查一体化 Gradio 工作流�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
 ---

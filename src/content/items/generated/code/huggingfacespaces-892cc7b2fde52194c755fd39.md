@@ -9,11 +9,11 @@ source:
   external_id: "pollen-robotics/microduck-simulator"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:35.474310+08:00"
+retrieved_at: "2026-10-31T03:45:44.069622+08:00"
 published_at: "2026-10-28T03:45:44.938103+08:00"
-summary: "Pollen Robotics 的 MicroDuck Docker 仿真器，为机器人控制算法与具身智能应用提供可复现的开发测试环境。"
+summary: "面向 MicroDuck 机器人的 Docker 化仿真环境，用于运动控制与具身智能算法的快速验证。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

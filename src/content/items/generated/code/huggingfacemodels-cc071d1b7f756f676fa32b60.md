@@ -15,5 +15,5 @@ summary: "drama-3 专注富有表现力的文本转语音，突出戏剧化与�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

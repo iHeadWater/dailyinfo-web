@@ -15,5 +15,5 @@ summary: "13万条RAG声明验证数据集，用于训练和评估检索增强�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25"]
+briefing_ids: ["code-2026-10-25"]
 ---

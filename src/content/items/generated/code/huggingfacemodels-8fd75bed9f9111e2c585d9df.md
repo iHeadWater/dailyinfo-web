@@ -15,5 +15,5 @@ summary: "lodestones/Kromoss 是文本到图像生成模型，主打风格化视
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26"]
 ---

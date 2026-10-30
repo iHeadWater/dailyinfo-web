@@ -9,11 +9,11 @@ source:
   external_id: "kulkas2pintu/wan777"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:35.474310+08:00"
+retrieved_at: "2026-10-31T03:45:44.069622+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "高人气 wan777 Gradio 应用，将模型生成能力封装为可视化工作流，降低使用与调参门槛。"
+summary: "基于 Wan 系列视频生成模型的可交互 Gradio 演示，支持文本/图像到视频创作与参数调优。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

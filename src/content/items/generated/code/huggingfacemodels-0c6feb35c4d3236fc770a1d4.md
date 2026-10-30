@@ -9,11 +9,11 @@ source:
   external_id: "black-forest-labs/flux-3-image-klein-comfy"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-30T03:45:15.065845+08:00"
+retrieved_at: "2026-10-31T03:45:17.620479+08:00"
 published_at: "2026-10-17T03:45:52.895924+08:00"
-summary: "FLUX.3 Image Klein Comfy 是面向 ComfyUI 工作流的图生图模型，突出轻量高效的图像编辑与风格转换。"
+summary: "面向ComfyUI生态的FLUX-3图像到图像模型，突出工作流集成与高质量图像编辑。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-24", "code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---
