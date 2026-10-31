@@ -15,5 +15,5 @@ summary: "面向科学推理与文本生成的Sage模型升级版，强调专业
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
 ---

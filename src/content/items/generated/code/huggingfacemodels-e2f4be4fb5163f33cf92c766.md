@@ -15,5 +15,5 @@ summary: "MOSS-Image 的 ComfyUI 封装版让文生图模型可节点化调用�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

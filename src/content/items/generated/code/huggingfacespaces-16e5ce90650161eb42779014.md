@@ -9,11 +9,11 @@ source:
   external_id: "kulkas2pintu/wan777"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:44.069622+08:00"
+retrieved_at: "2026-11-01T03:45:36.767091+08:00"
 published_at: "2026-10-02T05:31:00.047781+08:00"
-summary: "基于 Wan 系列视频生成模型的可交互 Gradio 演示，支持文本/图像到视频创作与参数调优。"
+summary: "基于Wan系列视频生成模型的Gradio交互应用，降低高质量文生视频/图生视频的体验与部署门槛。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
 ---

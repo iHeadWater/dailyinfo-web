@@ -9,11 +9,11 @@ source:
   external_id: "Nanbeige/Nanbeige4.3-33B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:17.620479+08:00"
+retrieved_at: "2026-11-01T03:45:16.076606+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "33B级文本生成模型，面向高质量生成与复杂指令跟随，突出规模与性能平衡。"
+summary: "Nanbeige4.3-33B 是面向高质量文本生成的中等规模稠密模型，在中文理解与长文推理上兼顾性能与部署成本。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
 ---

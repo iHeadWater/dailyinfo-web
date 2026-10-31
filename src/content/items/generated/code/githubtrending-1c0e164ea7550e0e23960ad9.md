@@ -15,5 +15,5 @@ summary: "面向编码智能体的多阶段安全审计技能，输出可独立�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26"]
+briefing_ids: ["code-2026-10-26"]
 ---

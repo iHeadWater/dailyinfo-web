@@ -9,11 +9,11 @@ source:
   external_id: "openbmb/MiniCPM-OCR-1.0"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:17.620479+08:00"
+retrieved_at: "2026-11-01T03:45:16.076606+08:00"
 published_at: "2026-10-31T03:45:55.076017+08:00"
-summary: "轻量OCR多模态模型，聚焦高精度文字识别与文档图像理解。"
+summary: "MiniCPM-OCR-1.0 是面端侧部署的轻量 OCR 模型，专注高精度文字识别与文档结构化。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
 ---

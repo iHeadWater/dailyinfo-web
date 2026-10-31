@@ -15,5 +15,5 @@ summary: "Black Forest Labs 的 FLUX.3 Image Klein Gradio 应用，以轻量模�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28"]
 ---

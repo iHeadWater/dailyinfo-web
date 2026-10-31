@@ -9,11 +9,11 @@ source:
   external_id: "orcarouter/DeepSeek-V4.1-Flash-1017-abliterated-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:17.620479+08:00"
+retrieved_at: "2026-11-01T03:45:16.076606+08:00"
 published_at: "2026-10-27T03:45:47.117722+08:00"
-summary: "DeepSeek-V4.1-Flash的去审查GGUF量化版，面向本地部署与开放文本生成。"
+summary: "DeepSeek-V4.1-Flash-1017-abliterated-GGUF 是去审查并量化的本地部署版本，适合无内容限制的离线文本生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
 ---

@@ -15,5 +15,5 @@ summary: "以 Docker 封装的前 LLM 时代 NLP 教学实验环境，帮助理�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
 ---

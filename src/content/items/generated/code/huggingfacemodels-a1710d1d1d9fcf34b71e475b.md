@@ -9,11 +9,11 @@ source:
   external_id: "RecursiveSI/flint"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:17.620479+08:00"
+retrieved_at: "2026-11-01T03:45:16.076606+08:00"
 published_at: "2026-10-23T03:45:40.806372+08:00"
-summary: "以递归式迭代优化为特色的文本生成模型，探索持续优化与高效推理。"
+summary: "RecursiveSI/flint 是聚焦递归式推理与自我改进的文本生成模型，强调多步推理链的稳定性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
 ---

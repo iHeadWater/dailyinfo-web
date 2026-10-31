@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/simready-central"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:44.069622+08:00"
+retrieved_at: "2026-11-01T03:45:36.767091+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "提供面向 Omniverse/仿真的 SimReady 标准化 3D 资产与验证流程，加速物理准确仿真场景构建。"
+summary: "面向Omniverse仿真场景的SimReady标准化资产中枢，提供仿真就绪3D资产的检索、管理与快速集成能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
 ---

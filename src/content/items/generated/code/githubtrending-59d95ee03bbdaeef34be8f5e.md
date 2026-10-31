@@ -9,11 +9,11 @@ source:
   external_id: "mattpocock/skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-10-31T03:45:06.125737+08:00"
+retrieved_at: "2026-11-01T03:45:04.357835+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "mattpocock/skills — 来自作者 .agents 目录的“Real Engineers”Agent 技能集，面向真实工程实践复用高效工作流。"
+summary: "汇集作者 .agents 目录中的实战智能体技能，为真实工程场景提供可直接复用的技能配置。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
 ---

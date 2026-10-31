@@ -15,5 +15,5 @@ summary: "Pollen Robotics 开发的微型双足鸭子机器人，主打小巧形
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-25", "code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-26", "code-2026-10-27"]
 ---

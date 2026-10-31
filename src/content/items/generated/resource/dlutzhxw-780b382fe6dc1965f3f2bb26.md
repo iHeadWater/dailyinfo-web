@@ -14,5 +14,5 @@ summary: "大连高新区管委会到访软件学院，就相关工作开展交�
 why_it_matters: null
 tags: ["校地合作", "综合新闻"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-10-25", "resource-2026-10-26"]
+briefing_ids: ["resource-2026-10-26"]
 ---
