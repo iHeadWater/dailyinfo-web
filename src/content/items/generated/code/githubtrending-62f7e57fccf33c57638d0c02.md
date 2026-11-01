@@ -15,5 +15,5 @@ summary: "基于多智能体 LLM 的金融交易框架，协同分析市场并�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-27"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-01T03:45:16.076606+08:00"
+retrieved_at: "2026-11-02T03:45:13.356463+08:00"
 published_at: "2026-10-30T03:45:44.310742+08:00"
-summary: "NVIDIA Nemotron-3.5-Transcribe-30B-A4B 采用 30B 总参、A4B 稀疏激活的 MoE 架构，面向高精度多语种语音转写。"
+summary: "NVIDIA Nemotron-3.5-Transcribe-30B-A4B 是面向高精度语音转写的 30B 级 MoE 模型，以 A4B 稀疏激活提升转写效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
 ---

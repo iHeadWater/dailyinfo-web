@@ -9,11 +9,11 @@ source:
   external_id: "lightpanda-io/browser"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-01T03:45:04.357835+08:00"
+retrieved_at: "2026-11-02T03:45:02.930584+08:00"
 published_at: "2026-10-31T03:45:55.076017+08:00"
-summary: "专为 AI 与自动化设计的无头浏览器，采用 Zig 实现，主打轻量高性能的网页自动化与抓取。"
+summary: "面向 AI 与自动化场景的 Zig 实现无头浏览器，旨在为智能代理提供更轻量高效的网页访问与执行环境。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
 ---

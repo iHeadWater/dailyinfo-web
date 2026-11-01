@@ -15,5 +15,5 @@ summary: "提供VDEBench基准数据集，用于系统评估视觉数据抽取�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-26", "code-2026-10-27"]
+briefing_ids: ["code-2026-10-27"]
 ---
