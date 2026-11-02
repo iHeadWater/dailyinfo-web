@@ -9,11 +9,11 @@ source:
   external_id: "hyprwm/Hyprland"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:02.930584+08:00"
+retrieved_at: "2026-11-03T03:45:07.483552+08:00"
 published_at: "2026-11-02T03:45:47.779777+08:00"
-summary: "独立、高度可定制且外观出色的动态平铺 Wayland 合成器，为 Linux 桌面提供现代窗口管理与视觉体验。"
+summary: "hyprwm/Hyprland — 独立、高度可定制且兼顾美观的 Wayland 动态平铺合成器。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
 ---

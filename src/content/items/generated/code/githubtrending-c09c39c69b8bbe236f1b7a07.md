@@ -9,11 +9,11 @@ source:
   external_id: "FlashML-org/FreeToken"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:02.930584+08:00"
+retrieved_at: "2026-11-03T03:45:07.483552+08:00"
 published_at: "2026-11-02T03:45:47.779777+08:00"
-summary: "将数据中心级模型服务能力带到桌面端，支持在本地高效运行大规模模型，降低推理部署门槛。"
+summary: "FlashML-org/FreeToken — 把数据中心级模型 Serving 带到桌面，支持在本地快速高效运行超大模型。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
 ---

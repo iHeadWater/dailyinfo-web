@@ -9,11 +9,11 @@ source:
   external_id: "briaai/Fibo-2.0-editing"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:37.689728+08:00"
+retrieved_at: "2026-11-03T03:45:34.781274+08:00"
 published_at: "2026-10-29T03:45:43.946956+08:00"
-summary: "BRIA Fibo 2.0 的可交互图像编辑演示，支持指令式精准修改图像内容与风格。"
+summary: "Bria AI的Fibo 2.0图像编辑Gradio应用，突出精准可控的高质量图像编辑能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

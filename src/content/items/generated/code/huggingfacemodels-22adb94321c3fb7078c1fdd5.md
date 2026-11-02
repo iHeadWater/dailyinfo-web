@@ -9,11 +9,11 @@ source:
   external_id: "speridlabs/idol"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:13.356463+08:00"
+retrieved_at: "2026-11-03T03:45:17.867145+08:00"
 published_at: "2026-11-01T03:45:49.100495+08:00"
-summary: "idol 是图像到 3D 生成模型，专注从单图重建高质量三维资产。"
+summary: "speridlabs 的 idol 图像转 3D 模型，主打从单图快速重建高质量 3D 资产。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

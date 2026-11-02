@@ -15,5 +15,5 @@ summary: "面向智能体驱动的社交媒体排期与发布工具，用 AI 自
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-28"]
 ---

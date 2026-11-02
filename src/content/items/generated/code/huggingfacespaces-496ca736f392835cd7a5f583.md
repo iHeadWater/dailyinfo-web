@@ -9,11 +9,11 @@ source:
   external_id: "a-test-user-in-the-wrold/qwen-image-21-uncensored"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:37.689728+08:00"
+retrieved_at: "2026-11-03T03:45:34.781274+08:00"
 published_at: "2026-11-01T03:45:49.100495+08:00"
-summary: "基于 Qwen-Image 2.1 的无审查图像生成应用，面向低限制创意实验与开放内容生成。"
+summary: "基于Qwen-Image 2.1的无审查图像生成Gradio应用，主打开放内容创作与快速出图。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

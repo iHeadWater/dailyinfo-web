@@ -15,5 +15,5 @@ summary: "面向 Claude Code、Codex、Cursor 等代理运行框架的性能优�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28"]
+briefing_ids: ["code-2026-10-28"]
 ---

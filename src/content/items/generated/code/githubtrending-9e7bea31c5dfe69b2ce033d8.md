@@ -9,11 +9,11 @@ source:
   external_id: "shiyu-coder/Kronos"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:02.930584+08:00"
+retrieved_at: "2026-11-03T03:45:07.483552+08:00"
 published_at: "2026-10-20T03:45:37.944745+08:00"
-summary: "面向金融市场的语言基础模型，用统一建模方式学习市场语言与动态模式，服务金融数据分析与预测。"
+summary: "shiyu-coder/Kronos — 面向金融市场“语言”的基础模型，用于建模金融市场的结构与语义。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
 ---

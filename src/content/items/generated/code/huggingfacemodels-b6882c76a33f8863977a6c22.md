@@ -15,5 +15,5 @@ summary: "HuggingFaceBio 的 Carbon-X 是面向生物医学文本的生成模型
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
 ---

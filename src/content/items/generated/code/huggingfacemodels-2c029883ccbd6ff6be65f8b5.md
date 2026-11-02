@@ -15,5 +15,5 @@ summary: "基于Qwen3.8-27B的多模态融合GGUF模型，集成长上下文、�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/simready-central"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:37.689728+08:00"
+retrieved_at: "2026-11-03T03:45:34.781274+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "NVIDIA SimReady Central 以 Docker 形式集中管理并验证仿真就绪的 3D 资产，提升数字孪生与仿真场景的资产复用效率。"
+summary: "面向NVIDIA SimReady资产的集中式管理与就绪性校验工具，帮助仿真内容标准化与复用。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

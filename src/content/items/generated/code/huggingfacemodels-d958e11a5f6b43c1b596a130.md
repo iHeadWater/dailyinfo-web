@@ -9,11 +9,11 @@ source:
   external_id: "Nanbeige/Nanbeige4.3-33B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:13.356463+08:00"
+retrieved_at: "2026-11-03T03:45:17.867145+08:00"
 published_at: "2026-10-26T03:45:41.255057+08:00"
-summary: "Nanbeige4.3-33B 是 330 亿参数文本生成模型，聚焦通用语言理解与高质量长文本生成。"
+summary: "南北阁 33B 文本生成模型，兼顾中文语境理解与通用生成能力的中大规模基座。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-27", "code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

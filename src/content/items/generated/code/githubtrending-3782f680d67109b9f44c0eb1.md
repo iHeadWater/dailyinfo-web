@@ -9,11 +9,11 @@ source:
   external_id: "thedotmack/claude-mem"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:02.930584+08:00"
+retrieved_at: "2026-11-03T03:45:07.483552+08:00"
 published_at: "2026-10-04T03:46:51.282722+08:00"
-summary: "跨会话持久化上下文工具，自动捕获代理会话行为并用 AI 压缩，再将相关上下文注入后续会话，兼容 Claude Code、Codex、Gemini 等多种代理。"
+summary: "thedotmack/claude-mem — 为多种 AI Agent 提供跨会话持久记忆，自动捕获、AI 压缩并回注相关上下文。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

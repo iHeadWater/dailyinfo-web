@@ -9,11 +9,11 @@ source:
   external_id: "secemp9/arxiv-complete"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-02T03:45:26.714909+08:00"
+retrieved_at: "2026-11-03T03:45:28.549842+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "构建完整的 arXiv 论文数据集合，支持学术检索、文本挖掘和科学文献大模型训练。"
+summary: "整合arXiv全量论文元数据与内容资源，服务学术检索、文献分析和科研大模型训练。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---
