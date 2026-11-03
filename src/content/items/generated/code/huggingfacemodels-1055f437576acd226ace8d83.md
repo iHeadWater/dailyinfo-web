@@ -9,11 +9,11 @@ source:
   external_id: "Edge0/Audio8-TTS-Realistic-Air"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-03T03:45:17.867145+08:00"
+retrieved_at: "2026-11-04T03:45:17.989304+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "Edge0 的 Audio8-TTS-Realistic-Air 语音合成模型，主打真实自然、轻盈空气感的 TTS 音色。"
+summary: "主打真实自然人声与空气感音质的 TTS 模型，适合高保真配音与语音内容生产。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
 ---

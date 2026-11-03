@@ -15,5 +15,5 @@ summary: "openbot：本地优先的桌面工作区，让 Codex、Claude、Grok �
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30"]
 ---

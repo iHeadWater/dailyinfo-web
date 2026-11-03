@@ -9,11 +9,11 @@ source:
   external_id: "wank3r/minimax-h3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-03T03:45:34.781274+08:00"
+retrieved_at: "2026-11-04T03:46:03.882681+08:00"
 published_at: "2026-10-21T07:42:21.029767+08:00"
-summary: "基于MiniMax H3的Gradio交互应用，封装模型能力以降低生成式内容创作门槛。"
+summary: "MiniMax-H3模型的Gradio演示，聚焦高质量视频生成与快速创作流程。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
 ---

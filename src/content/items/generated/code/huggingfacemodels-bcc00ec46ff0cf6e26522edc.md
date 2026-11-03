@@ -9,11 +9,11 @@ source:
   external_id: "abenzerps/Qwen-Image-2.1-Uncensored-Quantized"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-03T03:45:17.867145+08:00"
+retrieved_at: "2026-11-04T03:45:17.989304+08:00"
 published_at: "2026-10-13T03:45:48.389506+08:00"
-summary: "基于 Qwen-Image 2.1 的量化无审查文生图模型，突出低显存部署与开放式图像创作。"
+summary: "Qwen-Image 2.1 的去审查量化版文生图模型，兼顾自由度与量化后的低成本部署。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
 ---

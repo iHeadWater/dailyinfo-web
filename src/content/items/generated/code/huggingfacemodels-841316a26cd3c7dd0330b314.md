@@ -9,11 +9,11 @@ source:
   external_id: "LiquidAI/LFM3-Omni-2B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-03T03:45:17.867145+08:00"
+retrieved_at: "2026-11-04T03:45:17.989304+08:00"
 published_at: "2026-10-30T03:45:44.310742+08:00"
-summary: "LiquidAI 的 2B 全模态模型，支持文本、图像、音频等多模态输入输出的轻量统一交互。"
+summary: "LiquidAI 的 2B 任意模态到任意模态模型，在极小体量下统一处理文本、音频等多模态输入输出。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
 ---

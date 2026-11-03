@@ -15,5 +15,5 @@ summary: "构建多文化谜语数据集，用于评测和提升模型的跨文�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29"]
+briefing_ids: ["code-2026-10-29"]
 ---

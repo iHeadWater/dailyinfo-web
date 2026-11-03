@@ -15,5 +15,5 @@ summary: "JetBrains/thinkrail — JetBrains 推出的轻量真实 IDE，支持�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-28", "code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31"]
 ---

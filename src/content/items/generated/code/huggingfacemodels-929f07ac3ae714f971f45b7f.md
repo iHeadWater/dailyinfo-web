@@ -9,11 +9,11 @@ source:
   external_id: "facebook/sam3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-03T03:45:17.867145+08:00"
+retrieved_at: "2026-11-04T03:45:17.989304+08:00"
 published_at: "2026-10-16T03:46:00.937703+08:00"
-summary: "Meta 的 SAM3 通用分割模型，主打可提示的万物掩码生成与高精度图像视频分割。"
+summary: "Meta 第三代 Segment Anything 模型，实现更通用的提示驱动掩码生成与精细分割。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-03"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-03", "code-2026-11-04"]
 ---

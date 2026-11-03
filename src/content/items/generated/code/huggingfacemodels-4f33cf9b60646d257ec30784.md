@@ -9,11 +9,11 @@ source:
   external_id: "burner22/numbat"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-03T03:45:17.867145+08:00"
+retrieved_at: "2026-11-04T03:45:17.989304+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "burner22 的 numbat 模型，未标注任务类型，适合作为轻量实验性模型进行定制验证。"
+summary: "社区发布的轻量级模型，以小巧体积提供开箱即用的生成能力，便于本地快速试验。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
 ---
