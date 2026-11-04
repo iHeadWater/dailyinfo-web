@@ -15,5 +15,5 @@ summary: "面向无审查图像到图像生成的Gradio工具，支持双参考�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
 ---

@@ -15,5 +15,5 @@ summary: "ai-design-skills：面向 AI 设计场景的技能集合，帮助将�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30"]
+briefing_ids: ["code-2026-10-30"]
 ---

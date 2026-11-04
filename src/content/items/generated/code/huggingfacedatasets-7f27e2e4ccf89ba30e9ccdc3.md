@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/Granary-v2"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:27.179699+08:00"
+retrieved_at: "2026-11-05T03:45:29.444076+08:00"
 published_at: "2026-10-31T03:45:55.076017+08:00"
-summary: "提供NVIDIA更新版Granary大规模多语言语音数据集，支持语音识别模型训练与多语种评测。"
+summary: "nvidia/Granary-v2 — 提供NVIDIA Granary v2多语言语音数据集，面向语音识别模型的训练、微调与跨语言鲁棒性评估。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-04"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-04", "code-2026-11-05"]
 ---

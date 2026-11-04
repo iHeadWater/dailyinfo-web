@@ -9,11 +9,11 @@ source:
   external_id: "HuggingFaceBio/FineDNA"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:27.179699+08:00"
+retrieved_at: "2026-11-05T03:45:29.444076+08:00"
 published_at: "2026-11-04T03:46:21.199781+08:00"
-summary: "提供面向DNA序列的精细化数据与模型资源，服务基因组分析和生物信息学研究。"
+summary: "HuggingFaceBio/FineDNA — 提供面向DNA序列精细分析的生物信息学资源，服务基因组建模、序列分类与下游微调任务。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-05"]
 ---

@@ -15,5 +15,5 @@ summary: "expo/skills — 面向 Expo 项目与 EAS 的 AI Agent 技能集合，
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-31"]
 ---

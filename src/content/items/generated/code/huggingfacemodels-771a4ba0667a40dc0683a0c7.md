@@ -9,11 +9,11 @@ source:
   external_id: "FusionCow/Sulphur-3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:17.989304+08:00"
+retrieved_at: "2026-11-05T03:45:18.491154+08:00"
 published_at: "2026-11-04T03:46:21.199781+08:00"
-summary: "社区微调模型，以差异化风格化输出见长，适合个性化生成实验。"
+summary: "Sulphur-3 生成模型，聚焦高质量内容生成与可控输出，强调易用性和社区微调。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-05"]
 ---

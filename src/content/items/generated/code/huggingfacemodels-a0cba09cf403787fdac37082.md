@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:17.989304+08:00"
+retrieved_at: "2026-11-05T03:45:18.491154+08:00"
 published_at: "2026-10-30T03:45:44.310742+08:00"
-summary: "NVIDIA 推出的 30B 总参、A4B 激活的 MoE 语音识别模型，在高精度转写与推理效率之间取得平衡。"
+summary: "NVIDIA 30B-A4B 稀疏 MoE 语音转写模型，主打高精度、多语种自动语音识别与高效推理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
 ---

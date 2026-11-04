@@ -15,5 +15,5 @@ summary: "macro-inc/macro — 统一团队工作空间，将邮件、聊天、�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-31"]
 ---

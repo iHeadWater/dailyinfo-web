@@ -9,11 +9,11 @@ source:
   external_id: "baidu/Unlimited-OCR-2"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:17.989304+08:00"
+retrieved_at: "2026-11-05T03:45:18.491154+08:00"
 published_at: "2026-10-28T03:45:44.938103+08:00"
-summary: "百度推出的不限长度 OCR 模型，面向超长文档与复杂版面的高精度文字识别与理解。"
+summary: "百度 Unlimited-OCR-2 文档 OCR 模型，强调超长与复杂版面文字识别及结构化提取。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "floci-io/floci"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:05.935522+08:00"
+retrieved_at: "2026-11-05T03:45:04.053229+08:00"
 published_at: "2026-11-04T03:46:21.199781+08:00"
-summary: "floci-io/floci — 轻量、免费且开箱即用的本地 AWS 模拟器替代方案，帮助开发者在本地复现 AWS 服务。"
+summary: "轻量、免费、易用的 AWS 本地模拟器替代方案，服务本地开发与测试。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-05"]
 ---

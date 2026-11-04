@@ -15,5 +15,5 @@ summary: "DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF 是面向本地推理的量化 G
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-29", "code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
 ---

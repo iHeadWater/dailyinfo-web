@@ -9,11 +9,11 @@ source:
   external_id: "D4Vinci/Scrapling"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-04T03:45:05.935522+08:00"
+retrieved_at: "2026-11-05T03:45:04.053229+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "D4Vinci/Scrapling — 覆盖单次请求到大规模爬取的 Python Web 抓取框架，以统一能力简化复杂抓取流程。"
+summary: "Python 全能网页抓取框架，统一处理从单次请求到大规模爬取的任务。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
 ---
