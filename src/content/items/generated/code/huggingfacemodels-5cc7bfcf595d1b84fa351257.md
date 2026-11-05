@@ -15,5 +15,5 @@ summary: "4GB级E4B轻量文本模型，主打边缘设备低显存部署与高�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31"]
+briefing_ids: ["code-2026-10-31"]
 ---

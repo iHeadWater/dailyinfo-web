@@ -9,11 +9,11 @@ source:
   external_id: "briaai/Fibo-2.0-editing"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-05T03:45:44.881774+08:00"
+retrieved_at: "2026-11-06T03:45:35.464193+08:00"
 published_at: "2026-10-29T03:45:43.946956+08:00"
-summary: "基于Bria Fibo 2.0的可控图像编辑Gradio工具，提供精细化局部编辑与生成式修图能力。"
+summary: "BRIA Fibo 2.0 图像编辑 Gradio 应用，提供可控且高质量的图像编辑能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
 ---

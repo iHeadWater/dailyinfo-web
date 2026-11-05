@@ -1,0 +1,19 @@
+---
+schema_version: 1
+id: "githubtrending-367a8a7f81781c1d2229eb11"
+category: "code"
+title: "lz4/lz4"
+source:
+  name: "github_trending"
+  url: "https://github.com/lz4/lz4"
+  external_id: "lz4/lz4"
+authors: []
+source_published_at: null
+retrieved_at: "2026-11-06T03:45:03.424309+08:00"
+published_at: "2026-11-06T03:45:42.825567+08:00"
+summary: "lz4/lz4 — 极致快速的压缩算法实现，以高吞吐和低延迟著称，广泛用于数据存储与传输场景。"
+why_it_matters: null
+tags: []
+language: "zh-CN"
+briefing_ids: ["code-2026-11-06"]
+---

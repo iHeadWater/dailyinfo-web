@@ -9,11 +9,11 @@ source:
   external_id: "max-sixty/worktrunk"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-05T03:45:04.053229+08:00"
+retrieved_at: "2026-11-06T03:45:03.424309+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "面向并行 AI Agent 工作流的 Git worktree 管理 CLI，简化多工作树并行协作。"
+summary: "max-sixty/worktrunk — 面向并行 AI 智能体工作流的 Git worktree 管理 CLI，简化多工作树协作与切换。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
 ---

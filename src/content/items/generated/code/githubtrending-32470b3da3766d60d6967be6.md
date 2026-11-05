@@ -9,11 +9,11 @@ source:
   external_id: "scenario-labs/skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-05T03:45:04.053229+08:00"
+retrieved_at: "2026-11-06T03:45:03.424309+08:00"
 published_at: "2026-11-05T03:45:55.673532+08:00"
-summary: "为 AI Agent 提供生产级图像、视频、音频与 3D 生成技能，支持模型选择、成本预估、角色品牌一致性，并能驱动 Blender、Maya、ZBrush、Unreal、Unity。"
+summary: "scenario-labs/skills — 为任意 AI 智能体提供生产级图像、视频、音频与 3D 生成技能，支持模型选择、预算预估、角色/品牌一致性，并可通过 MCP 驱动 Blender、Maya、ZBrush、Unreal 与 Unity 等专家工具。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "wank3r/minimax-h3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-05T03:45:44.881774+08:00"
+retrieved_at: "2026-11-06T03:45:35.464193+08:00"
 published_at: "2026-10-21T07:42:21.029767+08:00"
-summary: "集成MiniMax H3模型的Gradio演示，聚焦高质量生成效果与快速交互体验。"
+summary: "集成 MiniMax H3 能力的 Gradio 应用，提供便捷的生成式内容交互入口。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
 ---

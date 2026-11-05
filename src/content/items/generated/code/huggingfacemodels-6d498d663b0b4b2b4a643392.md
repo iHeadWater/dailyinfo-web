@@ -9,11 +9,11 @@ source:
   external_id: "Lightricks/LTX-2.5"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-05T03:45:18.491154+08:00"
+retrieved_at: "2026-11-06T03:45:16.107621+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Lightricks 图像转视频模型，主打高质量、时序一致的视频生成与易用工作流。"
+summary: "LTX-2.5以高采用度验证的图生视频方案，突出高质量、稳定的视频生成与创作效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
 ---

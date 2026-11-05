@@ -15,5 +15,5 @@ summary: "提供经过筛选的高质量 Fable-5.1 Max 推理数据，面向复�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-30", "code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
 ---
