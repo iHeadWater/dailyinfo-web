@@ -15,5 +15,5 @@ summary: "面向 AI 与自动化场景的 Zig 实现无头浏览器，旨在为�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
 ---

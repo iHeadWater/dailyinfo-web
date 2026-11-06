@@ -15,5 +15,5 @@ summary: "汇总多种越狱提示词的清单仓库，可用于研究大模型�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-02"]
 ---

@@ -15,5 +15,5 @@ summary: "DeepSeek-V4.1-Flash-1017-abliterated-GGUF 是去审查并量化的本�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-11-01"]
 ---

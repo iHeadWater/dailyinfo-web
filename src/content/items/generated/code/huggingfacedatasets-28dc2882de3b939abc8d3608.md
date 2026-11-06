@@ -9,11 +9,11 @@ source:
   external_id: "codepawl/simready-glb"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:29.287405+08:00"
+retrieved_at: "2026-11-07T03:45:33.930922+08:00"
 published_at: "2026-11-02T03:45:47.779777+08:00"
-summary: "将SimReady资产以GLB格式提供，便于在Web与实时3D管线中直接加载仿真级模型。"
+summary: "将SimReady资产转换为GLB格式，兼顾仿真级资产规范与Web/实时3D应用的轻量加载需求。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
 ---

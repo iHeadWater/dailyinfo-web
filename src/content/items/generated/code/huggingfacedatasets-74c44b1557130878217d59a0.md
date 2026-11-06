@@ -15,5 +15,5 @@ summary: "提供2026年10月Qwen模型调查与推理轨迹数据，用于模型
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03"]
 ---

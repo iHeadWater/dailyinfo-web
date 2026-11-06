@@ -9,11 +9,11 @@ source:
   external_id: "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:16.107621+08:00"
+retrieved_at: "2026-11-07T03:45:17.996506+08:00"
 published_at: "2026-11-04T03:46:21.199781+08:00"
-summary: "基于DeepSeek V4.1 Flash的GGUF量化无审查文本生成版本，主打本地部署与宽松内容生成。"
+summary: "DeepSeek-V4.1-Flash 的无审查GGUF量化版本，面向本地文本生成与高自由度创作场景。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
 ---

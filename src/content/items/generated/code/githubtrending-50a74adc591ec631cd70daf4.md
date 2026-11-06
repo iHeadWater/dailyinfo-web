@@ -15,5 +15,5 @@ summary: "开源 Grok Bot 替代方案，为机器人提供可调用的虚拟机
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
 ---

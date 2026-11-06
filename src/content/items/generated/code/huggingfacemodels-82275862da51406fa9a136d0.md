@@ -15,5 +15,5 @@ summary: "MiniCPM-OCR-1.0 是面端侧部署的轻量 OCR 模型，专注高精�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-11-01"]
 ---

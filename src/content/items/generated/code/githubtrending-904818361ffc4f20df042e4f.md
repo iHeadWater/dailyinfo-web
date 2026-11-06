@@ -15,5 +15,5 @@ summary: "开源 AI 同事框架，为每个代理分配独立浏览器、文件
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-02"]
 ---

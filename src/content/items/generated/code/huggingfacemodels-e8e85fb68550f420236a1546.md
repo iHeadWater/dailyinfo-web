@@ -9,11 +9,11 @@ source:
   external_id: "ricursiveAI/Ripple-65B-Preview"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:16.107621+08:00"
+retrieved_at: "2026-11-07T03:45:17.996506+08:00"
 published_at: "2026-11-06T03:45:42.825567+08:00"
-summary: "Ripple-65B预览版以65B规模探索递归式生成能力，面向复杂任务的可扩展模型实验。"
+summary: "65B 参数预览版基础模型，面向大规模生成与推理实验，强调扩展能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
 ---

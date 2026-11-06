@@ -9,11 +9,11 @@ source:
   external_id: "google/skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:03.424309+08:00"
+retrieved_at: "2026-11-07T03:45:05.602736+08:00"
 published_at: "2026-10-03T03:45:46.426270+08:00"
-summary: "google/skills — 面向 Google 产品与技术的智能体技能集合，帮助 AI 代理调用和集成 Google 生态能力。"
+summary: "提供面向 Google 产品与技术的 Agent Skills 集合，帮助 AI 代理更规范地调用 Google 生态能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
 ---

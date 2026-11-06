@@ -15,5 +15,5 @@ summary: "Qwen-2511-Plus 与 Flux.2-klein 联合的 Gradio 图像生成工作流
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
 ---

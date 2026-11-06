@@ -9,11 +9,11 @@ source:
   external_id: "speridlabs/idol"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:35.464193+08:00"
+retrieved_at: "2026-11-07T03:45:41.862853+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "Speridlabs 推出的 IDOL 模型 Gradio 演示，突出便捷交互与快速生成推理。"
+summary: "以 IDOL 模型为核心的 Gradio 交互式演示，提供低门槛的在线试用与可视化结果展示入口。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
 ---

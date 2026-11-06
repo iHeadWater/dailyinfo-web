@@ -9,11 +9,11 @@ source:
   external_id: "Vyber07/cyber-security"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:29.287405+08:00"
+retrieved_at: "2026-11-07T03:45:33.930922+08:00"
 published_at: "2026-10-19T03:45:37.990334+08:00"
-summary: "汇集网络安全学习与攻防实践资源，助力安全技能训练和漏洞防御。"
+summary: "汇集网络安全学习与实战资源，覆盖攻防知识与工具，便于快速构建安全技能体系。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
 ---

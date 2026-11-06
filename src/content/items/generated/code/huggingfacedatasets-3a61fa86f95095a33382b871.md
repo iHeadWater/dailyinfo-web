@@ -9,11 +9,11 @@ source:
   external_id: "scenario-labs/3d-collection"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:29.287405+08:00"
+retrieved_at: "2026-11-07T03:45:33.930922+08:00"
 published_at: "2026-10-24T03:45:43.856039+08:00"
-summary: "汇集多样化3D模型与场景资源，支持快速构建和扩展实时3D应用。"
+summary: "汇集多类型高质量3D资产与场景集合，便于快速检索并集成到游戏、仿真和可视化项目中。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
 ---

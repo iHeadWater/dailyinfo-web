@@ -9,11 +9,11 @@ source:
   external_id: "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-06T03:45:16.107621+08:00"
+retrieved_at: "2026-11-07T03:45:17.996506+08:00"
 published_at: "2026-10-30T03:45:44.310742+08:00"
-summary: "NVIDIA Nemotron 3.5 Transcribe采用30B-A4B稀疏架构，面向高精度、高吞吐语音转写。"
+summary: "NVIDIA 的30B级自动语音识别模型，采用A4B高效架构，兼顾高精度转写与推理效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
 ---

@@ -15,5 +15,5 @@ summary: "Meta 第三代 Segment Anything 模型，实现更通用的提示驱�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
 ---

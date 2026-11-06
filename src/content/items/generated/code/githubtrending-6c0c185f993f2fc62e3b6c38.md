@@ -15,5 +15,5 @@ summary: "面向智能体的技能框架与可落地软件开发方法论，将�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-10-31", "code-2026-11-01"]
+briefing_ids: ["code-2026-11-01"]
 ---
