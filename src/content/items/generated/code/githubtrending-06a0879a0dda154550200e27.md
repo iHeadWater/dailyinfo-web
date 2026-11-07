@@ -15,5 +15,5 @@ summary: "基于倪海厦《天纪》体系的开源紫微斗数排盘引擎，�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-02"]
 ---

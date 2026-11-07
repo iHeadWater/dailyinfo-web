@@ -15,5 +15,5 @@ summary: "nvidia/Granary-v2 — 提供NVIDIA Granary v2多语言语音数据集�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-04", "code-2026-11-05"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-04", "code-2026-11-05"]
 ---

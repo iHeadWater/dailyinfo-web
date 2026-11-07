@@ -15,5 +15,5 @@ summary: "Spark-X2.6-4B 是 40 亿参数文本生成模型，聚焦轻量高效�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-01", "code-2026-11-02"]
+briefing_ids: ["code-2026-11-02"]
 ---

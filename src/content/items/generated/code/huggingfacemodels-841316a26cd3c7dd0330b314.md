@@ -15,5 +15,5 @@ summary: "LiquidAI 的 2B 任意模态到任意模态模型，在极小体量下
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-01", "code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
 ---
