@@ -9,11 +9,11 @@ source:
   external_id: "LiquidAI/LFM3-Omni-2B-WebGPU"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:41.862853+08:00"
+retrieved_at: "2026-11-08T03:45:55.852000+08:00"
 published_at: "2026-11-02T03:45:47.779777+08:00"
-summary: "将 LiquidAI 的 2B 多模态 Omni 模型通过 WebGPU 静态部署到浏览器端，实现免后端、低延迟的端侧多模态推理演示。"
+summary: "LiquidAI 2B 全模态模型在 WebGPU 上的浏览器端演示，突出本地实时多模态推理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

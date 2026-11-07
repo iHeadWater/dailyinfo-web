@@ -9,11 +9,11 @@ source:
   external_id: "moonshotai/Kimi-K3.1-Pro"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:17.996506+08:00"
+retrieved_at: "2026-11-08T03:45:10.790142+08:00"
 published_at: "2026-11-05T03:45:55.673532+08:00"
-summary: "MoonshotAI 的图文到文本旗舰模型，主打复杂图像理解与高质量多模态推理。"
+summary: "Kimi-K3.1-Pro 支持图文联合输入到文本输出，强化复杂多模态理解与专业级推理生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

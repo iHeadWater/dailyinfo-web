@@ -9,11 +9,11 @@ source:
   external_id: "astral-sh/ruff"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:05.602736+08:00"
+retrieved_at: "2026-11-08T03:45:00.900582+08:00"
 published_at: "2026-11-07T03:45:56.495059+08:00"
-summary: "用 Rust 编写的极速 Python linter 与代码格式化工具，显著提升静态检查与格式化效率。"
+summary: "用 Rust 编写的高速 Python 代码检查与格式化工具，显著提升大型项目开发效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "burner22/numbat"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:17.996506+08:00"
+retrieved_at: "2026-11-08T03:45:10.790142+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "面向社区实验与快速迭代的模型项目，侧重可部署性和二次开发友好度。"
+summary: "numbat 以轻量化模型形态聚焦灵活实验与部署，适合快速验证定制化生成任务。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

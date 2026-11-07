@@ -9,11 +9,11 @@ source:
   external_id: "Pika-Labs/Pika-H3-Flex"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:17.996506+08:00"
+retrieved_at: "2026-11-08T03:45:10.790142+08:00"
 published_at: "2026-11-01T03:45:49.100495+08:00"
-summary: "Pika 的图像到视频模型，强调灵活可控的视频生成与运动表现，适合创意短视频制作。"
+summary: "Pika-H3-Flex 聚焦图像到视频生成，主打灵活可控的视频创作与动态效果生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

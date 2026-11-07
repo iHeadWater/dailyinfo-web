@@ -9,11 +9,11 @@ source:
   external_id: "linoyts/qwen-image-2-1-realtime"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:41.862853+08:00"
+retrieved_at: "2026-11-08T03:45:55.852000+08:00"
 published_at: "2026-10-31T03:45:55.076017+08:00"
-summary: "将 Qwen-Image 2.1 封装为实时交互式 Gradio 应用，突出低延迟图像生成与即时预览能力。"
+summary: "基于 Qwen-Image 2.1 的实时图像生成 Gradio 演示，突出低延迟文生图交互。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

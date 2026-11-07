@@ -9,11 +9,11 @@ source:
   external_id: "prometheus/prometheus"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:05.602736+08:00"
+retrieved_at: "2026-11-08T03:45:00.900582+08:00"
 published_at: "2026-11-07T03:45:56.495059+08:00"
-summary: "开源监控系统与时序数据库，专注指标采集、查询告警和云原生可观测性。"
+summary: "云原生监控系统与时间序列数据库，用于指标采集、存储、查询和告警。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
 ---

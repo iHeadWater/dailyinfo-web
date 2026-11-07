@@ -9,11 +9,11 @@ source:
   external_id: "Lightricks/LTX-2.5"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-07T03:45:17.996506+08:00"
+retrieved_at: "2026-11-08T03:45:10.790142+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Lightricks 的图像到视频生成模型，支持高质量动态视频合成，强调连贯运动与可控生成。"
+summary: "LTX-2.5 面向图像到视频生成，主打高保真动态合成与高效视频创作工作流。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---
