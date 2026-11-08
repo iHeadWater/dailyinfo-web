@@ -9,11 +9,11 @@ source:
   external_id: "ccore/Qwen3.5-4B-GLB-3D-Coder"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:10.790142+08:00"
+retrieved_at: "2026-11-09T03:46:49.062367+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "Qwen3.5-4B-GLB-3D-Coder 面向3D代码生成，以4B轻量规模结合GLB相关能力，突出三维内容编程与高效部署。"
+summary: "基于Qwen3.5的4B级3D代码生成模型，专注生成GLB与3D场景代码，服务轻量级3D内容生产。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
 ---

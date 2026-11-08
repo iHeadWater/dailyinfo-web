@@ -9,11 +9,11 @@ source:
   external_id: "codepawl/abo-glb"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:47.272632+08:00"
+retrieved_at: "2026-11-09T03:47:03.850145+08:00"
 published_at: "2026-11-06T03:45:42.825567+08:00"
-summary: "将 Amazon Berkeley Objects 商品模型转为 GLB 格式，提供可直接用于电商 3D 展示与渲染的资产。"
+summary: "提供ABO商品的GLB三维模型数据，适用于电商3D展示、真实感渲染与视觉研究。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
 ---

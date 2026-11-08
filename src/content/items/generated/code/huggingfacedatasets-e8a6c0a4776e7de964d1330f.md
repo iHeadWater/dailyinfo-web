@@ -9,11 +9,11 @@ source:
   external_id: "codepawl/scanned-objects-glb"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:47.272632+08:00"
+retrieved_at: "2026-11-09T03:47:03.850145+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "汇集扫描实物的 GLB 格式 3D 模型，适用于真实感资产重建、渲染与仿真场景。"
+summary: "汇集扫描物体的GLB三维模型，适用于真实感渲染、3D重建与虚拟场景构建。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "ranxianglei/billion-context"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:00.900582+08:00"
+retrieved_at: "2026-11-09T03:46:42.900287+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "面向超长会话的上下文压缩插件，用 100K 窗口支撑月级会话并将 token 消耗降低约 5 倍。"
+summary: "上下文压缩插件，以 100K 小窗口支撑月级超长会话并节省约 5 倍 token。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "sherlock-project/sherlock"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:00.900582+08:00"
+retrieved_at: "2026-11-09T03:46:42.900287+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "通过用户名跨社交网络追踪账号的开源情报工具，快速定位同一身份的多平台足迹。"
+summary: "通过用户名跨社交网络批量追踪和定位社交媒体账号，提升开源情报搜集效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
 ---

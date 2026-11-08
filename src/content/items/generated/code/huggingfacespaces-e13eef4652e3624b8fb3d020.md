@@ -9,11 +9,11 @@ source:
   external_id: "huggingface/moe-blogpost"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:55.852000+08:00"
+retrieved_at: "2026-11-09T03:47:13.411380+08:00"
 published_at: "2026-11-07T03:45:56.495059+08:00"
-summary: "围绕混合专家（MoE）架构的博客与演示，突出稀疏激活带来的模型高效扩展能力。"
+summary: "以 Docker 镜像封装 Hugging Face 的 MoE 博客示例，帮助开发者快速复现专家混合模型的核心机制与实验流程。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "black-forest-labs/flux-3-image-klein-comfy"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:10.790142+08:00"
+retrieved_at: "2026-11-09T03:46:49.062367+08:00"
 published_at: "2026-10-17T03:45:52.895924+08:00"
-summary: "FLUX.3 Image Klein Comfy 面向ComfyUI图像到图像工作流，主打高质量图像重绘与可控风格编辑。"
+summary: "Black Forest Labs的FLUX 3图像到图像模型，面向ComfyUI工作流，提供高质量风格迁移与图像编辑能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
 ---
