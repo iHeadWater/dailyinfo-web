@@ -8,11 +8,11 @@ source:
   url: "http://gs.dlut.edu.cn/info/1089/52022.htm"
 authors: []
 source_published_at: "2026-10-16T00:00:00+08:00"
-retrieved_at: "2026-11-08T03:30:00.794280+08:00"
+retrieved_at: "2026-11-09T03:30:00.976532+08:00"
 published_at: "2026-11-08T03:30:13.213479+08:00"
-summary: "请有意参加的师生按通知报名参加2026博士生国际招生面试交流会，具体截止时间以通知为准。"
+summary: "我校师生需按通知报名参加中国教育国际交流协会2026博士生国际招生面试交流会。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["resource-2026-11-08"]
+briefing_ids: ["resource-2026-11-08", "resource-2026-11-09"]
 ---
