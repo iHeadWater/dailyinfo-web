@@ -15,5 +15,5 @@ summary: "hyprwm/Hyprland — 独立、高度可定制且兼顾美观的 Wayland
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-11-03"]
 ---

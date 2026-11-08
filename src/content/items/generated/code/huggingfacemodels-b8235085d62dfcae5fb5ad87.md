@@ -15,5 +15,5 @@ summary: "LiquidAI 的 2B 视觉语言模型，主打轻量高效的多模态图
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-11-03"]
 ---

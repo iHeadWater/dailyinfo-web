@@ -15,5 +15,5 @@ summary: "Donchitos/Claude-Code-Game-Studios — 将 Claude Code 扩展为完整
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
 ---

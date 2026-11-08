@@ -15,5 +15,5 @@ summary: "集成 MiniMax H3 能力的 Gradio 应用，提供便捷的生成式�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-05", "code-2026-11-06"]
 ---

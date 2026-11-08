@@ -15,5 +15,5 @@ summary: "kornia/kornia — 面向空间 AI 的几何计算机视觉 Python 库�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-11-03"]
 ---

@@ -15,5 +15,5 @@ summary: "pingdotgg/t3code — 暂无公开描述，核心功能与项目定位�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-02", "code-2026-11-03"]
+briefing_ids: ["code-2026-11-03"]
 ---
