@@ -9,11 +9,11 @@ source:
   external_id: "YuyaoTechnology/MatterSeek"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:55.852000+08:00"
+retrieved_at: "2026-11-10T03:45:35.311922+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "MatterSeek 的静态交互应用，聚焦物质/材料信息的智能检索与可视化探索。"
+summary: "面向材料与物质信息的智能检索静态应用，聚合多源知识以提升科研信息发现与查询效率。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-10"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "JCisHERE/wan2-2-i2v-v3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:47:13.411380+08:00"
+retrieved_at: "2026-11-10T03:45:35.311922+08:00"
 published_at: "2026-10-31T03:45:55.076017+08:00"
-summary: "基于 Wan2.2 的图生视频 Gradio 应用，支持将静态图像快速转换为动态视频。"
+summary: "基于 Wan2.2 的图像转视频 Gradio 工具，可将静态图片快速生成为动态视频内容。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---

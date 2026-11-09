@@ -9,11 +9,11 @@ source:
   external_id: "NousResearch/arete-data-pairs"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:47:03.850145+08:00"
+retrieved_at: "2026-11-10T03:45:25.724452+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "提供高质量成对训练数据，面向指令微调、偏好对齐与模型能力提升。"
+summary: "提供高质量数据对，面向大模型指令微调、对齐训练与评测数据构建。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
 ---

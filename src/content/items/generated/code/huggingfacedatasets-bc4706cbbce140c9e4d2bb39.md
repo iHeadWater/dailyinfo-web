@@ -9,11 +9,11 @@ source:
   external_id: "PentesterFlow/OffsecCyber"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:47:03.850145+08:00"
+retrieved_at: "2026-11-10T03:45:25.724452+08:00"
 published_at: "2026-11-05T03:45:55.673532+08:00"
-summary: "面向渗透测试与攻防学习的OffsecCyber数据集，聚合攻击技术、工具与实战知识。"
+summary: "面向渗透测试与攻防实战的安全资源集，支持红队训练、漏洞研究和安全教学。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---

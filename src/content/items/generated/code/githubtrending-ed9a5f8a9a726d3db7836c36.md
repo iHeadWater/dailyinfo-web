@@ -9,11 +9,11 @@ source:
   external_id: "anthropics/claude-quickstarts"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:46:42.900287+08:00"
+retrieved_at: "2026-11-10T03:45:00.912087+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "汇集 Claude API 快速上手项目，帮助开发者高效构建可部署应用。"
+summary: "anthropics/claude-quickstarts 提供基于 Claude API 的快速启动项目集合，帮助开发者迅速搭建可部署的 AI 应用。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
 ---

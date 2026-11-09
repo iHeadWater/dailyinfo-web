@@ -9,11 +9,11 @@ source:
   external_id: "meta/astryx"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:46:42.900287+08:00"
+retrieved_at: "2026-11-10T03:45:00.912087+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "Meta 开源、可完全定制且面向智能体的设计系统，支持代理参与界面构建与适配。"
+summary: "meta/astryx 是 Meta 开源、可完全定制且 Agent-ready 的设计系统，为构建可被智能体理解和操作的前端界面提供统一组件基础。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---

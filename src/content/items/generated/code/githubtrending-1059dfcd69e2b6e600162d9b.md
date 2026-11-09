@@ -9,11 +9,11 @@ source:
   external_id: "google-deepmind/mujoco"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:46:42.900287+08:00"
+retrieved_at: "2026-11-10T03:45:00.912087+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "通用多关节接触动力学物理仿真器，服务机器人、强化学习等物理模拟场景。"
+summary: "google-deepmind/mujoco 是面向多关节动力学与接触仿真的通用物理引擎，广泛用于机器人控制与强化学习研究。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
 ---

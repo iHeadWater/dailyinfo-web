@@ -9,11 +9,11 @@ source:
   external_id: "NousResearch/Arete-27B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:46:49.062367+08:00"
+retrieved_at: "2026-11-10T03:45:11.733604+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "NousResearch的27B通用文本生成模型，聚焦推理、指令遵循与开源生态下的可复现训练。"
+summary: "NousResearch 的 27B 文本生成模型，主打推理增强与开放研究导向，适合复杂对话和通用语言任务。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:46:49.062367+08:00"
+retrieved_at: "2026-11-10T03:45:11.733604+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "融合DeepSeek-V4-Pro与Qwen3.5的无审查文本生成模型，主打更强开放域写作与低限制对话生成。"
+summary: "基于 Qwen3.5-9B 的 DeepSeek-V4-Pro 融合文本生成模型，主打无审查、heretic 风格的高自由度对话与内容生成。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---

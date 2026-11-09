@@ -9,11 +9,11 @@ source:
   external_id: "speridlabs/idol"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-09T03:47:13.411380+08:00"
+retrieved_at: "2026-11-10T03:45:35.311922+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "展示 IDOL 多主体个性化图像生成方法，支持在文本生图过程中解耦并保持多个主体身份。"
+summary: "封装 IDOL 模型的 Gradio 交互式推理界面，方便用户直观体验其生成或编辑效果并快速验证能力。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---
