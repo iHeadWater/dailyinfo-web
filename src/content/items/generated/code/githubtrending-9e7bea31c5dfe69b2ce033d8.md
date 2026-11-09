@@ -15,5 +15,5 @@ summary: "shiyu-coder/Kronos — 将金融市场视为一种语言进行建模�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-04"]
 ---

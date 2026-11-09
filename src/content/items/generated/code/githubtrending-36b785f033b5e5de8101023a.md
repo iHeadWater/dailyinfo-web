@@ -15,5 +15,5 @@ summary: "JustVugg/colibri — 用 C 实现的前沿 MoE 分层推理引擎，�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-04"]
 ---

@@ -15,5 +15,5 @@ summary: "Meta的SAM 3通用掩码生成模型，支持可提示分割与开放�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-04", "code-2026-11-09"]
 ---

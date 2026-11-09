@@ -15,5 +15,5 @@ summary: "p-e-w/heretic — 无需训练即可修改语言模型行为，支持�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-04"]
 ---

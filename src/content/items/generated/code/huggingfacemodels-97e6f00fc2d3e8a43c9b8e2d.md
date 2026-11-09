@@ -15,5 +15,5 @@ summary: "35B 总参、3B 激活的稀疏 MoE 预览模型，以极低激活成�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-03", "code-2026-11-04"]
+briefing_ids: ["code-2026-11-04"]
 ---
