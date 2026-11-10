@@ -15,5 +15,5 @@ summary: "DeepSeek-V4.1-Flash-1017 支持图文输入到文本输出，主打Fla
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

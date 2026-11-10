@@ -15,5 +15,5 @@ summary: "来自真实工程实践的 .agents 技能集合，为开发者提供�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

@@ -15,5 +15,5 @@ summary: "Qwen3.8-27B 旗舰多模态模型，兼顾图文理解与生成式推�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---

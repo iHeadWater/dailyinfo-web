@@ -15,5 +15,5 @@ summary: "Meta SAM3 通用掩码生成模型，主打可提示与开放世界的
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
 ---

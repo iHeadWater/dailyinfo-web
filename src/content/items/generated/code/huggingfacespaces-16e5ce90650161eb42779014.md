@@ -15,5 +15,5 @@ summary: "基于 Gradio 的 Wan 系列视频生成交互应用，提供便捷的
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
 ---

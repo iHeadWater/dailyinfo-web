@@ -15,5 +15,5 @@ summary: "Usagi-org/ai-goofish-monitor — 基于 Playwright 与 AI 的闲鱼多
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-04", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---
