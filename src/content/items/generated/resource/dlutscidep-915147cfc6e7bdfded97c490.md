@@ -8,11 +8,11 @@ source:
   url: "http://scidep.dlut.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbnewsid=78923&wbtreeid=1022"
 authors: []
 source_published_at: "2026-11-03T00:00:00+08:00"
-retrieved_at: "2026-11-10T03:30:00.656191+08:00"
+retrieved_at: "2026-11-11T03:30:00.756316+08:00"
 published_at: "2026-11-08T03:30:13.213479+08:00"
 summary: "请符合条件的青年科研人员按通知要求申请国家自然科学基金委员会与国际应用系统分析学会2027年暑期青年科学家项目。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["resource-2026-11-08", "resource-2026-11-09", "resource-2026-11-10"]
+briefing_ids: ["resource-2026-11-08", "resource-2026-11-09", "resource-2026-11-10", "resource-2026-11-11"]
 ---

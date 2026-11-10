@@ -8,11 +8,11 @@ source:
   url: "http://scidep.dlut.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbnewsid=79003&wbtreeid=1022"
 authors: []
 source_published_at: "2026-11-09T00:00:00+08:00"
-retrieved_at: "2026-11-10T03:30:00.656191+08:00"
+retrieved_at: "2026-11-11T03:30:00.756316+08:00"
 published_at: "2026-11-10T03:30:21.201973+08:00"
-summary: "请相关科研人员按通知要求提交“集成芯片前沿技术科学基础”重大研究计划2027年度项目指南建议。"
+summary: "请相关教师和科研人员按科研院转发通知要求，提交“集成芯片前沿技术科学基础”重大研究计划2027年度项目指南建议。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["resource-2026-11-10"]
+briefing_ids: ["resource-2026-11-10", "resource-2026-11-11"]
 ---
