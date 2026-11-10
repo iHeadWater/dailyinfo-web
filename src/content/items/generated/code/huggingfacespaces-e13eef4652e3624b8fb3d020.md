@@ -9,11 +9,11 @@ source:
   external_id: "huggingface/moe-blogpost"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:35.311922+08:00"
+retrieved_at: "2026-11-11T03:45:27.653680+08:00"
 published_at: "2026-11-07T03:45:56.495059+08:00"
-summary: "面向混合专家（MoE）模型的技术博客与容器化演示，系统解析其稀疏激活原理、训练部署要点及工程实践价值。"
+summary: "以容器化博客/演示形式系统讲解混合专家（MoE）架构，突出稀疏激活与高效扩展的技术价值。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

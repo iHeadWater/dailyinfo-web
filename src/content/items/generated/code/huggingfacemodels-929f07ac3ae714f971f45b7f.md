@@ -9,11 +9,11 @@ source:
   external_id: "facebook/sam3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:11.733604+08:00"
+retrieved_at: "2026-11-11T03:45:08.537018+08:00"
 published_at: "2026-10-16T03:46:00.937703+08:00"
-summary: "Meta SAM3 通用掩码生成模型，主打可提示与开放世界的图像分割及掩码生成，提升视觉理解与标注自动化能力。"
+summary: "SAM3通用分割模型，支持以提示驱动的高精度掩码生成与开放场景分割。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

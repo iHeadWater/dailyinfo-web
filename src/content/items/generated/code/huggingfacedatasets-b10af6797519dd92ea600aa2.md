@@ -9,11 +9,11 @@ source:
   external_id: "ccore/ThreeJS-3D-Scenes"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:25.724452+08:00"
+retrieved_at: "2026-11-11T03:45:19.342726+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "提供基于Three.js的3D场景资源与示例，便于Web端交互式3D应用快速开发和集成。"
+summary: "汇集基于Three.js的3D场景资源，便于Web端三维可视化与交互开发。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

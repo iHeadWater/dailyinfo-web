@@ -9,11 +9,11 @@ source:
   external_id: "codepawl/scanned-objects-glb"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:25.724452+08:00"
+retrieved_at: "2026-11-11T03:45:19.342726+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "提供由实物扫描生成的GLB 3D模型集合，适合真实感渲染、AR展示与数字重建。"
+summary: "提供扫描实物生成的GLB 3D模型集合，适用于真实感场景重建与AR/VR展示。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

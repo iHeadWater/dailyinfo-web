@@ -9,11 +9,11 @@ source:
   external_id: "ccore/Qwen3.5-4B-GLB-3D-Coder"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:11.733604+08:00"
+retrieved_at: "2026-11-11T03:45:08.537018+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "基于 Qwen3.5-4B 的 GLB 3D 代码生成模型，专注从文本生成 GLB 与三维资产脚本，服务 3D 内容自动化生产。"
+summary: "基于Qwen3.5-4B的GLB 3D代码生成模型，打通文本指令到3D资产脚本的生成链路。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

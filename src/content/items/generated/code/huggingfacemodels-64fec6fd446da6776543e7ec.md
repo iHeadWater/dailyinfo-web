@@ -9,11 +9,11 @@ source:
   external_id: "PrunaAI/P-H3-Image-Comfy"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:11.733604+08:00"
+retrieved_at: "2026-11-11T03:45:08.537018+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "PrunaAI P-H3 Image 的 ComfyUI 版本，主打快速文生图与工作流集成，兼顾生成质量与推理效率。"
+summary: "P-H3-Image-Comfy文生图模型，针对ComfyUI优化推理速度与图像质量。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

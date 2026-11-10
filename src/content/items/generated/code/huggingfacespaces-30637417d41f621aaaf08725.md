@@ -9,11 +9,11 @@ source:
   external_id: "fendouai/free-ai-humanizer"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-10T03:45:35.311922+08:00"
+retrieved_at: "2026-11-11T03:45:27.653680+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "免费 AI 文本人性化工具，可将机器生成内容改写为更自然、更贴近人类表达风格的文本。"
+summary: "免费AI文本人性化工具，将机器生成文本改写得更自然、更像人类表达。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09", "code-2026-11-10"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

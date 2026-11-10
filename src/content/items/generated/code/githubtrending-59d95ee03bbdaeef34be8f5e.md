@@ -9,11 +9,11 @@ source:
   external_id: "mattpocock/skills"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-08T03:45:00.900582+08:00"
+retrieved_at: "2026-11-11T03:45:00.887789+08:00"
 published_at: "2026-10-01T03:54:36.918831+08:00"
-summary: "来自真实工程实践的 .agents 技能集合，为开发者提供可直接复用的代理工作流。"
+summary: "来自资深工程师 .agents 目录的实战技能集合，为真实工程场景提供可直接复用的 Agent Skills。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-11"]
 ---
