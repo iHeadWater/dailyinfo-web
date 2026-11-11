@@ -15,5 +15,5 @@ summary: "SenseNova 的9B多模态预览模型，聚焦图文理解与迭代推�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
 ---

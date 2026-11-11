@@ -15,5 +15,5 @@ summary: "D4Vinci/Scrapling — 覆盖从单次请求到大规模爬取的 Pytho
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---

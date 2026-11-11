@@ -15,5 +15,5 @@ summary: "scenario-labs/skills — 为任意 AI 智能体提供生产级图像�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---

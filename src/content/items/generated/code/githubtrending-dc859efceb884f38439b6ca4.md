@@ -15,5 +15,5 @@ summary: "vercel-labs/agent-desktop — 面向 AI 智能体的 Computer Use 命�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---

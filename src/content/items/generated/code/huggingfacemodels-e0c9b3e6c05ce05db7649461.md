@@ -15,5 +15,5 @@ summary: "Qwen-Image-2.1-Turbo-Quantized 以量化Turbo版本提供文生图能�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
 ---

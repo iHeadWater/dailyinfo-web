@@ -15,5 +15,5 @@ summary: "Mistral 的1T级稀疏多模态大模型，采用A52B激活架构，�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
 ---

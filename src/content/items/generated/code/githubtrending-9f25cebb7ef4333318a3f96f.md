@@ -15,5 +15,5 @@ summary: "garrytan/gstack — 复刻 Garry Tan 的 Claude Code 配置，内置 2
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---

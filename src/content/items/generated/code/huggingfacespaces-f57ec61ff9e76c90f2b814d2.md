@@ -15,5 +15,5 @@ summary: "基于Gradio的身份保持生成演示，支持在个性化内容中�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
 ---

@@ -15,5 +15,5 @@ summary: "max-sixty/worktrunk — 面向并行 AI 智能体工作流的 Git work
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---

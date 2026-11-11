@@ -15,5 +15,5 @@ summary: "LFM3-1.7B轻量文本生成模型，以小体积实现高效推理与�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-11"]
 ---

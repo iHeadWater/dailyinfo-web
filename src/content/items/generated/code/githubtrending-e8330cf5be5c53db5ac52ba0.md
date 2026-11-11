@@ -15,5 +15,5 @@ summary: "JiaFeiMiao-K-Cat/DiscImageStudio — 基于 C# 的光盘镜像工作�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---

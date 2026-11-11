@@ -15,5 +15,5 @@ summary: "floci-io/floci — 轻量、免费且易用的 AWS 本地模拟器替�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-05", "code-2026-11-06"]
+briefing_ids: ["code-2026-11-06"]
 ---
