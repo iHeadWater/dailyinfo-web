@@ -9,11 +9,11 @@ source:
   external_id: "we-promise/sure"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-11T03:45:00.887789+08:00"
+retrieved_at: "2026-11-12T03:45:00.893683+08:00"
 published_at: "2026-11-11T03:45:42.303353+08:00"
-summary: "社区共建的开源个人财务应用，面向所有人提供预算、资产与支出管理能力。"
+summary: "由社区共建、面向所有人的个人财务应用，强调开放协作与普惠理财管理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-11"]
+briefing_ids: ["code-2026-11-11", "code-2026-11-12"]
 ---
