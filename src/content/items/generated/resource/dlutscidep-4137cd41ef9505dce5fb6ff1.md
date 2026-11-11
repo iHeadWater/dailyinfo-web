@@ -8,11 +8,11 @@ source:
   url: "http://scidep.dlut.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbnewsid=78943&wbtreeid=1025"
 authors: []
 source_published_at: "2026-11-04T00:00:00+08:00"
-retrieved_at: "2026-11-11T03:30:00.756316+08:00"
+retrieved_at: "2026-11-12T03:30:00.752190+08:00"
 published_at: "2026-11-10T03:30:21.201973+08:00"
-summary: "请相关教师和科研人员按通知要求组织申报2026年大连市科技创新基金科技惠民项目。"
+summary: "相关教师和科研人员需按通知要求组织申报2026年大连市科技创新基金科技惠民项目（通知未明确截止时间，请以原文为准）。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["resource-2026-11-10", "resource-2026-11-11"]
+briefing_ids: ["resource-2026-11-10", "resource-2026-11-11", "resource-2026-11-12"]
 ---
