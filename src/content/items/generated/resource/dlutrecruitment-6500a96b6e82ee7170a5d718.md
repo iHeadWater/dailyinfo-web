@@ -9,11 +9,11 @@ source:
   external_id: "b4e3b7247a864b73b375b70a57f3f6bd"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:41:37.980857+08:00"
+retrieved_at: "2026-11-14T03:30:09.995765+08:00"
 published_at: "2026-11-13T08:41:48.671047+08:00"
-summary: "🏢 中交四航局第三工程有限公司 — 2027年校园招聘 | 截止：2027-05-11"
+summary: "中交四航局第三工程有限公司 — 2027年校园招聘（具体岗位未注明） | 截止：2027-05-11"
 why_it_matters: null
-tags: []
+tags: ["校园招聘"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-11-13"]
+briefing_ids: ["resource-2026-11-13", "resource-2026-11-14"]
 ---
