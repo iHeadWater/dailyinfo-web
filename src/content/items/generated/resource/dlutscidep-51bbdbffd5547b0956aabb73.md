@@ -8,11 +8,11 @@ source:
   url: "http://scidep.dlut.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbnewsid=78783&wbtreeid=1022"
 authors: []
 source_published_at: "2026-10-23T00:00:00+08:00"
-retrieved_at: "2026-11-12T03:30:00.752190+08:00"
+retrieved_at: "2026-11-13T08:41:27.051989+08:00"
 published_at: "2026-11-08T03:30:13.213479+08:00"
-summary: "相关科研人员需按基金委通知要求申报医学科学部2026年度专项项目（第三批）（通知未明确截止时间，请以原文为准）。"
+summary: "请医学科学领域相关科研人员按第三批专项项目指南申报2026年度国家自然科学基金委员会医学科学部专项项目，截止时间以原文通知为准。"
 why_it_matters: null
-tags: []
+tags: ["科研项目申报"]
 language: "zh-CN"
-briefing_ids: ["resource-2026-11-08", "resource-2026-11-09", "resource-2026-11-10", "resource-2026-11-11", "resource-2026-11-12"]
+briefing_ids: ["resource-2026-11-08", "resource-2026-11-09", "resource-2026-11-10", "resource-2026-11-11", "resource-2026-11-12", "resource-2026-11-13"]
 ---
