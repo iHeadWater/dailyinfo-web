@@ -15,5 +15,5 @@ summary: "DeepSeek-V4.1-Flash-1017-obliterated 是移除审查/对齐限制的�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
 ---

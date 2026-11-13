@@ -15,5 +15,5 @@ summary: "NVIDIA 推出的 Python 框架，用语义化图推理层为 LLM/Agent
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-07"]
 ---

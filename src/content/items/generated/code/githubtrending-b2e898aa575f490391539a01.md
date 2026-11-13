@@ -15,5 +15,5 @@ summary: "汇集面向 Google 产品与技术的 Agent Skills，帮助 AI 代理
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
 ---

@@ -15,5 +15,5 @@ summary: "numbat是面向实验性生成任务的轻量模型，强调可定制�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
 ---

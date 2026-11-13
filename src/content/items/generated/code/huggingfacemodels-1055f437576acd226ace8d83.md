@@ -15,5 +15,5 @@ summary: "Edge0 的写实风格TTS模型，主打自然空气感语音合成，�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-07"]
 ---

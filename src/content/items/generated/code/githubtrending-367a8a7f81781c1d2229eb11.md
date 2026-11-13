@@ -15,5 +15,5 @@ summary: "极致快速的压缩算法与实现，以高吞吐和低延迟见长�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-06", "code-2026-11-07"]
+briefing_ids: ["code-2026-11-07"]
 ---
