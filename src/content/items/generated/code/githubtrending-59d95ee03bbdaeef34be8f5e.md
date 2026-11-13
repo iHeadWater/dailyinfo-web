@@ -15,5 +15,5 @@ summary: "来自资深工程师 .agents 目录的实战技能集合，为真实�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-11"]
 ---

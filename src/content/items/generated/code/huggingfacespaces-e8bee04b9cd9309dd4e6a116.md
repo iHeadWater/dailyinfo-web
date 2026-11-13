@@ -15,5 +15,5 @@ summary: "在浏览器端通过 WebGPU 运行 LiquidAI 的 2B 多模态 Omni 模
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09"]
 ---

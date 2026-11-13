@@ -15,5 +15,5 @@ summary: "云原生监控系统与时间序列数据库，用于指标采集、�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-08"]
 ---

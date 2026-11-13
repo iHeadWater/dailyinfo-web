@@ -15,5 +15,5 @@ summary: "面向编码代理的多阶段安全审计技能，产出可独立验�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-08"]
 ---

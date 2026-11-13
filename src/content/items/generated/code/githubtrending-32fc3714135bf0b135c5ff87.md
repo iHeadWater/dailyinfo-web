@@ -15,5 +15,5 @@ summary: "用 Rust 编写的高速 Python 代码检查与格式化工具，显�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-08"]
 ---

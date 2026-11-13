@@ -15,5 +15,5 @@ summary: "基于 Qwen-Image 2.1 的实时图像生成 Gradio 演示，突出低�
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08"]
+briefing_ids: ["code-2026-11-08"]
 ---
