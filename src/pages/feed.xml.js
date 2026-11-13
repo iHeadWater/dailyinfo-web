@@ -5,6 +5,7 @@ import { loadSiteContent } from '../lib/content.ts';
 import { itemCanonicalUrl, itemGuid } from '../lib/identity.ts';
 import { truncate } from '../lib/format.ts';
 import { summaryPlainText } from '../lib/markdown.ts';
+import { FEED_ITEM_LIMIT, takeRecentItems } from '../lib/listing.ts';
 
 /**
  * Global feed: /feed.xml
@@ -12,15 +13,20 @@ import { summaryPlainText } from '../lib/markdown.ts';
  * Entries are Items (never whole Briefings). The GUID is the canonical Item
  * URL derived from the stable item id (identity.ts guarantees GUID === URL),
  * so it never changes between builds.
+ *
+ * Only the most recent FEED_ITEM_LIMIT Items are included. Older Items stay
+ * on the site (category pages, archive); rotating out of this window does
+ * not change their GUID.
  */
 export async function GET() {
   const site = await loadSiteContent();
+  const feedItems = takeRecentItems(site.items, FEED_ITEM_LIMIT);
   return rss({
     title: `${SITE.name}`,
     description: SITE.description,
     site: SITE.publicUrl,
     items: await Promise.all(
-      site.items.map(async (item) => ({
+      feedItems.map(async (item) => ({
         title: item.data.title,
         link: itemCanonicalUrl(item.data.category, item.data.id),
         // Plain text: a feed reader would otherwise show `## 🧠 模型进展` verbatim.

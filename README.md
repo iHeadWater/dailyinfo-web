@@ -39,7 +39,8 @@ GitHub Pages → iheadwater.github.io/dailyinfo-web/
 - **Astro 5**（`output: 'static'`）+ TypeScript（strict）
 - **Astro Content Collections**（glob loader）承载全部内容
 - **Zod schema**（经由 `astro/zod`）做构建期契约校验，fail-closed
-- **@astrojs/rss** 生成全局与分类 feed；**@astrojs/sitemap** 生成 sitemap
+- **@astrojs/rss** 生成全局与分类 feed（每个 feed 仅含最近 `FEED_ITEM_LIMIT` 条，默认 50）；**@astrojs/sitemap** 生成 sitemap
+- 分类列表静态分页（`CATEGORY_PAGE_SIZE`，默认 50）；第 1 页仍是 `/{category}/`
 - **rehype-sanitize** 清洗 Briefing Markdown，禁止任意 raw HTML
 - 零 UI 框架（无 React/Vue/Svelte）；唯一客户端 JS 是主题切换（localStorage）
 
@@ -111,11 +112,14 @@ Canonical 定义只在 [`src/lib/categories.ts`](src/lib/categories.ts)：
 
 ```text
 /                                    首页（latest available date 从内容推导）
-/{category}/                         分类页（published_at DESC）
+/{category}/                         分类页第 1 页（published_at DESC）
+/{category}/page/{n}/                分类页第 n 页（n ≥ 2）
 /archive/                            归档
 /daily/{YYYY-MM-DD}/                 某日全部日报
 /daily/{YYYY-MM-DD}/{category}/      单个 Briefing
 /{category}/{item-id}/               Item 永久链接（稳定 ID）
+/feed.xml                            全局 RSS（最近 N 条 Item，默认 50）
+/feed/{category}.xml                 分类 RSS（最近 N 条 Item，默认 50）
 ```
 
 Item URL 只由 `category + id` 决定，标题修改永不改变 URL。

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CategoryListing from '../../../components/CategoryListing.astro';
+import { CATEGORIES } from '../../../lib/categories.ts';
+import { categoryPageRoute } from '../../../lib/urls.ts';
+import { loadSiteContent } from '../../../lib/content.ts';
+import { CATEGORY_PAGE_SIZE, extraListingPages, paginate, totalPages } from '../../../lib/listing.ts';
+
+/**
+ * Paginated category listing: /{slug}/page/{n}/ for n >= 2.
+ *
+ * Page 1 stays at /{slug}/ so the category index URL in the publication
+ * contract does not change. These routes are listing presentation, not
+ * Item identity.
+ */
+export async function getStaticPaths() {
+  const site = await loadSiteContent();
+  return CATEGORIES.flatMap((category) => {
+    const items = site.itemsByCategory[category.id];
+    return extraListingPages(totalPages(items.length, CATEGORY_PAGE_SIZE)).map((page) => ({
+      params: { category: category.slug, page: String(page) },
+      props: { categoryId: category.id, page },
+    }));
+  });
+}
+
+const { categoryId, page } = Astro.props;
+const category = CATEGORIES.find((c) => c.id === categoryId)!;
+const site = await loadSiteContent();
+const items = site.itemsByCategory[category.id];
+const window = paginate(items, page, CATEGORY_PAGE_SIZE);
+---
+
+<BaseLayout
+  title={`${category.label} · 第 ${page} 页`}
+  description={`${category.label} — ${category.description}（第 ${page} 页）`}
+  path={categoryPageRoute(category.id, page)}
+  prevPath={categoryPageRoute(category.id, page - 1)}
+  nextPath={page < window.totalPages ? categoryPageRoute(category.id, page + 1) : undefined}
+>
+  <CategoryListing category={category} items={items} page={page} />
+</BaseLayout>
