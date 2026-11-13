@@ -9,11 +9,11 @@ source:
   external_id: "GoogleChrome/modern-web-guidance-src"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-12T03:45:00.893683+08:00"
+retrieved_at: "2026-11-13T08:37:46.646610+08:00"
 published_at: "2026-11-12T03:49:00.953153+08:00"
-summary: "GoogleChrome 团队维护的现代 Web 开发指南源码项目，用于沉淀和发布面向现代浏览器的 Web 最佳实践与指导内容。"
+summary: "为编码智能体提供最新Web最佳实践指南的Chrome官方项目，帮助AI生成符合现代Web标准的代码。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-12"]
+briefing_ids: ["code-2026-11-12", "code-2026-11-13"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "moonshotai/Kimi-K3.1-Pro"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-11T03:45:08.537018+08:00"
+retrieved_at: "2026-11-13T08:37:54.052773+08:00"
 published_at: "2026-11-05T03:45:55.673532+08:00"
-summary: "Kimi K3.1 Pro多模态大模型，强化图文理解、长上下文推理与复杂任务处理。"
+summary: "Kimi K3.1 Pro多模态模型，支持图文理解与长上下文推理。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
 ---

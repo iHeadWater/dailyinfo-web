@@ -9,11 +9,11 @@ source:
   external_id: "PrunaAI/P-H3-Image"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-11T03:45:27.653680+08:00"
+retrieved_at: "2026-11-13T08:38:12.400751+08:00"
 published_at: "2026-11-10T03:45:50.863188+08:00"
-summary: "基于PrunaAI加速的H3图像生成演示，兼顾高质量出图与推理效率。"
+summary: "PrunaAI 推出的 H3 图像生成优化演示空间，聚焦高效推理与图像生成体验。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-10", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
 ---

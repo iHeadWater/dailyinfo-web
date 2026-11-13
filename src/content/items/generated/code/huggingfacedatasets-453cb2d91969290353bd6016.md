@@ -9,11 +9,11 @@ source:
   external_id: "Vyber07/cyber-security"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-11T03:45:19.342726+08:00"
+retrieved_at: "2026-11-13T08:38:05.062366+08:00"
 published_at: "2026-10-19T03:45:37.990334+08:00"
-summary: "面向网络安全领域的数据资源，覆盖攻防与安全分析场景，便于构建安全智能应用。"
+summary: "网络安全主题资源集，覆盖攻防知识与安全场景，可支撑安全分析、问答和模型评测。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
 ---

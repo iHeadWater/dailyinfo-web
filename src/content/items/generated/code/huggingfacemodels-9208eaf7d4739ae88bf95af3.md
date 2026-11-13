@@ -9,11 +9,11 @@ source:
   external_id: "Qwen/Qwen3.8-27B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-11T03:45:08.537018+08:00"
+retrieved_at: "2026-11-13T08:37:54.052773+08:00"
 published_at: "2026-10-01T08:19:18.900600+08:00"
-summary: "Qwen3.8-27B多模态基础模型，兼顾图文理解、复杂推理与通用生成。"
+summary: "Qwen3.8-27B多模态理解模型，支持图像-文本输入到文本输出，兼顾性能与通用性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
 ---

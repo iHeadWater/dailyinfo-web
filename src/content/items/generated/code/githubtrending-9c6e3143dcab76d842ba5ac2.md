@@ -9,11 +9,11 @@ source:
   external_id: "meta/astryx"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-12T03:45:00.893683+08:00"
+retrieved_at: "2026-11-13T08:37:46.646610+08:00"
 published_at: "2026-11-08T03:46:09.072529+08:00"
-summary: "Meta 开源的可完全定制、面向 AI Agent 就绪的设计系统，为智能体时代提供统一且可扩展的 UI 基础设施。"
+summary: "Meta开源、可完全定制且面向智能体就绪的设计系统。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-12"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-12", "code-2026-11-13"]
 ---

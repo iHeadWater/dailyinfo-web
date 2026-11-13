@@ -9,11 +9,11 @@ source:
   external_id: "open-index/hacker-news"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-11T03:45:19.342726+08:00"
+retrieved_at: "2026-11-13T08:38:05.062366+08:00"
 published_at: "2026-11-03T03:45:45.144897+08:00"
-summary: "汇集Hacker News内容索引，便于检索技术社区讨论与趋势分析。"
+summary: "Hacker News 开放索引数据集，聚合帖子与评论内容，便于趋势分析、检索和社区文本挖掘。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11"]
+briefing_ids: ["code-2026-11-07", "code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
 ---
