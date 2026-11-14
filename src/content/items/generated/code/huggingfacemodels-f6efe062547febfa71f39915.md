@@ -9,11 +9,11 @@ source:
   external_id: "tencent/Qwen3.8-27B-DSpine-b16"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:37:54.052773+08:00"
+retrieved_at: "2026-11-14T11:21:27.732595+08:00"
 published_at: "2026-11-13T08:38:21.049658+08:00"
-summary: "腾讯基于Qwen3.8-27B的DSpine-b16文本生成模型，面向高性能推理与领域适配。"
+summary: "腾讯基于Qwen3.8-27B推出的DSpine-b16文本生成变体，探索27B模型的高效推理与部署优化。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-13"]
+briefing_ids: ["code-2026-11-13", "code-2026-11-14"]
 ---

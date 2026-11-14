@@ -9,11 +9,11 @@ source:
   external_id: "Angais/pixel-art-atlas-1.4m"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:38:05.062366+08:00"
+retrieved_at: "2026-11-14T11:21:40.263800+08:00"
 published_at: "2026-11-10T03:45:50.863188+08:00"
-summary: "百万级像素艺术图谱数据集，为像素风图像生成、检索与风格研究提供大规模素材支持。"
+summary: "汇集约140万像素艺术样本的图集资源，面向像素风图像生成、检索与风格研究提供大规模数据支撑。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
+briefing_ids: ["code-2026-11-10", "code-2026-11-11", "code-2026-11-13", "code-2026-11-14"]
 ---

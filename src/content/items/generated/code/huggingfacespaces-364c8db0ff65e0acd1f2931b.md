@@ -9,11 +9,11 @@ source:
   external_id: "JCisHERE/wan2-2-i2v-v3"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:38:12.400751+08:00"
+retrieved_at: "2026-11-14T11:21:50.210637+08:00"
 published_at: "2026-10-31T03:45:55.076017+08:00"
-summary: "基于 Wan2.2 的图像转视频 Gradio 演示，支持从单图生成动态视频并快速调参体验。"
+summary: "基于 Wan2.2 的图像转视频 Gradio 应用，支持上传图片快速生成动态视频。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13", "code-2026-11-14"]
 ---

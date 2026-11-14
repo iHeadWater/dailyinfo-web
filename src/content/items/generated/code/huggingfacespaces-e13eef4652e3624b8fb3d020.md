@@ -9,11 +9,11 @@ source:
   external_id: "huggingface/moe-blogpost"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:38:12.400751+08:00"
+retrieved_at: "2026-11-14T11:21:50.210637+08:00"
 published_at: "2026-11-07T03:45:56.495059+08:00"
-summary: "以博客形式系统解析混合专家（MoE）架构的原理、实现与工程实践，帮助开发者理解并应用高效稀疏模型。"
+summary: "以可复现容器形式呈现混合专家（MoE）模型原理与实践的 Hugging Face 博文示例。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
+briefing_ids: ["code-2026-11-08", "code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13", "code-2026-11-14"]
 ---

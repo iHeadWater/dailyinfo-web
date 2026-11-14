@@ -9,11 +9,11 @@ source:
   external_id: "Comfy-Org/MiniMax-H3-Image"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:37:54.052773+08:00"
+retrieved_at: "2026-11-14T11:21:27.732595+08:00"
 published_at: "2026-11-13T08:38:21.049658+08:00"
-summary: "适配ComfyUI的MiniMax-H3文生图版本，便于工作流集成和高质量图像生成。"
+summary: "MiniMax-H3-Image的ComfyUI适配版本，便于在Comfy工作流中直接调用高质量文生图。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-13"]
+briefing_ids: ["code-2026-11-13", "code-2026-11-14"]
 ---

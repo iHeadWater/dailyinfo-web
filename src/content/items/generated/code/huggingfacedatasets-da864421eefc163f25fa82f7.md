@@ -9,11 +9,11 @@ source:
   external_id: "NousResearch/Propaganda_Eval"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:38:05.062366+08:00"
+retrieved_at: "2026-11-14T11:21:40.263800+08:00"
 published_at: "2026-11-13T08:38:21.049658+08:00"
-summary: "宣传与说服性文本识别评测集，用于评估语言模型对宣传内容的检测、分类与鲁棒性。"
+summary: "面向宣传与说服性文本识别的评测基准，用于衡量模型对宣传内容的检测能力和鲁棒性。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-13"]
+briefing_ids: ["code-2026-11-13", "code-2026-11-14"]
 ---

@@ -9,11 +9,11 @@ source:
   external_id: "NousResearch/Arete-27B"
 authors: []
 source_published_at: null
-retrieved_at: "2026-11-13T08:37:54.052773+08:00"
+retrieved_at: "2026-11-14T11:21:27.732595+08:00"
 published_at: "2026-11-09T03:47:29.605294+08:00"
-summary: "NousResearch的27B文本生成模型，面向高质量推理与开放对话生成。"
+summary: "NousResearch推出的27B文本生成模型，面向开放研究与高性能对话/推理应用。"
 why_it_matters: null
 tags: []
 language: "zh-CN"
-briefing_ids: ["code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13"]
+briefing_ids: ["code-2026-11-09", "code-2026-11-10", "code-2026-11-11", "code-2026-11-13", "code-2026-11-14"]
 ---
