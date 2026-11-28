@@ -22,6 +22,21 @@ export function categoryRoute(id: CategoryId): string {
   return `/${CATEGORY_BY_ID[id].slug}/`;
 }
 
+/**
+ * Category listing URL for a 1-based page.
+ *
+ * Page 1 is the category index (`/{slug}/`). Later pages use the reserved
+ * path segment `page`, e.g. `/papers/page/2/`. That segment is presentation
+ * only — it is not part of Item identity and is never an Item id prefix.
+ *
+ * @param id Category internal id.
+ * @param page 1-based listing page. Values below 1 are treated as page 1.
+ */
+export function categoryPageRoute(id: CategoryId, page = 1): string {
+  if (page <= 1) return categoryRoute(id);
+  return `/${CATEGORY_BY_ID[id].slug}/page/${page}/`;
+}
+
 export function itemRoute(category: CategoryId, itemId: string): string {
   return `/${CATEGORY_BY_ID[category].slug}/${itemId}/`;
 }

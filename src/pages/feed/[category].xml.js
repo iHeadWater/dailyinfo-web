@@ -5,6 +5,7 @@ import { loadSiteContent } from '../../lib/content.ts';
 import { itemCanonicalUrl, itemGuid } from '../../lib/identity.ts';
 import { truncate } from '../../lib/format.ts';
 import { summaryPlainText } from '../../lib/markdown.ts';
+import { FEED_ITEM_LIMIT, takeRecentItems } from '../../lib/listing.ts';
 
 /**
  * Per-category feed: /feed/{category-slug}.xml
@@ -12,6 +13,10 @@ import { summaryPlainText } from '../../lib/markdown.ts';
  * Single implementation shared by all categories — adding a category in
  * categories.ts automatically adds its feed route. GUID === canonical Item
  * URL (identity.ts), stable across builds.
+ *
+ * Only the most recent FEED_ITEM_LIMIT Items in this category are included.
+ * Feed paths are frozen; history remains on paginated category pages and
+ * /archive/.
  */
 export async function getStaticPaths() {
   return CATEGORIES.map((category) => ({
@@ -24,12 +29,13 @@ export async function GET(context) {
   const { categoryId } = context.props;
   const category = CATEGORY_BY_ID[categoryId];
   const site = await loadSiteContent();
+  const feedItems = takeRecentItems(site.itemsByCategory[category.id], FEED_ITEM_LIMIT);
   return rss({
     title: `${SITE.name} · ${category.label}`,
     description: category.description,
     site: SITE.publicUrl,
     items: await Promise.all(
-      site.itemsByCategory[category.id].map(async (item) => ({
+      feedItems.map(async (item) => ({
         title: item.data.title,
         link: itemCanonicalUrl(item.data.category, item.data.id),
         // Plain text: a feed reader would otherwise show `## 🧠 模型进展` verbatim.
